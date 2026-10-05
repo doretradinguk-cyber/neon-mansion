@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "status": "working-design",
+  "rules": {
+    "internal_room_budget": 30,
+    "generated_rooms_persist_after_first_spawn": true,
+    "anchor_rooms_are_fixed": true,
+    "nightmare_frequency_is_separate_state": true
+  },
+  "internal_rooms": [
+    {"id":"A01","name":"Entrance / Reception Hall","type":"anchor","firefly_reference":"pending-map"},
+    {"id":"A02","name":"Grand Stair Hall","type":"anchor","firefly_reference":"pending-map"},
+    {"id":"A03","name":"Long Gallery","type":"anchor","firefly_reference":"pending-map"},
+    {"id":"A04","name":"Kitchen / Service Hub","type":"anchor","firefly_reference":"pending-map"},
+    {"id":"A05","name":"Main Lounge / Great Room","type":"anchor","firefly_reference":"pending-map"},
+    {"id":"A06","name":"Pool / Garden Hub","type":"anchor","firefly_reference":"pending-map"},
+
+    {"id":"R01","name":"Dining Room","type":"generated","firefly_reference":"pending-map"},
+    {"id":"R02","name":"Home Theatre","type":"generated","firefly_reference":"pending-map"},
+    {"id":"R03","name":"Games Room","type":"generated","firefly_reference":"pending-map"},
+    {"id":"R04","name":"Arcade","type":"generated","firefly_reference":"pending-map"},
+    {"id":"R05","name":"Study","type":"generated","firefly_reference":"pending-map"},
+    {"id":"R06","name":"Library","type":"generated","firefly_reference":"pending-map"},
+    {"id":"R07","name":"Music Room","type":"generated","firefly_reference":"pending-map"},
+    {"id":"R08","name":"Gym","type":"generated","firefly_reference":"pending-map"},
+    {"id":"R09","name":"Pool Changing Room","type":"generated","firefly_reference":"pending-map"},
+    {"id":"R10","name":"Utility / Laundry","type":"generated","firefly_reference":"pending-map"},
+    {"id":"R11","name":"Pantry","type":"generated","firefly_reference":"pending-map"},
+    {"id":"R12","name":"Wine Room","type":"generated","firefly_reference":"pending-map"},
+    {"id":"R13","name":"Bedroom 1","type":"generated","firefly_reference":"pending-map"},
+    {"id":"R14","name":"Bedroom 2","type":"generated","firefly_reference":"pending-map"},
+    {"id":"R15","name":"Bedroom 3","type":"generated","firefly_reference":"pending-map"},
+    {"id":"R16","name":"Bedroom 4","type":"generated","firefly_reference":"pending-map"},
+    {"id":"R17","name":"Bedroom 5","type":"generated","firefly_reference":"pending-map"},
+    {"id":"R18","name":"Bathroom 1","type":"generated","firefly_reference":"pending-map"},
+    {"id":"R19","name":"Bathroom 2","type":"generated","firefly_reference":"pending-map"},
+    {"id":"R20","name":"Bathroom 3","type":"generated","firefly_reference":"pending-map"},
+    {"id":"R21","name":"En-suite 1","type":"generated","firefly_reference":"pending-map"},
+    {"id":"R22","name":"En-suite 2","type":"generated","firefly_reference":"pending-map"},
+    {"id":"R23","name":"Security / CCTV Room","type":"generated-special","firefly_reference":"pending-map"},
+    {"id":"R24","name":"Cyber Mainframe Room","type":"generated-special","firefly_reference":"pending-map"}
+  ],
+  "exteriors": [
+    {"id":"E01","name":"Driveway","type":"exterior","firefly_reference":"pending-map"},
+    {"id":"E02","name":"Front Garden","type":"exterior","firefly_reference":"pending-map"},
+    {"id":"E03","name":"Rear Garden","type":"exterior","firefly_reference":"pending-map"},
+    {"id":"E04","name":"Shed / Workshop","type":"exterior","firefly_reference":"pending-map"},
+    {"id":"E05","name":"Pool Terrace","type":"exterior","firefly_reference":"pending-map"},
+    {"id":"E06","name":"Garage","type":"exterior","firefly_reference":"pending-map"}
+  ]
+}

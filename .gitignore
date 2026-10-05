@@ -4,6 +4,7 @@
 # Local Firefly working references copied from Drop Zone.
 # Keep master/generated art in the Drop Zone; commit only curated final assets.
 firefly/room-references/raw/
+firefly/texture-references/raw/
 
 # Local temporary review exports
 firefly/review-temp/

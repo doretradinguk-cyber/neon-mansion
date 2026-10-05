@@ -1,0 +1,76 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://assets/neon-mansion/scripts/grand_stair_hall_flat.gd" id="1"]
+[ext_resource type="Shader" path="res://assets/neon-mansion/materials/shaders/flat_outline.gdshader" id="2"]
+[ext_resource type="Script" path="res://assets/neon-mansion/scripts/screen_flipbook.gd" id="3"]
+[ext_resource type="Script" path="res://assets/neon-mansion/scripts/tile_overlay.gd" id="4"]
+[ext_resource type="Texture2D" path="res://assets/neon-mansion/textures/grand_stair_hall/screen_frame_01.png" id="5"]
+[ext_resource type="Texture2D" path="res://assets/neon-mansion/textures/grand_stair_hall/screen_frame_02.png" id="6"]
+[ext_resource type="Texture2D" path="res://assets/neon-mansion/textures/grand_stair_hall/screen_frame_03.png" id="7"]
+[ext_resource type="Texture2D" path="res://assets/neon-mansion/textures/grand_stair_hall/screen_frame_04.png" id="8"]
+[ext_resource type="Texture2D" path="res://assets/neon-mansion/textures/grand_stair_hall/tile_overlay.png" id="9"]
+
+[sub_resource type="Environment" id="Environment"]
+background_mode = 1
+background_color = Color(0.003922, 0.019608, 0.043137, 1)
+ambient_light_source = 1
+
+[sub_resource type="ShaderMaterial" id="OutlineMaterial"]
+shader = ExtResource("2")
+shader_parameter/ink = Color(0.003922, 0.019608, 0.043137, 1)
+
+[sub_resource type="QuadMesh" id="OutlineQuad"]
+size = Vector2(2, 2)
+
+[sub_resource type="StandardMaterial3D" id="ScreenMaterial"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("5")
+
+[sub_resource type="QuadMesh" id="ScreenQuad"]
+size = Vector2(2.6, 2.6)
+
+[sub_resource type="StandardMaterial3D" id="TileOverlayMaterial"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(1, 1, 1, 0.25)
+albedo_texture = ExtResource("9")
+uv1_scale = Vector3(1, 3.6, 1)
+
+[sub_resource type="PlaneMesh" id="TileOverlayPlane"]
+size = Vector2(11, 22)
+
+[node name="GrandStairHallFlat" type="Node3D"]
+script = ExtResource("1")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.999255, 0.03856, 0, -0.03856, 0.999255, 0, 1.6, 0)
+current = true
+fov = 56.6
+far = 100.0
+
+[node name="Outline" type="MeshInstance3D" parent="Camera3D"]
+material_override = SubResource("OutlineMaterial")
+cast_shadow = 0
+extra_cull_margin = 16384.0
+mesh = SubResource("OutlineQuad")
+
+[node name="Screen" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.19, -22.99)
+material_override = SubResource("ScreenMaterial")
+cast_shadow = 0
+mesh = SubResource("ScreenQuad")
+script = ExtResource("3")
+frames = Array[Texture2D]([ExtResource("5"), ExtResource("6"), ExtResource("7"), ExtResource("8")])
+
+[node name="TileOverlay" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.004, -11)
+material_override = SubResource("TileOverlayMaterial")
+cast_shadow = 0
+mesh = SubResource("TileOverlayPlane")
+script = ExtResource("4")

@@ -10,7 +10,7 @@ The active working copy is expected at:
 
 `C:\GitHub\neon-mansion`
 
-Important: the current playable Godot foundation and recent Codex polish/layout work have been developed as **local uncommitted work** while testing. Do not reset, clean, checkout over, delete or blindly replace the local working tree before reviewing it.
+Important: the current playable Godot foundation and recent Codex polish/layout/door work have been developed as **local uncommitted work** while testing. Do not reset, clean, checkout over, delete or blindly replace the local working tree before reviewing it.
 
 The remote `main` branch contains the asset/import/documentation pipeline, but the latest tested Godot scene changes may still only exist locally until the user approves the checkpoint.
 
@@ -100,8 +100,8 @@ Current runtime-facing material families include/target:
 
 Raw source references remain uncommitted unless deliberately curated into final runtime assets.
 
-## Firefly door pipeline — added
-A dedicated door import workflow now exists:
+## Firefly door pipeline
+A dedicated door import workflow exists:
 
 `tools/import-firefly-doors.ps1`
 
@@ -125,6 +125,67 @@ Target reusable door families:
 
 Preserve door IDs, interaction behavior, collision and room connections. Nightmare-corrupted doors are optional visual variants, not replacements for the normal door scene.
 
+Codex has completed the current door-system pass locally. Before committing, test the revised door scenes in Godot for scale, interaction, swing/clearance and collisions.
+
+## Firefly architectural-detail pipeline — added
+A new importer is ready for the upcoming Firefly architectural detail pack:
+
+`tools/import-firefly-architecture.ps1`
+
+Documentation:
+
+`docs/FIREFLY-ARCHITECTURE-PIPELINE.md`
+
+This pack covers:
+- wall treatments / mouldings / trim
+- floors
+- ceilings
+- windows / glass
+- lighting fixtures
+- furniture materials
+- signage / access panels
+- damage / ageing
+- Nightmare overlays
+- exterior materials
+
+The usual rule applies: Drop Zone is the master archive; local working references are ignored; only reviewed assets are promoted into runtime Godot folders.
+
+## Stable mansion map architecture — next major system
+After the current first-slice visual/door test, create the permanent mansion map before building the remaining rooms.
+
+The governing rule is:
+
+**The mansion structural skeleton always stays the same. Random rooms attach to fixed authored sockets.**
+
+This prevents sloppy procedural generation such as stairs in wrong places, impossible corridors, room overlap, blocked doors and misplaced furniture.
+
+Fixed/authored structure should include:
+- mansion exterior footprint
+- driveway/front approach
+- Entrance / Reception Hall
+- foyer transition
+- Grand Stair Hall
+- all staircases
+- upper landing/balcony
+- main corridor spine
+- Long Gallery
+- fixed wing junctions
+- service/kitchen hub
+- pool/garden hub
+- major exterior connections
+- important exterior-facing walls/windows
+- anchor doors and required story routes
+
+Random/semi-random rooms only populate designated sockets. Each socket must define floor, wing, size class, orientation, allowed room categories, exterior-wall requirements, service/plumbing constraints and connection transform.
+
+Every generated room must define safe doorway placement, prop/no-block zones and compatibility metadata before it can spawn. Once a random room is discovered, its socket assignment persists instead of rerolling on every visit.
+
+See:
+
+`docs/MANSION-MAP-ARCHITECTURE.md`
+
+Before scaling up, test one socket with two interchangeable room templates and confirm both connect cleanly, keep furniture clear of exits and persist after reload.
+
 ## Source / vendor policy
 KayKit and other third-party/vendor source assets remain under their vendor folders and must not be edited directly. Neon Mansion-owned wrappers, materials, scenes and variants belong under the Neon Mansion asset tree.
 
@@ -135,15 +196,17 @@ Current source packs include:
 - KayKit Prototype Bits
 
 ## Immediate test-before-merge plan
-1. Pull the latest remote pipeline/documentation updates **without discarding local Codex work**.
-2. Import the Firefly door pack with `tools/import-firefly-doors.ps1`.
-3. Let Codex inspect/classify the door pack and build/improve reusable door scenes incrementally.
-4. Preserve the recently revised four-room layout and visual-polish work.
-5. Reload changed files from disk in Godot if prompted.
-6. Test Entrance Hall, foyer transition, Grand Stair Hall, Long Gallery and Drawing Room in Godot 4.7.2.
-7. Test door scale, clearance, open/close interaction, collision and lighting.
-8. Run `git status` and review the complete local working tree.
-9. Only after visual/playable approval create the first proper checkpoint commit/merge.
+1. Wait for the new Firefly architectural detail pack.
+2. Pull the latest remote pipeline/documentation updates **without discarding local Codex work**.
+3. Import it with `tools/import-firefly-architecture.ps1` using the usual Drop Zone archive/extract/manifest workflow.
+4. Reload changed project files from disk in Godot if prompted.
+5. Test the latest local Codex door/layout/visual work in Godot 4.7.2.
+6. Verify Entrance Hall -> foyer -> Grand Stair Hall -> Long Gallery -> Drawing Room flow.
+7. Verify door scale, clearance, interaction, double-door movement and collision.
+8. Verify architecture is readable and furniture does not obstruct traversal.
+9. Run `git status` and review the complete local working tree.
+10. Only after playable approval create the first proper checkpoint commit/merge.
+11. Then design the permanent mansion map skeleton and socket system before adding the remaining room catalogue.
 
 ## Safety / rollback rules
 - Do not run `git clean`.
@@ -151,4 +214,4 @@ Current source packs include:
 - Do not modify KayKit vendor source files.
 - Do not commit `.godot` import cache.
 - Do not commit raw Firefly reference folders wholesale.
-- Do not build the remaining 26 rooms until the first slice establishes the approved architecture, door system, material system and lighting quality.
+- Do not build the remaining rooms until the first slice establishes the approved architecture, door system, material system, lighting quality and fixed-map/socket rules.

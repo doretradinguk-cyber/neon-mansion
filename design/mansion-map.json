@@ -1,0 +1,3551 @@
+{
+  "schema_version": 1,
+  "baseline": "v1",
+  "approved_on": "2026-10-05",
+  "approval": "Manually tested and structurally approved by the user",
+  "runtime_layout": "godot/assets/neon-mansion/layout/mansion_layout.json",
+  "synchronization_rule": "Runtime spatial records are authoritative for transforms. Update this planning snapshot, MANSION-MAP.md and MANSION-CHANGELOG.md together for every structural change.",
+  "units": "metres",
+  "floors": {
+    "GF": 0,
+    "UF": 6.4,
+    "BF": -6.4
+  },
+  "anchor_room_ids": [
+    "entrance_hall",
+    "foyer_reception",
+    "grand_stair_hall",
+    "long_gallery",
+    "lounge",
+    "kitchen",
+    "pool_hub",
+    "upper_landing",
+    "upper_corridor",
+    "service_corridor",
+    "cyber_mainframe"
+  ],
+  "rooms": [
+    {
+      "id": "entrance_hall",
+      "name": "Entrance Hall",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        20,
+        24
+      ],
+      "height": 10,
+      "role": "anchor",
+      "portals": {
+        "south": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 6.2,
+            "height": 5.12
+          }
+        ],
+        "north": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 6.2,
+            "height": 5.12
+          }
+        ]
+      }
+    },
+    {
+      "id": "foyer_reception",
+      "name": "Foyer / Reception",
+      "position": [
+        0,
+        0,
+        -18
+      ],
+      "size": [
+        12,
+        12
+      ],
+      "height": 6,
+      "role": "anchor",
+      "portals": {
+        "south": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 6.2,
+            "height": 5.12
+          }
+        ],
+        "north": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 6.2,
+            "height": 5.12
+          }
+        ]
+      }
+    },
+    {
+      "id": "grand_stair_hall",
+      "name": "Grand Stair Hall",
+      "position": [
+        0,
+        0,
+        -42
+      ],
+      "size": [
+        32,
+        36
+      ],
+      "height": 14,
+      "role": "anchor",
+      "portals": {
+        "south": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 6.2,
+            "height": 5.12
+          }
+        ],
+        "east": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 6.2,
+            "height": 5.12
+          },
+          {
+            "offset": -15,
+            "elevation": 6.4,
+            "width": 6.2,
+            "height": 5.12
+          }
+        ],
+        "west": [
+          {
+            "offset": -15,
+            "elevation": 6.4,
+            "width": 2,
+            "height": 2.9
+          }
+        ]
+      }
+    },
+    {
+      "id": "long_gallery",
+      "name": "Long Gallery",
+      "position": [
+        68,
+        0,
+        -42
+      ],
+      "size": [
+        104,
+        8
+      ],
+      "height": 6.0,
+      "role": "anchor",
+      "portals": {
+        "west": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 6.2,
+            "height": 5.12
+          }
+        ],
+        "south": [
+          {
+            "offset": -44,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          },
+          {
+            "offset": -28,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          },
+          {
+            "offset": -12,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          },
+          {
+            "offset": 4,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          },
+          {
+            "offset": 18,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          },
+          {
+            "offset": 30,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          },
+          {
+            "offset": 44,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ],
+        "north": [
+          {
+            "offset": -44,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          },
+          {
+            "offset": -28,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          },
+          {
+            "offset": -16,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          },
+          {
+            "offset": -6,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          },
+          {
+            "offset": 6,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          },
+          {
+            "offset": 18,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          },
+          {
+            "offset": 34,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ]
+      }
+    },
+    {
+      "id": "drawing_room",
+      "name": "Drawing Room",
+      "position": [
+        24,
+        0,
+        -30
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "height": 5.5,
+      "role": "benchmark",
+      "portals": {
+        "north": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ]
+      }
+    },
+    {
+      "id": "lounge",
+      "name": "Lounge",
+      "position": [
+        24,
+        0,
+        -54
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "height": 5.5,
+      "role": "anchor",
+      "portals": {
+        "south": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ]
+      }
+    },
+    {
+      "id": "kitchen",
+      "name": "Kitchen",
+      "position": [
+        40,
+        0,
+        -54
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "height": 5.5,
+      "role": "anchor",
+      "portals": {
+        "south": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ],
+        "east": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ]
+      },
+      "floor_regions": [
+        [
+          -8,
+          -8,
+          6,
+          16
+        ],
+        [
+          4,
+          -8,
+          4,
+          16
+        ],
+        [
+          -2,
+          -8,
+          6,
+          2
+        ],
+        [
+          -2,
+          6,
+          6,
+          2
+        ]
+      ]
+    },
+    {
+      "id": "pool_hub",
+      "name": "Pool Hub",
+      "position": [
+        40,
+        0,
+        -30
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "height": 5.5,
+      "role": "anchor",
+      "portals": {
+        "north": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ],
+        "south": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ]
+      }
+    },
+    {
+      "id": "pantry",
+      "name": "Pantry",
+      "position": [
+        52,
+        0,
+        -54
+      ],
+      "size": [
+        8,
+        16
+      ],
+      "height": 5.5,
+      "role": "defined_socket",
+      "portals": {
+        "south": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ],
+        "west": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ]
+      },
+      "socket_id": "GF-F01"
+    },
+    {
+      "id": "dining_room",
+      "name": "Dining Room",
+      "position": [
+        62,
+        0,
+        -54
+      ],
+      "size": [
+        12,
+        16
+      ],
+      "height": 5.5,
+      "role": "defined_socket",
+      "portals": {
+        "south": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ]
+      },
+      "socket_id": "GF-F02"
+    },
+    {
+      "id": "library",
+      "name": "Library",
+      "position": [
+        74,
+        0,
+        -54
+      ],
+      "size": [
+        12,
+        16
+      ],
+      "height": 5.5,
+      "role": "defined_socket",
+      "portals": {
+        "south": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ]
+      },
+      "socket_id": "GF-F03"
+    },
+    {
+      "id": "study",
+      "name": "Study",
+      "position": [
+        86,
+        0,
+        -54
+      ],
+      "size": [
+        12,
+        16
+      ],
+      "height": 5.5,
+      "role": "defined_socket",
+      "portals": {
+        "south": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ]
+      },
+      "socket_id": "GF-F04"
+    },
+    {
+      "id": "conservatory",
+      "name": "Conservatory",
+      "position": [
+        102,
+        0,
+        -54
+      ],
+      "size": [
+        20,
+        16
+      ],
+      "height": 5.5,
+      "role": "defined_socket",
+      "portals": {
+        "south": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ],
+        "north": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ]
+      },
+      "socket_id": "GF-F05"
+    },
+    {
+      "id": "home_theatre",
+      "name": "Home Theatre",
+      "position": [
+        56,
+        0,
+        -30
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "height": 5.5,
+      "role": "defined_socket",
+      "portals": {
+        "north": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ]
+      },
+      "socket_id": "GF-F06"
+    },
+    {
+      "id": "games_room",
+      "name": "Games Room",
+      "position": [
+        72,
+        0,
+        -30
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "height": 5.5,
+      "role": "defined_socket",
+      "portals": {
+        "north": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ]
+      },
+      "socket_id": "GF-F07"
+    },
+    {
+      "id": "gym",
+      "name": "Gym",
+      "position": [
+        86,
+        0,
+        -30
+      ],
+      "size": [
+        12,
+        16
+      ],
+      "height": 5.5,
+      "role": "defined_socket",
+      "portals": {
+        "north": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ]
+      },
+      "socket_id": "GF-F08"
+    },
+    {
+      "id": "arcade",
+      "name": "Arcade",
+      "position": [
+        98,
+        0,
+        -30
+      ],
+      "size": [
+        12,
+        16
+      ],
+      "height": 5.5,
+      "role": "defined_socket",
+      "portals": {
+        "north": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ]
+      },
+      "socket_id": "GF-F09"
+    },
+    {
+      "id": "random_ground",
+      "name": "Random Room",
+      "position": [
+        112,
+        0,
+        -30
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "height": 5.5,
+      "role": "random_socket",
+      "portals": {
+        "north": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ]
+      },
+      "socket_id": "GF-R01"
+    },
+    {
+      "id": "upper_landing",
+      "name": "Upper Landing",
+      "position": [
+        0,
+        6.4,
+        -57
+      ],
+      "size": [
+        32,
+        6
+      ],
+      "height": 7.6,
+      "role": "anchor",
+      "portals": {},
+      "shell": false
+    },
+    {
+      "id": "upper_corridor",
+      "name": "Upper Corridor",
+      "position": [
+        68,
+        6.4,
+        -57
+      ],
+      "size": [
+        104,
+        8
+      ],
+      "height": 6.0,
+      "role": "anchor",
+      "portals": {
+        "west": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 6.2,
+            "height": 5.12
+          }
+        ],
+        "north": [
+          {
+            "offset": -44,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          },
+          {
+            "offset": -30,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          },
+          {
+            "offset": -16,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          },
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          },
+          {
+            "offset": 22,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          },
+          {
+            "offset": 44,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ],
+        "south": [
+          {
+            "offset": -24,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          },
+          {
+            "offset": -8,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          },
+          {
+            "offset": 16,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          },
+          {
+            "offset": 42,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ]
+      }
+    },
+    {
+      "id": "master_bedroom",
+      "name": "Master Bedroom",
+      "position": [
+        -38,
+        6.4,
+        -57
+      ],
+      "size": [
+        20,
+        16
+      ],
+      "height": 5.5,
+      "role": "defined_socket",
+      "portals": {
+        "east": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ]
+      },
+      "socket_id": "UF-F01"
+    },
+    {
+      "id": "ensuite_1",
+      "name": "En-Suite 1",
+      "position": [
+        -22,
+        6.4,
+        -57
+      ],
+      "size": [
+        12,
+        16
+      ],
+      "height": 5.5,
+      "role": "defined_socket",
+      "portals": {
+        "east": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ],
+        "west": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ]
+      },
+      "socket_id": "UF-F02"
+    },
+    {
+      "id": "bedroom_2",
+      "name": "Bedroom 2",
+      "position": [
+        24,
+        6.4,
+        -69
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "height": 5.5,
+      "role": "defined_socket",
+      "portals": {
+        "south": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ],
+        "east": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ]
+      },
+      "socket_id": "UF-F03"
+    },
+    {
+      "id": "ensuite_2",
+      "name": "En-Suite 2",
+      "position": [
+        38,
+        6.4,
+        -69
+      ],
+      "size": [
+        12,
+        16
+      ],
+      "height": 5.5,
+      "role": "defined_socket",
+      "portals": {
+        "south": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ],
+        "west": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ]
+      },
+      "socket_id": "UF-F04"
+    },
+    {
+      "id": "bedroom_3",
+      "name": "Bedroom 3",
+      "position": [
+        52,
+        6.4,
+        -69
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "height": 5.5,
+      "role": "defined_socket",
+      "portals": {
+        "south": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ]
+      },
+      "socket_id": "UF-F05"
+    },
+    {
+      "id": "bedroom_4",
+      "name": "Bedroom 4",
+      "position": [
+        68,
+        6.4,
+        -69
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "height": 5.5,
+      "role": "defined_socket",
+      "portals": {
+        "south": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ]
+      },
+      "socket_id": "UF-F06"
+    },
+    {
+      "id": "bedroom_5_attic",
+      "name": "Bedroom 5 / Attic",
+      "position": [
+        90,
+        6.4,
+        -69
+      ],
+      "size": [
+        28,
+        16
+      ],
+      "height": 5.5,
+      "role": "special_socket",
+      "portals": {
+        "south": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ]
+      },
+      "socket_id": "UF-F07"
+    },
+    {
+      "id": "random_upper_north",
+      "name": "Upper Random Socket",
+      "position": [
+        112,
+        6.4,
+        -69
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "height": 5.5,
+      "role": "defined_socket",
+      "portals": {
+        "south": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ]
+      },
+      "socket_id": "UF-R02"
+    },
+    {
+      "id": "bathroom_1",
+      "name": "Bathroom 1",
+      "position": [
+        44,
+        6.4,
+        -45
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "height": 5.5,
+      "role": "defined_socket",
+      "portals": {
+        "north": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ]
+      },
+      "socket_id": "UF-F08"
+    },
+    {
+      "id": "bathroom_2",
+      "name": "Bathroom 2",
+      "position": [
+        60,
+        6.4,
+        -45
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "height": 5.5,
+      "role": "defined_socket",
+      "portals": {
+        "north": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ]
+      },
+      "socket_id": "UF-F09"
+    },
+    {
+      "id": "guest_lounge",
+      "name": "Guest Lounge",
+      "position": [
+        84,
+        6.4,
+        -45
+      ],
+      "size": [
+        32,
+        16
+      ],
+      "height": 5.5,
+      "role": "defined_socket",
+      "portals": {
+        "north": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ]
+      },
+      "socket_id": "UF-F10"
+    },
+    {
+      "id": "random_upper",
+      "name": "Upper Random Room",
+      "position": [
+        110,
+        6.4,
+        -45
+      ],
+      "size": [
+        20,
+        16
+      ],
+      "height": 5.5,
+      "role": "random_socket",
+      "portals": {
+        "north": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ]
+      },
+      "socket_id": "UF-R01"
+    },
+    {
+      "id": "utility_service",
+      "name": "Utility / Service",
+      "position": [
+        40,
+        -6.4,
+        -54
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "height": 5.6,
+      "role": "fixed",
+      "portals": {
+        "south": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ]
+      },
+      "ceiling_regions": [
+        [
+          -8,
+          -8,
+          6,
+          16
+        ],
+        [
+          4,
+          -8,
+          4,
+          16
+        ],
+        [
+          -2,
+          -8,
+          6,
+          2
+        ],
+        [
+          -2,
+          6,
+          6,
+          2
+        ]
+      ]
+    },
+    {
+      "id": "service_corridor",
+      "name": "Service Corridor",
+      "position": [
+        64,
+        -6.4,
+        -42
+      ],
+      "size": [
+        64,
+        8
+      ],
+      "height": 5.6,
+      "role": "anchor",
+      "portals": {
+        "north": [
+          {
+            "offset": -24,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          },
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ]
+      }
+    },
+    {
+      "id": "wine_room",
+      "name": "Wine Room",
+      "position": [
+        64,
+        -6.4,
+        -54
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "height": 5.6,
+      "role": "locked_destination",
+      "portals": {
+        "south": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ],
+        "east": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ]
+      }
+    },
+    {
+      "id": "security_cctv",
+      "name": "Security / CCTV",
+      "position": [
+        80,
+        -6.4,
+        -54
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "height": 5.6,
+      "role": "locked_destination",
+      "portals": {
+        "west": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ],
+        "north": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ]
+      }
+    },
+    {
+      "id": "cyber_mainframe",
+      "name": "Cyber Room / Mainframe",
+      "position": [
+        80,
+        -6.4,
+        -74
+      ],
+      "size": [
+        24,
+        24
+      ],
+      "height": 5.6,
+      "role": "special_anchor",
+      "portals": {
+        "south": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ]
+      }
+    },
+    {
+      "id": "driveway",
+      "name": "Driveway",
+      "position": [
+        0,
+        0,
+        40
+      ],
+      "size": [
+        20,
+        56
+      ],
+      "height": 5,
+      "role": "exterior",
+      "portals": {},
+      "shell": false
+    },
+    {
+      "id": "front_garden",
+      "name": "Front Garden",
+      "position": [
+        0,
+        0,
+        40
+      ],
+      "size": [
+        80,
+        56
+      ],
+      "height": 5,
+      "role": "exterior",
+      "portals": {},
+      "shell": false
+    },
+    {
+      "id": "rear_garden",
+      "name": "Rear Garden",
+      "position": [
+        56,
+        0,
+        -106
+      ],
+      "size": [
+        136,
+        40
+      ],
+      "height": 5,
+      "role": "exterior",
+      "portals": {},
+      "shell": false
+    },
+    {
+      "id": "pool_terrace",
+      "name": "Pool Terrace",
+      "position": [
+        40,
+        0,
+        -14
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "height": 5,
+      "role": "exterior",
+      "portals": {},
+      "shell": false
+    },
+    {
+      "id": "shed_workshop",
+      "name": "Shed / Workshop",
+      "position": [
+        58,
+        0,
+        -14
+      ],
+      "size": [
+        12,
+        12
+      ],
+      "height": 4,
+      "role": "fixed",
+      "portals": {
+        "south": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ]
+      }
+    },
+    {
+      "id": "garage",
+      "name": "Garage",
+      "position": [
+        80,
+        0,
+        8
+      ],
+      "size": [
+        24,
+        24
+      ],
+      "height": 5,
+      "role": "fixed",
+      "portals": {
+        "south": [
+          {
+            "offset": 0,
+            "elevation": 0,
+            "width": 2,
+            "height": 2.9
+          }
+        ]
+      }
+    }
+  ],
+  "connections": [
+    {
+      "id": "door_front_arrival",
+      "room_a": "driveway",
+      "room_b": "entrance_hall",
+      "position": [
+        0,
+        0,
+        12
+      ],
+      "yaw": 0,
+      "variant": "grand_anchor",
+      "caption": "Entrance Hall",
+      "number": "01"
+    },
+    {
+      "id": "door_entrance_foyer",
+      "room_a": "entrance_hall",
+      "room_b": "foyer_reception",
+      "position": [
+        0,
+        0,
+        -12
+      ],
+      "yaw": 0,
+      "variant": "grand_anchor",
+      "caption": "Foyer / Reception",
+      "number": "02"
+    },
+    {
+      "id": "door_entrance_stair",
+      "room_a": "entrance_hall",
+      "room_b": "grand_stair_hall",
+      "position": [
+        0,
+        0,
+        -24
+      ],
+      "yaw": 0,
+      "variant": "grand_anchor",
+      "caption": "Grand Stair Hall",
+      "number": "03",
+      "via": "foyer_reception"
+    },
+    {
+      "id": "door_stair_gallery",
+      "room_a": "grand_stair_hall",
+      "room_b": "long_gallery",
+      "position": [
+        16,
+        0,
+        -42
+      ],
+      "yaw": -1.5707963267948966,
+      "variant": "grand_anchor",
+      "caption": "Long Gallery",
+      "number": "04"
+    },
+    {
+      "id": "door_gallery_drawing",
+      "room_a": "long_gallery",
+      "room_b": "drawing_room",
+      "position": [
+        24,
+        0,
+        -38
+      ],
+      "yaw": 0,
+      "variant": "luxury",
+      "caption": "Drawing Room",
+      "number": "05"
+    },
+    {
+      "id": "door_gallery_lounge",
+      "room_a": "long_gallery",
+      "room_b": "lounge",
+      "position": [
+        24,
+        0,
+        -46
+      ],
+      "yaw": 0,
+      "variant": "luxury",
+      "caption": "Lounge",
+      "number": "06"
+    },
+    {
+      "id": "door_gallery_kitchen",
+      "room_a": "long_gallery",
+      "room_b": "kitchen",
+      "position": [
+        40,
+        0,
+        -46
+      ],
+      "yaw": 0,
+      "variant": "kitchen_service",
+      "caption": "Kitchen",
+      "number": "07"
+    },
+    {
+      "id": "door_gallery_pantry",
+      "room_a": "long_gallery",
+      "room_b": "pantry",
+      "position": [
+        52,
+        0,
+        -46
+      ],
+      "yaw": 0,
+      "variant": "kitchen_service",
+      "caption": "Pantry",
+      "number": "08"
+    },
+    {
+      "id": "door_gallery_dining_room",
+      "room_a": "long_gallery",
+      "room_b": "dining_room",
+      "position": [
+        62,
+        0,
+        -46
+      ],
+      "yaw": 0,
+      "variant": "luxury",
+      "caption": "Dining Room",
+      "number": "09"
+    },
+    {
+      "id": "door_gallery_library",
+      "room_a": "long_gallery",
+      "room_b": "library",
+      "position": [
+        74,
+        0,
+        -46
+      ],
+      "yaw": 0,
+      "variant": "luxury",
+      "caption": "Library",
+      "number": "10"
+    },
+    {
+      "id": "door_gallery_study",
+      "room_a": "long_gallery",
+      "room_b": "study",
+      "position": [
+        86,
+        0,
+        -46
+      ],
+      "yaw": 0,
+      "variant": "luxury",
+      "caption": "Study",
+      "number": "11"
+    },
+    {
+      "id": "door_gallery_conservatory",
+      "room_a": "long_gallery",
+      "room_b": "conservatory",
+      "position": [
+        102,
+        0,
+        -46
+      ],
+      "yaw": 0,
+      "variant": "luxury",
+      "caption": "Conservatory",
+      "number": "12"
+    },
+    {
+      "id": "door_gallery_pool_hub",
+      "room_a": "long_gallery",
+      "room_b": "pool_hub",
+      "position": [
+        40,
+        0,
+        -38
+      ],
+      "yaw": 0,
+      "variant": "standard",
+      "caption": "Pool Hub",
+      "number": "13"
+    },
+    {
+      "id": "door_gallery_home_theatre",
+      "room_a": "long_gallery",
+      "room_b": "home_theatre",
+      "position": [
+        56,
+        0,
+        -38
+      ],
+      "yaw": 0,
+      "variant": "theatre_games_arcade",
+      "caption": "Home Theatre",
+      "number": "14"
+    },
+    {
+      "id": "door_gallery_games_room",
+      "room_a": "long_gallery",
+      "room_b": "games_room",
+      "position": [
+        72,
+        0,
+        -38
+      ],
+      "yaw": 0,
+      "variant": "theatre_games_arcade",
+      "caption": "Games Room",
+      "number": "15"
+    },
+    {
+      "id": "door_gallery_gym",
+      "room_a": "long_gallery",
+      "room_b": "gym",
+      "position": [
+        86,
+        0,
+        -38
+      ],
+      "yaw": 0,
+      "variant": "standard",
+      "caption": "Gym",
+      "number": "16"
+    },
+    {
+      "id": "door_gallery_arcade",
+      "room_a": "long_gallery",
+      "room_b": "arcade",
+      "position": [
+        98,
+        0,
+        -38
+      ],
+      "yaw": 0,
+      "variant": "theatre_games_arcade",
+      "caption": "Arcade",
+      "number": "17"
+    },
+    {
+      "id": "door_gallery_random_ground",
+      "room_a": "long_gallery",
+      "room_b": "random_ground",
+      "position": [
+        112,
+        0,
+        -38
+      ],
+      "yaw": 0,
+      "variant": "standard",
+      "caption": "Random Room",
+      "number": "18"
+    },
+    {
+      "id": "door_kitchen_pantry",
+      "room_a": "kitchen",
+      "room_b": "pantry",
+      "position": [
+        48,
+        0,
+        -54
+      ],
+      "yaw": -1.5707963267948966,
+      "variant": "kitchen_service",
+      "caption": "Pantry",
+      "number": "19"
+    },
+    {
+      "id": "door_pool_terrace",
+      "room_a": "pool_hub",
+      "room_b": "pool_terrace",
+      "position": [
+        40,
+        0,
+        -22
+      ],
+      "yaw": 0,
+      "variant": "exterior_garden",
+      "caption": "Pool Terrace",
+      "number": "20"
+    },
+    {
+      "id": "door_conservatory_garden",
+      "room_a": "conservatory",
+      "room_b": "rear_garden",
+      "position": [
+        102,
+        0,
+        -62
+      ],
+      "yaw": 0,
+      "variant": "exterior_garden",
+      "caption": "Rear Garden",
+      "number": "21"
+    },
+    {
+      "id": "door_shed",
+      "room_a": "pool_terrace",
+      "room_b": "shed_workshop",
+      "position": [
+        58,
+        0,
+        -8
+      ],
+      "yaw": 0,
+      "variant": "kitchen_service",
+      "caption": "Shed / Workshop",
+      "number": "22"
+    },
+    {
+      "id": "door_garage",
+      "room_a": "front_garden",
+      "room_b": "garage",
+      "position": [
+        80,
+        0,
+        20
+      ],
+      "yaw": 0,
+      "variant": "exterior_garden",
+      "caption": "Garage",
+      "number": "23"
+    },
+    {
+      "id": "door_landing_corridor",
+      "room_a": "grand_stair_hall",
+      "room_b": "upper_corridor",
+      "position": [
+        16,
+        6.4,
+        -57
+      ],
+      "yaw": -1.5707963267948966,
+      "variant": "grand_anchor",
+      "caption": "Upper Corridor",
+      "number": "24",
+      "via": "upper_landing"
+    },
+    {
+      "id": "door_landing_ensuite",
+      "room_a": "grand_stair_hall",
+      "room_b": "ensuite_1",
+      "position": [
+        -16,
+        6.4,
+        -57
+      ],
+      "yaw": -1.5707963267948966,
+      "variant": "bedroom_bathroom",
+      "caption": "En-Suite 1",
+      "number": "25",
+      "via": "upper_landing"
+    },
+    {
+      "id": "door_master_ensuite",
+      "room_a": "ensuite_1",
+      "room_b": "master_bedroom",
+      "position": [
+        -28,
+        6.4,
+        -57
+      ],
+      "yaw": -1.5707963267948966,
+      "variant": "bedroom_bathroom",
+      "caption": "Master Bedroom",
+      "number": "26"
+    },
+    {
+      "id": "door_upper_bedroom_2",
+      "room_a": "upper_corridor",
+      "room_b": "bedroom_2",
+      "position": [
+        24,
+        6.4,
+        -61
+      ],
+      "yaw": 0,
+      "variant": "bedroom_bathroom",
+      "caption": "Bedroom 2",
+      "number": "27"
+    },
+    {
+      "id": "door_upper_ensuite_2",
+      "room_a": "upper_corridor",
+      "room_b": "ensuite_2",
+      "position": [
+        38,
+        6.4,
+        -61
+      ],
+      "yaw": 0,
+      "variant": "bedroom_bathroom",
+      "caption": "En-Suite 2",
+      "number": "28"
+    },
+    {
+      "id": "door_upper_bedroom_3",
+      "room_a": "upper_corridor",
+      "room_b": "bedroom_3",
+      "position": [
+        52,
+        6.4,
+        -61
+      ],
+      "yaw": 0,
+      "variant": "bedroom_bathroom",
+      "caption": "Bedroom 3",
+      "number": "29"
+    },
+    {
+      "id": "door_upper_bedroom_4",
+      "room_a": "upper_corridor",
+      "room_b": "bedroom_4",
+      "position": [
+        68,
+        6.4,
+        -61
+      ],
+      "yaw": 0,
+      "variant": "bedroom_bathroom",
+      "caption": "Bedroom 4",
+      "number": "30"
+    },
+    {
+      "id": "door_upper_bedroom_5_attic",
+      "room_a": "upper_corridor",
+      "room_b": "bedroom_5_attic",
+      "position": [
+        90,
+        6.4,
+        -61
+      ],
+      "yaw": 0,
+      "variant": "bedroom_bathroom",
+      "caption": "Bedroom 5 / Attic",
+      "number": "31"
+    },
+    {
+      "id": "door_upper_random_upper_north",
+      "room_a": "upper_corridor",
+      "room_b": "random_upper_north",
+      "position": [
+        112,
+        6.4,
+        -61
+      ],
+      "yaw": 0,
+      "variant": "bedroom_bathroom",
+      "caption": "Upper Random Socket",
+      "number": "32"
+    },
+    {
+      "id": "door_upper_bathroom_1",
+      "room_a": "upper_corridor",
+      "room_b": "bathroom_1",
+      "position": [
+        44,
+        6.4,
+        -53
+      ],
+      "yaw": 0,
+      "variant": "bedroom_bathroom",
+      "caption": "Bathroom 1",
+      "number": "33"
+    },
+    {
+      "id": "door_upper_bathroom_2",
+      "room_a": "upper_corridor",
+      "room_b": "bathroom_2",
+      "position": [
+        60,
+        6.4,
+        -53
+      ],
+      "yaw": 0,
+      "variant": "bedroom_bathroom",
+      "caption": "Bathroom 2",
+      "number": "34"
+    },
+    {
+      "id": "door_upper_guest_lounge",
+      "room_a": "upper_corridor",
+      "room_b": "guest_lounge",
+      "position": [
+        84,
+        6.4,
+        -53
+      ],
+      "yaw": 0,
+      "variant": "luxury",
+      "caption": "Guest Lounge",
+      "number": "35"
+    },
+    {
+      "id": "door_upper_random_upper",
+      "room_a": "upper_corridor",
+      "room_b": "random_upper",
+      "position": [
+        110,
+        6.4,
+        -53
+      ],
+      "yaw": 0,
+      "variant": "bedroom_bathroom",
+      "caption": "Upper Random Room",
+      "number": "36"
+    },
+    {
+      "id": "door_bedroom2_ensuite",
+      "room_a": "bedroom_2",
+      "room_b": "ensuite_2",
+      "position": [
+        32,
+        6.4,
+        -69
+      ],
+      "yaw": -1.5707963267948966,
+      "variant": "bedroom_bathroom",
+      "caption": "En-Suite 2",
+      "number": "37"
+    },
+    {
+      "id": "door_utility_corridor",
+      "room_a": "utility_service",
+      "room_b": "service_corridor",
+      "position": [
+        40,
+        -6.4,
+        -46
+      ],
+      "yaw": 0,
+      "variant": "kitchen_service",
+      "caption": "Service Corridor",
+      "number": "38"
+    },
+    {
+      "id": "door_service_wine",
+      "room_a": "service_corridor",
+      "room_b": "wine_room",
+      "position": [
+        64,
+        -6.4,
+        -46
+      ],
+      "yaw": 0,
+      "variant": "kitchen_service",
+      "caption": "Wine Room",
+      "number": "39"
+    },
+    {
+      "id": "door_wine_security",
+      "room_a": "wine_room",
+      "room_b": "security_cctv",
+      "position": [
+        72,
+        -6.4,
+        -54
+      ],
+      "yaw": -1.5707963267948966,
+      "variant": "security_cyber",
+      "caption": "Security / CCTV",
+      "number": "40"
+    },
+    {
+      "id": "door_security_mainframe",
+      "room_a": "security_cctv",
+      "room_b": "cyber_mainframe",
+      "position": [
+        80,
+        -6.4,
+        -62
+      ],
+      "yaw": 0,
+      "variant": "security_cyber",
+      "caption": "Cyber Room / Mainframe",
+      "number": "41"
+    }
+  ],
+  "outdoor_connections": [
+    {
+      "from": "driveway",
+      "to": "front_garden",
+      "kind": "shared_grounds"
+    },
+    {
+      "from": "front_garden",
+      "to": "rear_garden",
+      "kind": "shared_grounds"
+    },
+    {
+      "from": "rear_garden",
+      "to": "pool_terrace",
+      "kind": "shared_grounds"
+    }
+  ],
+  "socket_ids": [
+    "GF-R01",
+    "UF-R01",
+    "UF-R02",
+    "GF-F01",
+    "GF-F02",
+    "GF-F03",
+    "GF-F04",
+    "GF-F05",
+    "GF-F06",
+    "GF-F07",
+    "GF-F08",
+    "GF-F09",
+    "UF-F01",
+    "UF-F02",
+    "UF-F03",
+    "UF-F04",
+    "UF-F05",
+    "UF-F06",
+    "UF-F07",
+    "UF-F08",
+    "UF-F09",
+    "UF-F10"
+  ],
+  "sockets": [
+    {
+      "socket_id": "GF-R01",
+      "room_id": "random_ground",
+      "floor": "GF",
+      "wing": "east_leisure",
+      "transform": {
+        "position": [
+          112,
+          0,
+          -30
+        ],
+        "rotation_y": 0
+      },
+      "orientation": "north-entry",
+      "size_class": "medium",
+      "footprint": [
+        16,
+        16
+      ],
+      "permitted_categories": [
+        "music",
+        "study"
+      ],
+      "exterior_window": {
+        "allowed": true,
+        "required": false
+      },
+      "service_requirement": "none",
+      "door_connections": [
+        {
+          "door_id": "door_gallery_random_ground",
+          "position": [
+            112,
+            0,
+            -38
+          ],
+          "yaw": 0,
+          "width": 2
+        }
+      ],
+      "safe_doorway_clearance": {
+        "local_bounds": [
+          -2,
+          -8,
+          4,
+          4
+        ],
+        "height": 3.2
+      },
+      "prop_exclusion_zones": [
+        [
+          -2,
+          -8,
+          4,
+          4
+        ]
+      ],
+      "templates": [
+        "music",
+        "study"
+      ],
+      "status": "prototype",
+      "entry_edge": "north",
+      "entry_offset": 0
+    },
+    {
+      "socket_id": "UF-R01",
+      "room_id": "random_upper",
+      "floor": "UF",
+      "wing": "east_private",
+      "transform": {
+        "position": [
+          110,
+          6.4,
+          -45
+        ],
+        "rotation_y": 0
+      },
+      "orientation": "north-entry",
+      "size_class": "large",
+      "footprint": [
+        20,
+        16
+      ],
+      "permitted_categories": [
+        "bedroom",
+        "guest_lounge"
+      ],
+      "exterior_window": {
+        "allowed": true,
+        "required": false
+      },
+      "service_requirement": "optional",
+      "door_connections": [
+        {
+          "door_id": "door_upper_random_upper",
+          "position": [
+            110,
+            6.4,
+            -53
+          ],
+          "yaw": 0,
+          "width": 2
+        }
+      ],
+      "safe_doorway_clearance": {
+        "local_bounds": [
+          -2,
+          -8,
+          4,
+          4
+        ],
+        "height": 3.2
+      },
+      "prop_exclusion_zones": [
+        [
+          -2,
+          -8,
+          4,
+          4
+        ]
+      ],
+      "templates": [],
+      "status": "reserved_shell",
+      "entry_edge": "north",
+      "entry_offset": 0
+    },
+    {
+      "socket_id": "UF-R02",
+      "room_id": "random_upper_north",
+      "floor": "UF",
+      "wing": "east_private",
+      "transform": {
+        "position": [
+          112,
+          6.4,
+          -69
+        ],
+        "rotation_y": 0
+      },
+      "orientation": "south-entry",
+      "size_class": "medium",
+      "footprint": [
+        16,
+        16
+      ],
+      "permitted_categories": [
+        "bedroom",
+        "attic"
+      ],
+      "exterior_window": {
+        "allowed": true,
+        "required": true
+      },
+      "service_requirement": "none",
+      "door_connections": [
+        {
+          "door_id": "door_upper_random_upper_north",
+          "position": [
+            112,
+            6.4,
+            -61
+          ],
+          "yaw": 0,
+          "width": 2
+        }
+      ],
+      "safe_doorway_clearance": {
+        "local_bounds": [
+          -2,
+          4,
+          4,
+          4
+        ],
+        "height": 3.2
+      },
+      "prop_exclusion_zones": [
+        [
+          -2,
+          4,
+          4,
+          4
+        ]
+      ],
+      "templates": [],
+      "status": "reserved_shell",
+      "entry_edge": "south",
+      "entry_offset": 0
+    },
+    {
+      "socket_id": "GF-F01",
+      "room_id": "pantry",
+      "floor": "GF",
+      "wing": "east_social_or_leisure",
+      "transform": {
+        "position": [
+          52,
+          0,
+          -54
+        ],
+        "rotation_y": 0
+      },
+      "orientation": "south-entry",
+      "size_class": "small",
+      "footprint": [
+        8,
+        16
+      ],
+      "permitted_categories": [
+        "pantry"
+      ],
+      "exterior_window": {
+        "allowed": true,
+        "required": false
+      },
+      "service_requirement": "service",
+      "door_connections": [
+        {
+          "door_id": "door_gallery_pantry",
+          "position": [
+            52,
+            0,
+            -46
+          ],
+          "yaw": 0,
+          "width": 2
+        },
+        {
+          "door_id": "door_kitchen_pantry",
+          "position": [
+            48,
+            0,
+            -54
+          ],
+          "yaw": -1.5707963267948966,
+          "width": 2
+        }
+      ],
+      "safe_doorway_clearance": {
+        "local_bounds": [
+          -2,
+          4,
+          4,
+          4
+        ],
+        "height": 3.2
+      },
+      "prop_exclusion_zones": [
+        [
+          -2,
+          4,
+          4,
+          4
+        ],
+        [
+          -4,
+          -2,
+          4,
+          4
+        ]
+      ],
+      "templates": [],
+      "status": "authored_fixed_shell",
+      "entry_edge": "south",
+      "entry_offset": 0
+    },
+    {
+      "socket_id": "GF-F02",
+      "room_id": "dining_room",
+      "floor": "GF",
+      "wing": "east_social_or_leisure",
+      "transform": {
+        "position": [
+          62,
+          0,
+          -54
+        ],
+        "rotation_y": 0
+      },
+      "orientation": "south-entry",
+      "size_class": "medium",
+      "footprint": [
+        12,
+        16
+      ],
+      "permitted_categories": [
+        "dining_room"
+      ],
+      "exterior_window": {
+        "allowed": true,
+        "required": false
+      },
+      "service_requirement": "none",
+      "door_connections": [
+        {
+          "door_id": "door_gallery_dining_room",
+          "position": [
+            62,
+            0,
+            -46
+          ],
+          "yaw": 0,
+          "width": 2
+        }
+      ],
+      "safe_doorway_clearance": {
+        "local_bounds": [
+          -2,
+          4,
+          4,
+          4
+        ],
+        "height": 3.2
+      },
+      "prop_exclusion_zones": [
+        [
+          -2,
+          4,
+          4,
+          4
+        ]
+      ],
+      "templates": [],
+      "status": "authored_fixed_shell",
+      "entry_edge": "south",
+      "entry_offset": 0
+    },
+    {
+      "socket_id": "GF-F03",
+      "room_id": "library",
+      "floor": "GF",
+      "wing": "east_social_or_leisure",
+      "transform": {
+        "position": [
+          74,
+          0,
+          -54
+        ],
+        "rotation_y": 0
+      },
+      "orientation": "south-entry",
+      "size_class": "medium",
+      "footprint": [
+        12,
+        16
+      ],
+      "permitted_categories": [
+        "library"
+      ],
+      "exterior_window": {
+        "allowed": true,
+        "required": false
+      },
+      "service_requirement": "none",
+      "door_connections": [
+        {
+          "door_id": "door_gallery_library",
+          "position": [
+            74,
+            0,
+            -46
+          ],
+          "yaw": 0,
+          "width": 2
+        }
+      ],
+      "safe_doorway_clearance": {
+        "local_bounds": [
+          -2,
+          4,
+          4,
+          4
+        ],
+        "height": 3.2
+      },
+      "prop_exclusion_zones": [
+        [
+          -2,
+          4,
+          4,
+          4
+        ]
+      ],
+      "templates": [],
+      "status": "authored_fixed_shell",
+      "entry_edge": "south",
+      "entry_offset": 0
+    },
+    {
+      "socket_id": "GF-F04",
+      "room_id": "study",
+      "floor": "GF",
+      "wing": "east_social_or_leisure",
+      "transform": {
+        "position": [
+          86,
+          0,
+          -54
+        ],
+        "rotation_y": 0
+      },
+      "orientation": "south-entry",
+      "size_class": "medium",
+      "footprint": [
+        12,
+        16
+      ],
+      "permitted_categories": [
+        "study"
+      ],
+      "exterior_window": {
+        "allowed": true,
+        "required": false
+      },
+      "service_requirement": "none",
+      "door_connections": [
+        {
+          "door_id": "door_gallery_study",
+          "position": [
+            86,
+            0,
+            -46
+          ],
+          "yaw": 0,
+          "width": 2
+        }
+      ],
+      "safe_doorway_clearance": {
+        "local_bounds": [
+          -2,
+          4,
+          4,
+          4
+        ],
+        "height": 3.2
+      },
+      "prop_exclusion_zones": [
+        [
+          -2,
+          4,
+          4,
+          4
+        ]
+      ],
+      "templates": [],
+      "status": "authored_fixed_shell",
+      "entry_edge": "south",
+      "entry_offset": 0
+    },
+    {
+      "socket_id": "GF-F05",
+      "room_id": "conservatory",
+      "floor": "GF",
+      "wing": "east_social_or_leisure",
+      "transform": {
+        "position": [
+          102,
+          0,
+          -54
+        ],
+        "rotation_y": 0
+      },
+      "orientation": "south-entry",
+      "size_class": "large",
+      "footprint": [
+        20,
+        16
+      ],
+      "permitted_categories": [
+        "conservatory"
+      ],
+      "exterior_window": {
+        "allowed": true,
+        "required": true
+      },
+      "service_requirement": "none",
+      "door_connections": [
+        {
+          "door_id": "door_gallery_conservatory",
+          "position": [
+            102,
+            0,
+            -46
+          ],
+          "yaw": 0,
+          "width": 2
+        },
+        {
+          "door_id": "door_conservatory_garden",
+          "position": [
+            102,
+            0,
+            -62
+          ],
+          "yaw": 0,
+          "width": 2
+        }
+      ],
+      "safe_doorway_clearance": {
+        "local_bounds": [
+          -2,
+          4,
+          4,
+          4
+        ],
+        "height": 3.2
+      },
+      "prop_exclusion_zones": [
+        [
+          -2,
+          4,
+          4,
+          4
+        ],
+        [
+          -2,
+          -8,
+          4,
+          4
+        ]
+      ],
+      "templates": [],
+      "status": "authored_fixed_shell",
+      "entry_edge": "south",
+      "entry_offset": 0
+    },
+    {
+      "socket_id": "GF-F06",
+      "room_id": "home_theatre",
+      "floor": "GF",
+      "wing": "east_social_or_leisure",
+      "transform": {
+        "position": [
+          56,
+          0,
+          -30
+        ],
+        "rotation_y": 0
+      },
+      "orientation": "north-entry",
+      "size_class": "medium",
+      "footprint": [
+        16,
+        16
+      ],
+      "permitted_categories": [
+        "home_theatre"
+      ],
+      "exterior_window": {
+        "allowed": true,
+        "required": false
+      },
+      "service_requirement": "none",
+      "door_connections": [
+        {
+          "door_id": "door_gallery_home_theatre",
+          "position": [
+            56,
+            0,
+            -38
+          ],
+          "yaw": 0,
+          "width": 2
+        }
+      ],
+      "safe_doorway_clearance": {
+        "local_bounds": [
+          -2,
+          -8,
+          4,
+          4
+        ],
+        "height": 3.2
+      },
+      "prop_exclusion_zones": [
+        [
+          -2,
+          -8,
+          4,
+          4
+        ]
+      ],
+      "templates": [],
+      "status": "authored_fixed_shell",
+      "entry_edge": "north",
+      "entry_offset": 0
+    },
+    {
+      "socket_id": "GF-F07",
+      "room_id": "games_room",
+      "floor": "GF",
+      "wing": "east_social_or_leisure",
+      "transform": {
+        "position": [
+          72,
+          0,
+          -30
+        ],
+        "rotation_y": 0
+      },
+      "orientation": "north-entry",
+      "size_class": "medium",
+      "footprint": [
+        16,
+        16
+      ],
+      "permitted_categories": [
+        "games_room"
+      ],
+      "exterior_window": {
+        "allowed": true,
+        "required": false
+      },
+      "service_requirement": "none",
+      "door_connections": [
+        {
+          "door_id": "door_gallery_games_room",
+          "position": [
+            72,
+            0,
+            -38
+          ],
+          "yaw": 0,
+          "width": 2
+        }
+      ],
+      "safe_doorway_clearance": {
+        "local_bounds": [
+          -2,
+          -8,
+          4,
+          4
+        ],
+        "height": 3.2
+      },
+      "prop_exclusion_zones": [
+        [
+          -2,
+          -8,
+          4,
+          4
+        ]
+      ],
+      "templates": [],
+      "status": "authored_fixed_shell",
+      "entry_edge": "north",
+      "entry_offset": 0
+    },
+    {
+      "socket_id": "GF-F08",
+      "room_id": "gym",
+      "floor": "GF",
+      "wing": "east_social_or_leisure",
+      "transform": {
+        "position": [
+          86,
+          0,
+          -30
+        ],
+        "rotation_y": 0
+      },
+      "orientation": "north-entry",
+      "size_class": "medium",
+      "footprint": [
+        12,
+        16
+      ],
+      "permitted_categories": [
+        "gym"
+      ],
+      "exterior_window": {
+        "allowed": true,
+        "required": false
+      },
+      "service_requirement": "none",
+      "door_connections": [
+        {
+          "door_id": "door_gallery_gym",
+          "position": [
+            86,
+            0,
+            -38
+          ],
+          "yaw": 0,
+          "width": 2
+        }
+      ],
+      "safe_doorway_clearance": {
+        "local_bounds": [
+          -2,
+          -8,
+          4,
+          4
+        ],
+        "height": 3.2
+      },
+      "prop_exclusion_zones": [
+        [
+          -2,
+          -8,
+          4,
+          4
+        ]
+      ],
+      "templates": [],
+      "status": "authored_fixed_shell",
+      "entry_edge": "north",
+      "entry_offset": 0
+    },
+    {
+      "socket_id": "GF-F09",
+      "room_id": "arcade",
+      "floor": "GF",
+      "wing": "east_social_or_leisure",
+      "transform": {
+        "position": [
+          98,
+          0,
+          -30
+        ],
+        "rotation_y": 0
+      },
+      "orientation": "north-entry",
+      "size_class": "medium",
+      "footprint": [
+        12,
+        16
+      ],
+      "permitted_categories": [
+        "arcade"
+      ],
+      "exterior_window": {
+        "allowed": true,
+        "required": false
+      },
+      "service_requirement": "none",
+      "door_connections": [
+        {
+          "door_id": "door_gallery_arcade",
+          "position": [
+            98,
+            0,
+            -38
+          ],
+          "yaw": 0,
+          "width": 2
+        }
+      ],
+      "safe_doorway_clearance": {
+        "local_bounds": [
+          -2,
+          -8,
+          4,
+          4
+        ],
+        "height": 3.2
+      },
+      "prop_exclusion_zones": [
+        [
+          -2,
+          -8,
+          4,
+          4
+        ]
+      ],
+      "templates": [],
+      "status": "authored_fixed_shell",
+      "entry_edge": "north",
+      "entry_offset": 0
+    },
+    {
+      "socket_id": "UF-F01",
+      "room_id": "master_bedroom",
+      "floor": "UF",
+      "wing": "west_private",
+      "transform": {
+        "position": [
+          -38,
+          6.4,
+          -57
+        ],
+        "rotation_y": 0
+      },
+      "orientation": "east-entry",
+      "size_class": "large",
+      "footprint": [
+        20,
+        16
+      ],
+      "permitted_categories": [
+        "bedroom"
+      ],
+      "exterior_window": {
+        "allowed": true,
+        "required": true
+      },
+      "service_requirement": "none",
+      "door_connections": [
+        {
+          "door_id": "door_master_ensuite",
+          "position": [
+            -28,
+            6.4,
+            -57
+          ],
+          "yaw": -1.5707963267948966,
+          "width": 2
+        }
+      ],
+      "safe_doorway_clearance": {
+        "local_bounds": [
+          6,
+          -2,
+          4,
+          4
+        ],
+        "height": 3.2
+      },
+      "prop_exclusion_zones": [
+        [
+          6,
+          -2,
+          4,
+          4
+        ]
+      ],
+      "templates": [],
+      "status": "authored_fixed_shell",
+      "entry_edge": "east",
+      "entry_offset": 0
+    },
+    {
+      "socket_id": "UF-F02",
+      "room_id": "ensuite_1",
+      "floor": "UF",
+      "wing": "west_private",
+      "transform": {
+        "position": [
+          -22,
+          6.4,
+          -57
+        ],
+        "rotation_y": 0
+      },
+      "orientation": "east-entry",
+      "size_class": "medium",
+      "footprint": [
+        12,
+        16
+      ],
+      "permitted_categories": [
+        "bathroom"
+      ],
+      "exterior_window": {
+        "allowed": true,
+        "required": false
+      },
+      "service_requirement": "plumbing",
+      "door_connections": [
+        {
+          "door_id": "door_landing_ensuite",
+          "position": [
+            -16,
+            6.4,
+            -57
+          ],
+          "yaw": -1.5707963267948966,
+          "width": 2
+        },
+        {
+          "door_id": "door_master_ensuite",
+          "position": [
+            -28,
+            6.4,
+            -57
+          ],
+          "yaw": -1.5707963267948966,
+          "width": 2
+        }
+      ],
+      "safe_doorway_clearance": {
+        "local_bounds": [
+          2,
+          -2,
+          4,
+          4
+        ],
+        "height": 3.2
+      },
+      "prop_exclusion_zones": [
+        [
+          2,
+          -2,
+          4,
+          4
+        ],
+        [
+          -6,
+          -2,
+          4,
+          4
+        ]
+      ],
+      "templates": [],
+      "status": "authored_fixed_shell",
+      "entry_edge": "east",
+      "entry_offset": 0
+    },
+    {
+      "socket_id": "UF-F03",
+      "room_id": "bedroom_2",
+      "floor": "UF",
+      "wing": "east_private",
+      "transform": {
+        "position": [
+          24,
+          6.4,
+          -69
+        ],
+        "rotation_y": 0
+      },
+      "orientation": "south-entry",
+      "size_class": "medium",
+      "footprint": [
+        16,
+        16
+      ],
+      "permitted_categories": [
+        "bedroom"
+      ],
+      "exterior_window": {
+        "allowed": true,
+        "required": false
+      },
+      "service_requirement": "none",
+      "door_connections": [
+        {
+          "door_id": "door_upper_bedroom_2",
+          "position": [
+            24,
+            6.4,
+            -61
+          ],
+          "yaw": 0,
+          "width": 2
+        },
+        {
+          "door_id": "door_bedroom2_ensuite",
+          "position": [
+            32,
+            6.4,
+            -69
+          ],
+          "yaw": -1.5707963267948966,
+          "width": 2
+        }
+      ],
+      "safe_doorway_clearance": {
+        "local_bounds": [
+          -2,
+          4,
+          4,
+          4
+        ],
+        "height": 3.2
+      },
+      "prop_exclusion_zones": [
+        [
+          -2,
+          4,
+          4,
+          4
+        ],
+        [
+          4,
+          -2,
+          4,
+          4
+        ]
+      ],
+      "templates": [],
+      "status": "authored_fixed_shell",
+      "entry_edge": "south",
+      "entry_offset": 0
+    },
+    {
+      "socket_id": "UF-F04",
+      "room_id": "ensuite_2",
+      "floor": "UF",
+      "wing": "east_private",
+      "transform": {
+        "position": [
+          38,
+          6.4,
+          -69
+        ],
+        "rotation_y": 0
+      },
+      "orientation": "south-entry",
+      "size_class": "medium",
+      "footprint": [
+        12,
+        16
+      ],
+      "permitted_categories": [
+        "bathroom"
+      ],
+      "exterior_window": {
+        "allowed": true,
+        "required": false
+      },
+      "service_requirement": "plumbing",
+      "door_connections": [
+        {
+          "door_id": "door_upper_ensuite_2",
+          "position": [
+            38,
+            6.4,
+            -61
+          ],
+          "yaw": 0,
+          "width": 2
+        },
+        {
+          "door_id": "door_bedroom2_ensuite",
+          "position": [
+            32,
+            6.4,
+            -69
+          ],
+          "yaw": -1.5707963267948966,
+          "width": 2
+        }
+      ],
+      "safe_doorway_clearance": {
+        "local_bounds": [
+          -2,
+          4,
+          4,
+          4
+        ],
+        "height": 3.2
+      },
+      "prop_exclusion_zones": [
+        [
+          -2,
+          4,
+          4,
+          4
+        ],
+        [
+          -6,
+          -2,
+          4,
+          4
+        ]
+      ],
+      "templates": [],
+      "status": "authored_fixed_shell",
+      "entry_edge": "south",
+      "entry_offset": 0
+    },
+    {
+      "socket_id": "UF-F05",
+      "room_id": "bedroom_3",
+      "floor": "UF",
+      "wing": "east_private",
+      "transform": {
+        "position": [
+          52,
+          6.4,
+          -69
+        ],
+        "rotation_y": 0
+      },
+      "orientation": "south-entry",
+      "size_class": "medium",
+      "footprint": [
+        16,
+        16
+      ],
+      "permitted_categories": [
+        "bedroom"
+      ],
+      "exterior_window": {
+        "allowed": true,
+        "required": false
+      },
+      "service_requirement": "none",
+      "door_connections": [
+        {
+          "door_id": "door_upper_bedroom_3",
+          "position": [
+            52,
+            6.4,
+            -61
+          ],
+          "yaw": 0,
+          "width": 2
+        }
+      ],
+      "safe_doorway_clearance": {
+        "local_bounds": [
+          -2,
+          4,
+          4,
+          4
+        ],
+        "height": 3.2
+      },
+      "prop_exclusion_zones": [
+        [
+          -2,
+          4,
+          4,
+          4
+        ]
+      ],
+      "templates": [],
+      "status": "authored_fixed_shell",
+      "entry_edge": "south",
+      "entry_offset": 0
+    },
+    {
+      "socket_id": "UF-F06",
+      "room_id": "bedroom_4",
+      "floor": "UF",
+      "wing": "east_private",
+      "transform": {
+        "position": [
+          68,
+          6.4,
+          -69
+        ],
+        "rotation_y": 0
+      },
+      "orientation": "south-entry",
+      "size_class": "medium",
+      "footprint": [
+        16,
+        16
+      ],
+      "permitted_categories": [
+        "bedroom"
+      ],
+      "exterior_window": {
+        "allowed": true,
+        "required": false
+      },
+      "service_requirement": "none",
+      "door_connections": [
+        {
+          "door_id": "door_upper_bedroom_4",
+          "position": [
+            68,
+            6.4,
+            -61
+          ],
+          "yaw": 0,
+          "width": 2
+        }
+      ],
+      "safe_doorway_clearance": {
+        "local_bounds": [
+          -2,
+          4,
+          4,
+          4
+        ],
+        "height": 3.2
+      },
+      "prop_exclusion_zones": [
+        [
+          -2,
+          4,
+          4,
+          4
+        ]
+      ],
+      "templates": [],
+      "status": "authored_fixed_shell",
+      "entry_edge": "south",
+      "entry_offset": 0
+    },
+    {
+      "socket_id": "UF-F07",
+      "room_id": "bedroom_5_attic",
+      "floor": "UF",
+      "wing": "east_private",
+      "transform": {
+        "position": [
+          90,
+          6.4,
+          -69
+        ],
+        "rotation_y": 0
+      },
+      "orientation": "south-entry",
+      "size_class": "large",
+      "footprint": [
+        28,
+        16
+      ],
+      "permitted_categories": [
+        "bedroom"
+      ],
+      "exterior_window": {
+        "allowed": true,
+        "required": false
+      },
+      "service_requirement": "none",
+      "door_connections": [
+        {
+          "door_id": "door_upper_bedroom_5_attic",
+          "position": [
+            90,
+            6.4,
+            -61
+          ],
+          "yaw": 0,
+          "width": 2
+        }
+      ],
+      "safe_doorway_clearance": {
+        "local_bounds": [
+          -2,
+          4,
+          4,
+          4
+        ],
+        "height": 3.2
+      },
+      "prop_exclusion_zones": [
+        [
+          -2,
+          4,
+          4,
+          4
+        ]
+      ],
+      "templates": [],
+      "status": "reserved_special_shell",
+      "entry_edge": "south",
+      "entry_offset": 0
+    },
+    {
+      "socket_id": "UF-F08",
+      "room_id": "bathroom_1",
+      "floor": "UF",
+      "wing": "east_private",
+      "transform": {
+        "position": [
+          44,
+          6.4,
+          -45
+        ],
+        "rotation_y": 0
+      },
+      "orientation": "north-entry",
+      "size_class": "medium",
+      "footprint": [
+        16,
+        16
+      ],
+      "permitted_categories": [
+        "bathroom"
+      ],
+      "exterior_window": {
+        "allowed": true,
+        "required": false
+      },
+      "service_requirement": "plumbing",
+      "door_connections": [
+        {
+          "door_id": "door_upper_bathroom_1",
+          "position": [
+            44,
+            6.4,
+            -53
+          ],
+          "yaw": 0,
+          "width": 2
+        }
+      ],
+      "safe_doorway_clearance": {
+        "local_bounds": [
+          -2,
+          -8,
+          4,
+          4
+        ],
+        "height": 3.2
+      },
+      "prop_exclusion_zones": [
+        [
+          -2,
+          -8,
+          4,
+          4
+        ]
+      ],
+      "templates": [],
+      "status": "authored_fixed_shell",
+      "entry_edge": "north",
+      "entry_offset": 0
+    },
+    {
+      "socket_id": "UF-F09",
+      "room_id": "bathroom_2",
+      "floor": "UF",
+      "wing": "east_private",
+      "transform": {
+        "position": [
+          60,
+          6.4,
+          -45
+        ],
+        "rotation_y": 0
+      },
+      "orientation": "north-entry",
+      "size_class": "medium",
+      "footprint": [
+        16,
+        16
+      ],
+      "permitted_categories": [
+        "bathroom"
+      ],
+      "exterior_window": {
+        "allowed": true,
+        "required": false
+      },
+      "service_requirement": "plumbing",
+      "door_connections": [
+        {
+          "door_id": "door_upper_bathroom_2",
+          "position": [
+            60,
+            6.4,
+            -53
+          ],
+          "yaw": 0,
+          "width": 2
+        }
+      ],
+      "safe_doorway_clearance": {
+        "local_bounds": [
+          -2,
+          -8,
+          4,
+          4
+        ],
+        "height": 3.2
+      },
+      "prop_exclusion_zones": [
+        [
+          -2,
+          -8,
+          4,
+          4
+        ]
+      ],
+      "templates": [],
+      "status": "authored_fixed_shell",
+      "entry_edge": "north",
+      "entry_offset": 0
+    },
+    {
+      "socket_id": "UF-F10",
+      "room_id": "guest_lounge",
+      "floor": "UF",
+      "wing": "east_private",
+      "transform": {
+        "position": [
+          84,
+          6.4,
+          -45
+        ],
+        "rotation_y": 0
+      },
+      "orientation": "north-entry",
+      "size_class": "large",
+      "footprint": [
+        32,
+        16
+      ],
+      "permitted_categories": [
+        "guest_lounge"
+      ],
+      "exterior_window": {
+        "allowed": true,
+        "required": false
+      },
+      "service_requirement": "none",
+      "door_connections": [
+        {
+          "door_id": "door_upper_guest_lounge",
+          "position": [
+            84,
+            6.4,
+            -53
+          ],
+          "yaw": 0,
+          "width": 2
+        }
+      ],
+      "safe_doorway_clearance": {
+        "local_bounds": [
+          -2,
+          -8,
+          4,
+          4
+        ],
+        "height": 3.2
+      },
+      "prop_exclusion_zones": [
+        [
+          -2,
+          -8,
+          4,
+          4
+        ]
+      ],
+      "templates": [],
+      "status": "authored_fixed_shell",
+      "entry_edge": "north",
+      "entry_offset": 0
+    }
+  ],
+  "stairs": [
+    {
+      "id": "grand_stair",
+      "from": "grand_stair_hall",
+      "to": "upper_landing",
+      "position": [
+        0,
+        0,
+        -45
+      ],
+      "width": 6,
+      "run": 18,
+      "rise": 6.4
+    },
+    {
+      "id": "service_stair",
+      "from": "utility_service",
+      "to": "kitchen",
+      "position": [
+        41,
+        -6.4,
+        -54
+      ],
+      "width": 4,
+      "run": 12,
+      "rise": 6.4
+    }
+  ],
+  "reserved_wing_connections": [
+    {
+      "id": "grand_west_GF",
+      "position": [
+        -16,
+        0,
+        -42
+      ],
+      "orientation": 1.5707963267948966,
+      "active": false
+    }
+  ],
+  "critical_route": [
+    "driveway",
+    "entrance_hall",
+    "foyer_reception",
+    "grand_stair_hall",
+    "long_gallery"
+  ],
+  "benchmark_route": [
+    "long_gallery",
+    "drawing_room"
+  ],
+  "basement_route": [
+    "kitchen",
+    "utility_service",
+    "service_corridor",
+    "wine_room",
+    "security_cctv",
+    "cyber_mainframe"
+  ],
+  "random_room_compatibility_rules": {
+    "authored_sockets_only": true,
+    "fixed_structure_immutable": true,
+    "permanent_once_assigned": true,
+    "persistence_scope": "run",
+    "template_definition": "godot/assets/neon-mansion/layout/room_templates.json",
+    "active_socket_ids": [
+      "GF-R01"
+    ],
+    "reserved_random_socket_ids": [
+      "UF-R01",
+      "UF-R02"
+    ],
+    "required_matches": [
+      "size_class",
+      "footprint",
+      "floor",
+      "wing",
+      "entry_edge",
+      "entry_offset",
+      "entry_width",
+      "service_requirement"
+    ],
+    "category_rule": "Template category must be permitted by the socket and template ID must be explicitly allowlisted.",
+    "window_rule": "Template window need requires socket permission; a socket-required window requires a template with a window.",
+    "clearance_rule": "Actual prop bounds must stay inside footprint and outside doorway clearance and prop exclusion zones.",
+    "persistence_rule": "Persist first assignment; returning or changing seed must not reroll. Preserve malformed or incompatible save files.",
+    "generation_scope": "Two authored interchangeable templates only; no free placement, shell regeneration or corridor changes."
+  },
+  "notes": [
+    "Drawing Room retained as an extra benchmark room alongside the map's Lounge.",
+    "Wine and security are progression destinations; no lock/gameplay implementation yet.",
+    "Exterior diagram adjacency is symbolic; traversable grounds connect the outdoor zones.",
+    "Foyer and Upper Landing are explicit IDs; historical entrance-to-stair semantic door link remains and records via foyer.",
+    "Roof/attic ascent beyond UF not built."
+  ]
+}

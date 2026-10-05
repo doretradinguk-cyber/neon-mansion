@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "review_status": "All nine local images inspected; reference family translated into Godot geometry. No source bitmap is used as a runtime texture.",
+  "source_root": "firefly/door-references/raw",
+  "usable_decal_or_screen_assets": [],
+  "exterior_note": "No dedicated exterior/garden source in this pack. Variant derived from standard frame and bathroom glazing vocabulary; no new reference invented.",
+  "nightmare_note": "No dedicated Nightmare door board found. Procedural optional overlay uses the established separate corruption palette; all mansion instances start disabled.",
+  "sources": [
+    {
+      "source_filename": "Retro_Nightmare_Frequency___Scene_1_Production_Board-1.png",
+      "dimensions": [
+        1379,
+        770
+      ],
+      "observed_content": "Standard rectangular single-door state study",
+      "classification": [
+        "modelling reference",
+        "frame/profile reference",
+        "handle/hardware reference",
+        "emissive-trim reference",
+        "access-panel / room-number reference",
+        "reference-only / unsuitable for direct runtime use"
+      ],
+      "usable_decal_or_screen_asset": false,
+      "suitable_for_direct_runtime_use": false,
+      "useful_details": "Lever on round rose; magenta jamb/lintel bars; teal stepped frame; small green upper-frame light",
+      "runtime_family": "standard",
+      "photoshop_cleanup": "For production decal/screen extraction: isolate individual symbols/controls; remove headings, state captions, black background, perspective and baked glow; redraw clean glyphs/text and export verified alpha. These boards need no cleanup for modelling-reference use.",
+      "model_review": "Views are illustrative rather than consistent orthographic/scale drawings; redraw profiles and confirm hinge/hardware positions in 3D."
+    },
+    {
+      "source_filename": "Retro_Nightmare_Frequency___Scene_1_Production_Board-2.png",
+      "dimensions": [
+        1379,
+        770
+      ],
+      "observed_content": "Wide luxury pointed-arch single-door state study",
+      "classification": [
+        "modelling reference",
+        "frame/profile reference",
+        "handle/hardware reference",
+        "emissive-trim reference",
+        "access-panel / room-number reference",
+        "reference-only / unsuitable for direct runtime use"
+      ],
+      "usable_decal_or_screen_asset": false,
+      "suitable_for_direct_runtime_use": false,
+      "useful_details": "Gothic arch, triple panel inlay, ornamental pull, magenta arch trim and green side indicator",
+      "runtime_family": "luxury",
+      "photoshop_cleanup": "For production decal/screen extraction: isolate individual symbols/controls; remove headings, state captions, black background, perspective and baked glow; redraw clean glyphs/text and export verified alpha. These boards need no cleanup for modelling-reference use.",
+      "model_review": "Views are illustrative rather than consistent orthographic/scale drawings; redraw profiles and confirm hinge/hardware positions in 3D."
+    },
+    {
+      "source_filename": "Retro_Nightmare_Frequency___Scene_1_Production_Board-3.png",
+      "dimensions": [
+        1379,
+        770
+      ],
+      "observed_content": "Grand pointed-arch double-door state study",
+      "classification": [
+        "modelling reference",
+        "frame/profile reference",
+        "handle/hardware reference",
+        "emissive-trim reference",
+        "access-panel / room-number reference",
+        "reference-only / unsuitable for direct runtime use"
+      ],
+      "usable_decal_or_screen_asset": false,
+      "suitable_for_direct_runtime_use": false,
+      "useful_details": "Paired leaves/pulls, arch/transom, green invented glyph signage and magenta arch",
+      "runtime_family": "grand_double",
+      "photoshop_cleanup": "For production decal/screen extraction: isolate individual symbols/controls; remove headings, state captions, black background, perspective and baked glow; redraw clean glyphs/text and export verified alpha. These boards need no cleanup for modelling-reference use.",
+      "model_review": "Views are illustrative rather than consistent orthographic/scale drawings; redraw profiles and confirm hinge/hardware positions in 3D."
+    },
+    {
+      "source_filename": "Retro_Nightmare_Frequency___Scene_1_Production_Board-4.png",
+      "dimensions": [
+        1379,
+        770
+      ],
+      "observed_content": "Bedroom single-door state study",
+      "classification": [
+        "modelling reference",
+        "frame/profile reference",
+        "handle/hardware reference",
+        "emissive-trim reference",
+        "access-panel / room-number reference",
+        "reference-only / unsuitable for direct runtime use"
+      ],
+      "usable_decal_or_screen_asset": false,
+      "suitable_for_direct_runtime_use": false,
+      "useful_details": "Shallow pointed panel inset, lever/backplate, bed pictogram and magenta leaf border",
+      "runtime_family": "bedroom_bathroom",
+      "photoshop_cleanup": "For production decal/screen extraction: isolate individual symbols/controls; remove headings, state captions, black background, perspective and baked glow; redraw clean glyphs/text and export verified alpha. These boards need no cleanup for modelling-reference use.",
+      "model_review": "Views are illustrative rather than consistent orthographic/scale drawings; redraw profiles and confirm hinge/hardware positions in 3D."
+    },
+    {
+      "source_filename": "Retro_Nightmare_Frequency___Scene_1_Production_Board-5.png",
+      "dimensions": [
+        1379,
+        770
+      ],
+      "observed_content": "Bathroom/en-suite glazed single-door state study",
+      "classification": [
+        "modelling reference",
+        "frame/profile reference",
+        "handle/hardware reference",
+        "emissive-trim reference",
+        "access-panel / room-number reference",
+        "reference-only / unsuitable for direct runtime use"
+      ],
+      "usable_decal_or_screen_asset": false,
+      "suitable_for_direct_runtime_use": false,
+      "useful_details": "Glazed upper panel, lower solid panel, dark lever, green privacy icon, magenta leaf/frame edges",
+      "runtime_family": "bedroom_bathroom; exterior_garden (derived)",
+      "photoshop_cleanup": "For production decal/screen extraction: isolate individual symbols/controls; remove headings, state captions, black background, perspective and baked glow; redraw clean glyphs/text and export verified alpha. These boards need no cleanup for modelling-reference use.",
+      "model_review": "Views are illustrative rather than consistent orthographic/scale drawings; redraw profiles and confirm hinge/hardware positions in 3D."
+    },
+    {
+      "source_filename": "Retro_Nightmare_Frequency___Scene_1_Production_Board-6.png",
+      "dimensions": [
+        1379,
+        770
+      ],
+      "observed_content": "Kitchen/service single-door state study",
+      "classification": [
+        "modelling reference",
+        "frame/profile reference",
+        "handle/hardware reference",
+        "emissive-trim reference",
+        "access-panel / room-number reference",
+        "reference-only / unsuitable for direct runtime use"
+      ],
+      "usable_decal_or_screen_asset": false,
+      "suitable_for_direct_runtime_use": false,
+      "useful_details": "Porthole, push plate with PUSH text, offset magenta contour, paired green access controls",
+      "runtime_family": "kitchen_service",
+      "photoshop_cleanup": "For production decal/screen extraction: isolate individual symbols/controls; remove headings, state captions, black background, perspective and baked glow; redraw clean glyphs/text and export verified alpha. These boards need no cleanup for modelling-reference use.",
+      "model_review": "Views are illustrative rather than consistent orthographic/scale drawings; redraw profiles and confirm hinge/hardware positions in 3D."
+    },
+    {
+      "source_filename": "Retro_Nightmare_Frequency___Scene_1_Production_Board-7.png",
+      "dimensions": [
+        1379,
+        770
+      ],
+      "observed_content": "Library/study gothic single-door state study",
+      "classification": [
+        "modelling reference",
+        "frame/profile reference",
+        "handle/hardware reference",
+        "emissive-trim reference",
+        "access-panel / room-number reference",
+        "reference-only / unsuitable for direct runtime use"
+      ],
+      "usable_decal_or_screen_asset": false,
+      "suitable_for_direct_runtime_use": false,
+      "useful_details": "Pointed arch, stacked panels, ornate lever/backplate, book icon and magenta edge trim",
+      "runtime_family": "luxury; bedroom_bathroom",
+      "photoshop_cleanup": "For production decal/screen extraction: isolate individual symbols/controls; remove headings, state captions, black background, perspective and baked glow; redraw clean glyphs/text and export verified alpha. These boards need no cleanup for modelling-reference use.",
+      "model_review": "Views are illustrative rather than consistent orthographic/scale drawings; redraw profiles and confirm hinge/hardware positions in 3D."
+    },
+    {
+      "source_filename": "Retro_Nightmare_Frequency___Scene_1_Production_Board-8.png",
+      "dimensions": [
+        1379,
+        770
+      ],
+      "observed_content": "Games/arcade rectangular single-door state study",
+      "classification": [
+        "modelling reference",
+        "frame/profile reference",
+        "handle/hardware reference",
+        "emissive-trim reference",
+        "access-panel / room-number reference",
+        "reference-only / unsuitable for direct runtime use"
+      ],
+      "usable_decal_or_screen_asset": false,
+      "suitable_for_direct_runtime_use": false,
+      "useful_details": "Cyan vertical spine, controller access pictogram, dark lever and magenta outlined panel",
+      "runtime_family": "theatre_games_arcade",
+      "photoshop_cleanup": "For production decal/screen extraction: isolate individual symbols/controls; remove headings, state captions, black background, perspective and baked glow; redraw clean glyphs/text and export verified alpha. These boards need no cleanup for modelling-reference use.",
+      "model_review": "Views are illustrative rather than consistent orthographic/scale drawings; redraw profiles and confirm hinge/hardware positions in 3D."
+    },
+    {
+      "source_filename": "Retro_Nightmare_Frequency___Scene_1_Production_Board-9.png",
+      "dimensions": [
+        1379,
+        770
+      ],
+      "observed_content": "Security/CCTV single-door state study",
+      "classification": [
+        "modelling reference",
+        "frame/profile reference",
+        "handle/hardware reference",
+        "emissive-trim reference",
+        "access-panel / room-number reference",
+        "reference-only / unsuitable for direct runtime use"
+      ],
+      "usable_decal_or_screen_asset": false,
+      "suitable_for_direct_runtime_use": false,
+      "useful_details": "Armoured riveted panel, keypad, CCTV icon and notched magenta contour",
+      "runtime_family": "security_cyber",
+      "photoshop_cleanup": "For production decal/screen extraction: isolate individual symbols/controls; remove headings, state captions, black background, perspective and baked glow; redraw clean glyphs/text and export verified alpha. These boards need no cleanup for modelling-reference use.",
+      "model_review": "Views are illustrative rather than consistent orthographic/scale drawings; redraw profiles and confirm hinge/hardware positions in 3D."
+    }
+  ]
+}

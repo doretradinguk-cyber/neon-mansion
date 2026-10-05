@@ -11,6 +11,10 @@ firefly/architecture-references/raw/
 # Local temporary review exports
 firefly/review-temp/
 
+# Imported reference boards and local validation/run artifacts are not runtime assets.
+godot/assets/neon-mansion/materials/firefly-source/
+work/
+
 # OS/editor noise
 Thumbs.db
 .DS_Store

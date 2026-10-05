@@ -1,226 +1,135 @@
 # Neon Mansion — handover
 
-Updated: 5 October 2026.
+Updated 5 October 2026. Work performed only inside C:\GitHub\neon-mansion. Nothing reset, cleaned, deleted, checked out over, merged or published. The user has authorized the Baseline v1 local checkpoint commit; pushing is not authorized. Existing uncommitted work was inspected first. The previous handover and the previous foundation entry scene/stair script are preserved in work/map-foundation alongside the before-state hash inventory. Existing owned room scenes, original foundation helpers, door behavior, materials, reference images and vendor sources are retained.
 
-## Purpose
-Neon Mansion is the reusable 3D mansion / virtual-layer project for **Neo-Gothic Glitch**. The Book of Hosts Virtual Manor remains reference/rollback material only; Neon Mansion is now a clean Godot 4.7 project with its own modular architecture, materials, room rules and Firefly-assisted art pipeline.
+## Approved structural baseline — v1
 
-## Current local development state
-The active working copy is expected at:
+The current mansion foundation has been manually tested by the user and the layout is approved as the structural baseline. Codex validation passed in Godot 4.7.2. Grand Stair Hall, upper landing/balconies, doors, basement traversal and the persistent random socket prototype are working.
 
-`C:\GitHub\neon-mansion`
+Permanent planning records: `docs/MANSION-MAP.md`, `design/mansion-map.json` and `docs/MANSION-CHANGELOG.md`. Future structural alterations must update the map, runtime definition, planning snapshot and changelog together. Random rooms may only attach to approved sockets. Nightmare Frequency remains disabled by default.
 
-Important: the current playable Godot foundation and recent Codex polish/layout/door work have been developed as **local uncommitted work** while testing. Do not reset, clean, checkout over, delete or blindly replace the local working tree before reviewing it.
+## Current playable build
 
-The remote `main` branch contains the asset/import/documentation pipeline, but the latest tested Godot scene changes may still only exist locally until the user approves the checkpoint.
+The user-supplied THE SANCTUM — MANSION MAP is now the structural authority. The earlier instruction to stop at four rooms is superseded by this authorized skeleton pass. Ordinary rooms are structural shells with basic lighting and labels; the Drawing Room is the furnished benchmark. The former four room IDs and three door IDs remain.
 
-## Current playable foundation
-A working first-person four-room slice has been created and tested in Godot 4.7.2:
+Open godot/project.godot in Godot 4.7.2 and press F5. The player starts on the driveway at (0,0.05,32), facing the entrance. WASD/arrows move; mouse looks; E operates a focused door leaf; Escape releases capture and left-click captures again. An open door must be targeted at its moved leaf to close it.
 
-Entrance / Reception Hall -> Grand Stair Hall -> Long Gallery -> Drawing Room
+Permanent arrival route:
+Driveway / Exterior -> Entrance Hall -> Foyer / Reception -> Grand Stair Hall -> Long Gallery -> Drawing Room / mansion wings.
 
-Verified during local testing:
-- first-person movement works
-- mouse look works
-- door interaction exists
-- collision is present
-- stair traversal works
-- room/door IDs are visible and retained
-- teal/charcoal base palette is present
-- magenta emissive accents are present
-- cyan/acid-green indicators are present
-- no obvious missing-material pink/error surfaces were seen in the tested screenshots
+The front door is about 48 metres from the first stair, with the Entrance Hall and foyer intervening. The stair toe is 12 metres beyond the stair-hall threshold. Stairs are not immediately behind the front door.
 
-## Current layout issue / required correction
-The first tested layout placed the Grand Stair Hall too directly behind the first doorway. This makes the mansion feel cramped and abrupt.
+## Authored structure and proportions
 
-Required flow:
+World axes: X runs along the galleries; -Z runs inward from the driveway; Y is elevation. Ground floor 0 m, upper floor +6.4 m, basement -6.4 m.
 
-Entrance Hall -> short reception/foyer transition -> Grand Stair Hall -> Long Gallery -> Drawing Room
+| Anchor | Centre (X,Y,Z), metres | Footprint | Ceiling / structure |
+| --- | --- | --- | --- |
+| Entrance Hall | (0,0,0) | 20 x 24 m | 10 m, multiple pilaster/window bays, coffered ceiling and chandelier |
+| Foyer / Reception | (0,0,-18) | 12 x 12 m | 6 m, console/cabinet, seating, side panels and practical lights |
+| Grand Stair Hall | (0,0,-42) | 32 x 36 m | 14 m, broad arrival floor, central staircase and open side balconies |
+| Long Gallery | (68,0,-42) | 104 x 8 m | 6 m, horizontal GF circulation with repeated art/light/ceiling bays |
+| Upper Landing | (0,6.4,-57) | 32 x 6 m rear deck | Side returns 6 x 20 m; principal void open to stair hall below |
+| Upper Corridor | (68,6.4,-57) | 104 x 8 m | 6 m, bedroom/bathroom sockets on both sides |
+| Drawing Room | (24,0,-30) | 16 x 16 m | 5.5 m, seating group, table, rug, walnut panels, artwork, lamps and ceiling detail |
 
-Grand Stair Hall should become a true anchor room:
-- wider and deeper
-- staircase set back from the entrance
-- meaningful lower-floor arrival space before the first step
-- larger visible landing/balcony
-- clear railing silhouette
-- room for future left/right wing connections
-- stronger mansion proportions and visual hierarchy
+Grand staircase: 6 m wide, 18 m run, 6.4 m rise, 32 visible steps. Toe Z=-36; top Z=-54; rear landing Z=-54..-60. Ramp collision provides continuous movement, with slope handrails, open balusters and continuous balcony guards. Side balcony entry lanes X=10..16 and -16..-10 remain open. A lower west-wing marker at (-16,0,-42) is reserved/inactive; the east GF gallery and east UF corridor are live connections.
 
-Do not expand to the full mansion until this anchor flow feels correct.
+Service staircase: 4 m wide, 12 m run, 6.4 m rise, 32 steps, under the kitchen. Its shaft is explicitly cut through kitchen floor, utility ceiling and exterior ground collision. All exposed upper edges are guarded except the authored stair entry.
 
-## Visual benchmark
-The current geometry is structurally useful but still needs environmental dressing and lighting polish to match the Firefly benchmark.
+The machine-readable authority is godot/assets/neon-mansion/layout/mansion_layout.json: 43 named spatial definitions, 41 doors, 22 fixed/random/special socket definitions and two vertical connections. These are shell/discovery spaces, not 43 furnished rooms. The Drawing Room is retained in addition to the map's Lounge. The additional UF-R02 is an authored reserved socket.
 
-Target language:
-- dark teal / charcoal architecture
-- near-black doors
-- hot-magenta emissive trims
-- restrained cyan and acid-green diagnostics
-- dark tiled/polished flooring
-- cel-shaded / graphic low-poly presentation
-- controlled neon spill rather than neon on every surface
-- readable architecture despite a dark horror mood
-- 80s/90s retrowave + neo-gothic atmosphere
+### Map structure implemented
 
-The Drawing Room should become the first quality-benchmark room before duplicating the style across the remaining mansion.
+- Exterior: Driveway, Front Garden, Rear Garden, Pool Terrace, Shed / Workshop and Garage. Outdoor ground is shared and traversable around the mansion. Gardens and pool are structural placeholders; no swimming or complete landscape dressing.
+- GF anchors: Entrance Hall, Foyer / Reception, Grand Stair Hall, Long Gallery, Lounge, Kitchen and Pool Hub, plus the Drawing Room benchmark.
+- GF defined shells: Pantry, Dining Room, Library, Study, Conservatory, Home Theatre, Games Room, Gym, Arcade and GF-R01.
+- UF: Upper Landing/open stair void, Upper Corridor, Master Bedroom, En-Suite 1, Bedroom 2, En-Suite 2, Bedrooms 3 and 4, Bedroom 5 / Attic special shell, Bathrooms 1 and 2, Guest Lounge, UF-R01 and UF-R02.
+- Basement: Kitchen service descent -> Utility / Service -> Service Corridor -> Wine Room -> Security / CCTV -> Cyber Room / Mainframe. Wine/security connect sideways; the mainframe turns north beyond security. It is a progression route, not a decorative straight row.
 
-## Nightmare Frequency rule
-Nightmare Frequency remains a **separate disabled visual state** during normal mansion testing. It may later add code rain, corrupted signage, Jester imagery, signal fractures, emissive cracks, glitch distortion and fog, but normal materials must remain intact and reusable.
+The attic is a special upper-floor shell; no additional attic storey/access stair has been added. Wine/security are designated future locked destinations, but all foundation doors are operable and no lock gameplay is implemented.
 
-## Firefly room pipeline
-The 30 Firefly room concepts are visual targets, not literal 3D rooms.
+## Random sockets and persistence
 
-Use them to define:
-- room identity
-- major prop priorities
-- palette
-- lighting
-- door relationships
-- backdrop/screen/decal opportunities
+All variation is constrained to explicit socket IDs. Fixed and special shells also have socket records, so later furnishing cannot alter the circulation spine. Each record includes floor, wing/zone, world transform, entry orientation/offset, footprint/size class, permitted categories, exterior-window flags, plumbing/service constraints, door transforms, safe clearance and prop exclusions. Fixed shells do not randomly populate.
 
-Source master stays in `the-drop-zone`. Local references are ignored by Git. See `docs/FIREFLY-ROOM-PIPELINE.md`.
+GF-R01 is the working prototype, at (112,0,-30), 16 x 16 m, with its north doorway at (112,0,-38). It accepts two authored templates in layout/room_templates.json:
 
-## Firefly texture/material pipeline
-Firefly texture/support packs are imported as working references first. Do not assume every composite board is a direct UV-ready texture.
+- music: Music Salon, with seating, cabinet and table.
+- study: Private Study, with desk/table, chair and shelving.
 
-Current runtime-facing material families include/target:
-- teal wall
-- charcoal wall
-- near-black door
-- dark tile
-- dark marble
-- walnut/dark wood
-- brass/dark metal
-- smoked glass
-- magenta emissive trim
-- cyan emissive trim
-- acid-green indicator
-- Nightmare corruption base/emissive variants
+Both reuse exactly the same shell, doorway and corridor. Furniture is authored outside the door exclusion lane, and actual vendor mesh bounds are checked against the shell and exclusions during validation. The shared content builder uses the real inspected KayKit furniture assets.
 
-Raw source references remain uncommitted unless deliberately curated into final runtime assets.
+socket_assignments.gd validates footprint, category, floor, wing, entry edge/offset/width, service requirements and window constraints. It stores the selected template immediately when first assigned. Returning/reloading uses that assignment, irrespective of a changed seed. Malformed/incompatible saves are preserved and reported, not silently overwritten.
 
-## Firefly door pipeline
-A dedicated door import workflow exists:
+The current prototype default run_seed=0 chooses music for a fresh file. This is a deterministic foundation, not unrestricted random generation. Runtime assignments default to work/map-foundation/run-state.json inside the repository. For a separate test run, set assignment_file to a NEW path under work/map-foundation and use run_seed=1 to choose study. Do not discard existing run files. UF-R01/UF-R02 and the fixed socket records remain reserved shells.
 
-`tools/import-firefly-doors.ps1`
+## Door system
 
-Documentation:
+All eight existing families remain intact: standard, luxury, grand double, bedroom/bathroom, service, theatre/games/arcade, security/cyber and exterior/garden. One additional grand_anchor profile/scene reuses the same door system with two 3 x 5 m leaves, in 6.2 x 5.12 m portals for the entrance/foyer/stair/gallery/landing anchors.
 
-`docs/FIREFLY-DOOR-PIPELINE.md`
+Historical IDs:
+- door_entrance_stair retains entrance_hall -> grand_stair_hall semantic links, records via foyer_reception, and sits at the foyer/stair boundary.
+- door_stair_gallery retains grand_stair_hall -> long_gallery; it is now at the ground-floor east opening.
+- door_gallery_drawing retains long_gallery -> drawing_room; it now connects the ground-floor gallery to the benchmark.
 
-The door pack remains mastered in Drop Zone and is copied into ignored local reference storage for inspection. It must be classified before runtime use.
+Interaction/controller code, opening timing, debounce, raycast owner lookup and signals were not changed. Normal single-leaf dimensions remain 1.92 x 2.78 x 0.16 m. The two anchor doors among the historical IDs now use the deliberately larger double-leaf collider profile; this is a documented scale/geometry change, not removal of collision. Decorative hardware, frames, panels and lights remain collision-free. All 41 installed doors passed closed-block/open-pass/close and ray-owner checks.
 
-Target reusable door families:
-- standard single
-- luxury single
-- grand double
-- bedroom/bathroom/en-suite
-- kitchen/service
-- library/study
-- games/arcade/theatre
-- security/CCTV
-- cyber mainframe high-security
-- exterior/garden/terrace
+## Visual/art integration
 
-Preserve door IDs, interaction behavior, collision and room connections. Nightmare-corrupted doors are optional visual variants, not replacements for the normal door scene.
+New reusable interior_kit.gd and light_fixture.tscn/gd provide pilasters, panel mouldings, brass dado/coffer details, framed art, decorative smoked sash windows, practical sconces, simplified chandeliers, labels and furniture wrappers. Materials remain shared Neon Mansion resources: teal/charcoal, near-black doors, dark tile/marble, walnut, brass/dark metal, smoked glass, magenta and cyan trim, acid-green diagnostics. garden_ground.tres adds a restrained owned outdoor material.
 
-Codex has completed the current door-system pass locally. Before committing, test the revised door scenes in Godot for scale, interaction, swing/clearance and collisions.
+Normal lighting mixes cool practicals with restrained warm luxury accents; a shadowed exterior moon improves the approach. Subtle fog, restrained glow and 32-step screen-space reflection settings support readability. Neon is concentrated on door frames, occasional stair treads and short indicators rather than every edge.
 
-## Firefly architectural-detail pipeline — ready with two packs
-The Drop Zone now contains two approved architectural-detail packs from Firefly. The importer has been updated to import **all matching architecture/detail ZIPs together** in one session rather than only the newest pack.
+All 25 architectural boards (11 pack 1, 14 pack 2) were individually opened and classified. layout/architecture_manifest.json records filename, observed contents, roles, suitability, corresponding Godot helper and Photoshop requirements.
 
-Importer:
+Useful current references:
+- Pack 2 boards 1/11: wall mouldings, wainscot/bay/pilaster grammar.
+- Pack 2 boards 3/12: coffered/ornate ceiling grammar.
+- Pack 2 boards 5/13: sconce/chandelier/practical fixture silhouettes.
+- Pack 2 board 4: smoked/privacy/sash window vocabulary.
+- Pack 2 board 6: upholstery/walnut/brass palette.
+- Pack 2 board 7: room/access signage vocabulary, rebuilt as literal Godot labels.
+- Pack 1 board 10: warm/cool luxury lighting balance.
+- Surface/floor swatch boards: existing procedural material families, never whole-board UV textures.
 
-`tools/import-firefly-architecture.ps1`
+No new raw architecture bitmap was promoted into a runtime texture. Labelled swatch sheets, modelling studies and composite masks remain reference-only. The checkpoint replaces provisional raw-board sampling with two owned procedural placeholder art designs in the same frames. No raw Firefly bitmap is required by the committed runtime; originals remain untouched locally.
 
-Documentation:
+All 25 architectural composite images require component extraction/redrawing and Photoshop cleanup before direct texture/decal/screen/overlay use. Common work: remove captions/borders/checkerboards/backgrounds, verify real alpha, straighten perspective, remove baked glow/reflections, repair generated text, make suitable planar swatches seamless, separate normal and corrupted layers. Pack 1 boards 5/6/7/8/9 and pack 2 boards 4/7/8/9 contain potentially useful decal/screen/backdrop/mask/VFX components; none is approved wholesale.
 
-`docs/FIREFLY-ARCHITECTURE-PIPELINE.md`
+The earlier nine door boards remain modelling references; see architecture/doors/firefly_door_manifest.json. The earlier material pack classification remains materials/firefly_manifest.json. The 30 room concepts are described in design/room-catalog.json, but their image folder is absent locally. Drop Zone was not accessed or imported during this pass.
 
-This workflow now:
-- archives both master ZIPs
-- extracts each pack into its own subfolder
-- creates one combined manifest with `source_pack`
-- prefixes local reference filenames with the source pack key to avoid collisions
-- keeps raw working references out of Git
+## Nightmare Frequency
 
-The packs cover:
-- wall treatments / mouldings / trim
-- floors
-- ceilings
-- windows / glass
-- lighting fixtures
-- furniture materials
-- signage / access panels
-- damage / ageing
-- Nightmare overlays
-- exterior materials
+NightmareLayer remains separate, invisible and disabled by default. Every door's Nightmare overlay also defaults off and passed the final checks. The master layer lists prepared hooks for emissive cracks, code contamination, corrupted signage, Jester interference, glitch overlays and altered lights. Labels and fixtures expose hook groups; light fixtures can restore their normal colour after a future frequency change. Normal geometry/materials have no dependency on an enabled corruption state. Full corrupted gameplay/VFX are not implemented.
 
-The usual rule applies: Drop Zone is the master archive; local working references are ignored; only reviewed assets are promoted into runtime Godot folders.
+## Validation
 
-## Stable mansion map architecture — next major system
-After the current first-slice visual/door/architecture test, create the permanent mansion map before building the remaining rooms.
+Installed executable: C:\Users\doret\Videos\Godot_v4.7.2-stable_win64.exe\Godot_v4.7.2-stable_win64.exe. Reported engine version 4.7.2.stable.official.ed1daf0bf.
 
-The governing rule is:
+- Main project and rendered skeleton load successfully.
+- Headless deterministic 60-FPS physics: all 41 actual doors, IDs/links, arrival route and return, ascent/descent of grand stairs, both balcony guard directions, landing and upper corridor alignment, service stair descent/ascent, basement progression and return.
+- Walking lanes on both sides of the Drawing Room seating/table pass.
+- Both random templates: identical shell/door/corridor, actual mesh bounds within shell and clear of the door exclusions, traversable entrance, saved assignment reload without reroll.
+- Authored room footprint overlap checks pass at each level. Open landing/ground overlay volumes are intentional.
+- Room graph reachability covers all 43 IDs. This is traversal/adjacency validation, not an AI NavigationMesh bake.
+- Rendered input: pointer capture, yaw/pitch and limit, keyboard movement, focused E opening and reverse-side leaf closing, Escape release and click recapture pass.
+- Nightmare master and all door layers remain off.
+- No parser/resource/shader errors in final checks.log, input.log, render.log or final-detail-render.log.
+- Nine camera PNGs under work/map-foundation were generated and visually reviewed; final foyer/gallery details were recaptured after the sign/headroom adjustment.
 
-**The mansion structural skeleton always stays the same. Random rooms attach to fixed authored sockets.**
+Development checks caught and fixed the terrain bridging the service shaft and a balcony guard closing the side return. Early failed test logs are retained for traceability. The initial headless mouse-input attempt was an unsuitable input harness; rendered input verifies the real controller instead.
 
-This prevents sloppy procedural generation such as stairs in wrong places, impossible corridors, room overlap, blocked doors and misplaced furniture.
+## Remaining limitations / bugs
 
-Fixed/authored structure should include:
-- mansion exterior footprint
-- driveway/front approach
-- Entrance / Reception Hall
-- foyer transition
-- Grand Stair Hall
-- all staircases
-- upper landing/balcony
-- main corridor spine
-- Long Gallery
-- fixed wing junctions
-- service/kitchen hub
-- pool/garden hub
-- major exterior connections
-- important exterior-facing walls/windows
-- anchor doors and required story routes
+No unresolved blocking traversal, collision, parser or resource failures in the final tests. Manual feel/scale approval is complete for Baseline v1. Hardware performance profiling remains future work. Exterior landscaping/roof silhouette, ordinary room furnishing, pool swimming, attic ascent, locks/puzzles, complete Nightmare VFX, AI navigation and networking are outside this foundation implementation. Decorative windows are smoked panels on opaque wall backing, not full cut-through openings. Runtime room nodes are built from authored JSON when playing; the editor entry scene itself remains compact.
 
-Random/semi-random rooms only populate designated sockets. Each socket must define floor, wing, size class, orientation, allowed room categories, exterior-wall requirements, service/plumbing constraints and connection transform.
+The existing player fall-respawn behavior is unchanged. Normal basement floor at -6.4 m stays above its -10 m fallback threshold.
 
-Every generated room must define safe doorway placement, prop/no-block zones and compatibility metadata before it can spawn. Once a random room is discovered, its socket assignment persists instead of rerolling on every visit.
+## Checkpoint and next work
 
-See:
+Baseline v1 is approved for a local commit. Do not push without separate authorization. Review the local commit SHA and changed-file summary before any publishing step.
 
-`docs/MANSION-MAP-ARCHITECTURE.md`
+Further furnishing may build on this approved skeleton. Preserve the anchor proportions, stair/landing connections, door IDs and socket rules; record any proposed structural alteration in the permanent map/changelog before implementation.
 
-Before scaling up, test one socket with two interchangeable room templates and confirm both connect cleanly, keep furniture clear of exits and persist after reload.
-
-## Source / vendor policy
-KayKit and other third-party/vendor source assets remain under their vendor folders and must not be edited directly. Neon Mansion-owned wrappers, materials, scenes and variants belong under the Neon Mansion asset tree.
-
-Current source packs include:
-- KayKit Dungeon Remastered
-- KayKit Furniture Bits
-- KayKit Restaurant Bits
-- KayKit Prototype Bits
-
-## Immediate test-before-merge plan
-1. Pull the latest remote importer/handover updates **without discarding local Codex work**.
-2. Run `tools/import-firefly-architecture.ps1`; it should import both architectural-detail ZIPs visible in the Drop Zone.
-3. Reload changed project files from disk in Godot if prompted.
-4. Let Codex inspect/classify the combined architecture packs, but do not expand the mansion yet.
-5. Test the latest local Codex door/layout/visual work in Godot 4.7.2.
-6. Verify Entrance Hall -> foyer -> Grand Stair Hall -> Long Gallery -> Drawing Room flow.
-7. Verify door scale, clearance, interaction, double-door movement and collision.
-8. Verify architecture is readable and furniture does not obstruct traversal.
-9. Run `git status` and review the complete local working tree.
-10. Only after playable approval create the first proper checkpoint commit/merge.
-11. Then design the permanent mansion map skeleton and socket system before adding the remaining room catalogue.
-
-## Safety / rollback rules
-- Do not run `git clean`.
-- Do not run destructive reset/checkout commands against the local working tree.
-- Do not modify KayKit vendor source files.
-- Do not commit `.godot` import cache.
-- Do not commit raw Firefly reference folders wholesale.
-- Do not build the remaining rooms until the first slice establishes the approved architecture, door system, material system, lighting quality and fixed-map/socket rules.
+Reproducible validation harnesses are in `tools/validation/check_mansion.gd` and `tools/validation/check_input.gd`. Run them against `godot/` using the installed Godot executable (headless fixed-fps 60 for the mansion checks; rendered mode for input). They write run/test artifacts only beneath the ignored `work/` folder. Local historical screenshots/logs and inventories remain there but are excluded from the checkpoint, as are raw Firefly references and `.godot/` caches. Godot `.import` settings and stable `.uid` sidecars remain tracked source metadata.

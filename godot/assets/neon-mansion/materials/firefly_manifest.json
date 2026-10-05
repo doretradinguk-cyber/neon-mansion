@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "review_status": "Local visual-support references; no automatic production approval",
+  "all_sources_inspected": true,
+  "source_policy": "Original files unchanged. No raw composite bitmap is required at runtime. Board 6 informed the framed-art direction; owned procedural placeholder panels now replace provisional atlas sampling.",
+  "sources": [
+    {
+      "source_filename": "nightmare-fx/Retro_Nightmare_Frequency___Scene_1_Production_Board-1.png",
+      "dimensions": [
+        1025,
+        1025
+      ],
+      "classification": "Labelled 3x3 surface swatch board",
+      "observed_content": "Teal, charcoal, black door, tile, marble, walnut, panelling, brass and dark metal references",
+      "suitable_for_direct_runtime_use_as_is": false,
+      "intended_godot_role": "Palette reference only",
+      "corresponding_material_or_helper": "materials/dark_teal.tres; charcoal.tres; near_black.tres; dark_tile.tres; dark_marble.tres; walnut.tres; brass.tres; dark_metal.tres",
+      "photoshop_cleanup": "If texture extraction is desired: isolate swatches; remove labels/borders, baked gradients and highlights; repair seams; author matching normal/roughness maps.",
+      "production_cleanup_required": true
+    },
+    {
+      "source_filename": "nightmare-fx/Retro_Nightmare_Frequency___Scene_1_Production_Board-2.png",
+      "dimensions": [
+        1025,
+        1025
+      ],
+      "classification": "Labelled 3x3 glass/tile/carpet/masonry/corruption board",
+      "observed_content": "Smoked and frosted glass, pool/bath tiles, carpet, concrete, paving, stone, neon cracks",
+      "suitable_for_direct_runtime_use_as_is": false,
+      "intended_godot_role": "Reference for smoked glass and dormant corruption; unrelated surfaces deferred",
+      "corresponding_material_or_helper": "materials/smoked_glass.tres; nightmare-fx/materials/corruption_base.tres",
+      "photoshop_cleanup": "Extract individual swatches, remove text and perspective/highlight bake, fix seams. Corruption base and emission must be separated.",
+      "production_cleanup_required": true
+    },
+    {
+      "source_filename": "nightmare-fx/Retro_Nightmare_Frequency___Scene_1_Production_Board-3.png",
+      "dimensions": [
+        1025,
+        1025
+      ],
+      "classification": "Labelled 3x3 fabric/metal/crack/stone/leather board",
+      "observed_content": "Fabric, dark chrome, luminous crack network, stone, plaster, leather, rubber, black paint, metal mesh",
+      "suitable_for_direct_runtime_use_as_is": false,
+      "intended_godot_role": "Reference for charcoal, metal and dormant emissive corruption",
+      "corresponding_material_or_helper": "materials/charcoal.tres; dark_metal.tres; nightmare-fx/materials/corruption_emissive.tres",
+      "photoshop_cleanup": "Isolate patches; remove captions; de-light and make tileable. Extract a clean crack emission mask rather than baking glow into albedo.",
+      "production_cleanup_required": true
+    },
+    {
+      "source_filename": "nightmare-fx/Retro_Nightmare_Frequency___Scene_1_Production_Board-4.png",
+      "dimensions": [
+        1025,
+        1025
+      ],
+      "classification": "Labelled emissive component comparison sheet",
+      "observed_content": "Clean and glitched light bars, access buttons, signs, hazard bands and terminals on black",
+      "suitable_for_direct_runtime_use_as_is": false,
+      "intended_godot_role": "Reference for geometric normal trims/indicators; glitch variants deferred",
+      "corresponding_material_or_helper": "materials/magenta_trim.tres; cyan_indicator.tres; acid_green.tres",
+      "photoshop_cleanup": "Extract each component; remove labels, black matte and baked bloom; separate crisp emission masks from glow and glitch overlays.",
+      "production_cleanup_required": true
+    },
+    {
+      "source_filename": "nightmare-fx/Retro_Nightmare_Frequency___Scene_1_Production_Board-5.png",
+      "dimensions": [
+        1025,
+        1025
+      ],
+      "classification": "Labelled decal/icon contact sheet with visible checker pattern",
+      "observed_content": "Room numbers, caution/security/CCTV/access, damage marks and corruption symbols",
+      "suitable_for_direct_runtime_use_as_is": false,
+      "intended_godot_role": "Future decal candidates only; not a wall texture",
+      "corresponding_material_or_helper": "materials/material_library.gd (normal indicator palette); no bitmap decal helper approved",
+      "photoshop_cleanup": "Isolate each icon, verify real alpha (checker pattern is visible imagery), remove checkerboard and headings; redraw illegible labels; clean edges.",
+      "production_cleanup_required": true
+    },
+    {
+      "source_filename": "nightmare-fx/Retro_Nightmare_Frequency___Scene_1_Production_Board-6.png",
+      "dimensions": [
+        1025,
+        1025
+      ],
+      "classification": "Labelled screens/artwork contact sheet",
+      "observed_content": "CCTV/security/arcade/UI/signage/corrupt terminals, gothic painting, abstract retrowave artwork and poster",
+      "suitable_for_direct_runtime_use_as_is": false,
+      "intended_godot_role": "Artwork and screen reference only; runtime frames use owned procedural placeholder panels. Screens deferred.",
+      "corresponding_material_or_helper": "scripts/firefly_artwork.gd; materials/shaders/firefly_artwork.gdshader",
+      "photoshop_cleanup": "Production: export gothic painting and abstract artwork separately with clean margins and adequate resolution. Other cells need heading/frame removal and text cleanup; screen UI requires readable text. Whole board is not a runtime surface.",
+      "production_cleanup_required": true
+    },
+    {
+      "source_filename": "nightmare-fx/Retro_Nightmare_Frequency___Scene_1_Production_Board-7.png",
+      "dimensions": [
+        1025,
+        1025
+      ],
+      "classification": "Labelled cinematic background plate board",
+      "observed_content": "City, driveway, front garden, rear garden/pool, storm sky and corrupted sky",
+      "suitable_for_direct_runtime_use_as_is": false,
+      "intended_godot_role": "Future backdrop references only; no exterior added",
+      "corresponding_material_or_helper": "No runtime helper assigned in four-room slice",
+      "photoshop_cleanup": "Extract each plate, remove titles/dividers, review generated architecture; sky images are perspective plates, not seamless spherical sky maps.",
+      "production_cleanup_required": true
+    },
+    {
+      "source_filename": "nightmare-fx/Retro_Nightmare_Frequency___Scene_1_Production_Board-8.png",
+      "dimensions": [
+        1025,
+        1025
+      ],
+      "classification": "Labelled VFX contact sheet with checker background",
+      "observed_content": "Code rain, glyph sets, scanlines, tears, bursts, clouds, cracks, ring, static noise, cells, Jester and sigil",
+      "suitable_for_direct_runtime_use_as_is": false,
+      "intended_godot_role": "Disabled Nightmare VFX references only",
+      "corresponding_material_or_helper": "scripts/nightmare_layer.gd; nightmare-fx/materials/corruption_emissive.tres",
+      "photoshop_cleanup": "Separate sprites/masks; remove checker and labels; verify alpha; author seamless/animatable overlays; split the combined composite into layers.",
+      "production_cleanup_required": true
+    },
+    {
+      "source_filename": "nightmare-fx/Retro_Nightmare_Frequency___Scene_1_Production_Board-9.png",
+      "dimensions": [
+        1025,
+        1025
+      ],
+      "classification": "Labelled black/white mask sheet",
+      "observed_content": "Door/window/screen/trim/sign/floor/wall/ceiling/activation/Jester zones and combined multi-mask",
+      "suitable_for_direct_runtime_use_as_is": false,
+      "intended_godot_role": "Mask planning reference; not aligned to this slice UVs",
+      "corresponding_material_or_helper": "scripts/nightmare_layer.gd; no mask bound",
+      "photoshop_cleanup": "Extract individual masks, remove titles/borders, normalize ranges and edges; redraw/map for actual meshes. Combined reference is not a usable packed mask.",
+      "production_cleanup_required": true
+    },
+    {
+      "source_filename": "nightmare-fx/Retro_Nightmare_Frequency___Scene_1_Production_Board-10.png",
+      "dimensions": [
+        1025,
+        1025
+      ],
+      "classification": "Lighting and colour-grading comparison board",
+      "observed_content": "Cool cyan, saturated magenta, moonlight, green corruption and warm brass variations",
+      "suitable_for_direct_runtime_use_as_is": false,
+      "intended_godot_role": "Normal lighting reference: restrained cyan fill, local magenta, warm drawing-room accent",
+      "corresponding_material_or_helper": "scripts/foundation.gd; scenes/foundation.tscn",
+      "photoshop_cleanup": "No cleanup needed for reference use. Not a lighting LUT, cubemap, surface texture or lightmap.",
+      "production_cleanup_required": false
+    },
+    {
+      "source_filename": "nightmare-fx/Retro_Nightmare_Frequency___Scene_1_Production_Board-11.png",
+      "dimensions": [
+        1025,
+        1025
+      ],
+      "classification": "Material naming and swatch guide",
+      "observed_content": "Names/descriptions with small palette/material chips",
+      "suitable_for_direct_runtime_use_as_is": false,
+      "intended_godot_role": "Material family organisation and palette reference",
+      "corresponding_material_or_helper": "materials/material_library.gd",
+      "photoshop_cleanup": "No cleanup needed for reference use. Tiny labelled chips are unsuitable as production textures.",
+      "production_cleanup_required": false
+    }
+  ]
+}

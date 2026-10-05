@@ -1,0 +1,5 @@
+[gd_scene load_steps=3 format=3]
+[ext_resource type="PackedScene" path="res://assets/neon-mansion/architecture/door.tscn" id="1"]
+[ext_resource type="Resource" path="res://assets/neon-mansion/architecture/doors/styles/bedroom_bathroom.tres" id="2"]
+[node name="bedroom_bathroom" instance=ExtResource("1")]
+style = ExtResource("2")

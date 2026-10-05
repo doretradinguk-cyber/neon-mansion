@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "templates": {
+    "music": {
+      "category": "music",
+      "size_class": "medium",
+      "footprint": [
+        16,
+        16
+      ],
+      "entry_edge": "north",
+      "entry_offset": 0,
+      "entry_width": 2,
+      "floor": "GF",
+      "wing": "east_leisure",
+      "requires_window": false,
+      "service_requirement": "none",
+      "props": [
+        {
+          "asset": "chair_A",
+          "at": [
+            -4,
+            0,
+            2
+          ],
+          "yaw": 0
+        },
+        {
+          "asset": "cabinet_medium",
+          "at": [
+            5,
+            0,
+            4
+          ],
+          "yaw": 0
+        },
+        {
+          "asset": "table_medium",
+          "at": [
+            -4,
+            0,
+            4
+          ],
+          "yaw": 0
+        }
+      ],
+      "name": "Music Salon"
+    },
+    "study": {
+      "category": "study",
+      "size_class": "medium",
+      "footprint": [
+        16,
+        16
+      ],
+      "entry_edge": "north",
+      "entry_offset": 0,
+      "entry_width": 2,
+      "floor": "GF",
+      "wing": "east_leisure",
+      "requires_window": false,
+      "service_requirement": "none",
+      "props": [
+        {
+          "asset": "table_medium",
+          "at": [
+            4,
+            0,
+            2
+          ],
+          "yaw": 0
+        },
+        {
+          "asset": "chair_A",
+          "at": [
+            4,
+            0,
+            4
+          ],
+          "yaw": 0
+        },
+        {
+          "asset": "shelf_A_big",
+          "at": [
+            -6,
+            0,
+            4
+          ],
+          "yaw": 0
+        }
+      ],
+      "name": "Private Study"
+    }
+  }
+}
+

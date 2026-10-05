@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="" load_steps=2 format=3]
+[ext_resource type="Script" path="res://assets/neon-mansion/architecture/doors/door_style.gd" id="1"]
+[resource]
+script = ExtResource("1")
+family = "grand_anchor"
+leaf_width = 3.0
+leaf_height = 5.0
+leaf_count = 2
+pointed_profile = true
+hardware = "pull"
+

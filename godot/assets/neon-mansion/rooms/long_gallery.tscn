@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3]
+[ext_resource type="Script" path="res://assets/neon-mansion/scripts/room.gd" id="1"]
+[ext_resource type="Material" path="res://assets/neon-mansion/materials/dark_tile.tres" id="2"]
+[ext_resource type="Material" path="res://assets/neon-mansion/materials/walnut.tres" id="3"]
+[node name="LongGallery" type="Node3D"]
+script = ExtResource("1")
+room_id = &"long_gallery"
+display_name = "Long Gallery"
+footprint = Vector2(4, 16)
+ceiling_height = 4
+portals = {"south": {"offset": 0.0, "elevation": 0.0}, "east": {"offset": -4.0, "elevation": 0.0}}
+
+floor_material = ExtResource("2")
+lower_wall_material = ExtResource("3")

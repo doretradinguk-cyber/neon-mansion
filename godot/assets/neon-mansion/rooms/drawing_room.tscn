@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3]
+[ext_resource type="Script" path="res://assets/neon-mansion/scripts/room.gd" id="1"]
+[ext_resource type="Material" path="res://assets/neon-mansion/materials/walnut.tres" id="2"]
+[ext_resource type="Material" path="res://assets/neon-mansion/materials/charcoal.tres" id="3"]
+[ext_resource type="Material" path="res://assets/neon-mansion/materials/walnut.tres" id="4"]
+[node name="DrawingRoom" type="Node3D"]
+script = ExtResource("1")
+room_id = &"drawing_room"
+display_name = "Drawing Room"
+footprint = Vector2(8, 8)
+ceiling_height = 4
+portals = {"west": {"offset": 0.0, "elevation": 0.0}}
+
+floor_material = ExtResource("2")
+wall_material = ExtResource("3")
+lower_wall_material = ExtResource("4")

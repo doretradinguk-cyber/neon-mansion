@@ -1,0 +1,394 @@
+{
+  "schema_version": 1,
+  "inspection": "All 25 local architectural images individually inspected",
+  "room_concepts_status": "30 entries in design/room-catalog.json; room-reference images absent locally. Drop Zone was not accessed.",
+  "existing_manifest_references": [
+    "materials/firefly_manifest.json",
+    "architecture/doors/firefly_door_manifest.json"
+  ],
+  "sources": [
+    {
+      "source_filename": "neon-mansion-architecture-pack-1__Retro_Nightmare_Frequency___Scene_1_Production_Board-1.png",
+      "source_pack": 1,
+      "observed_content": "Nine labelled swatches: teal plaster, charcoal plaster, black panel, dark tile/marble, walnut, dark wood panels, brass and black metal",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "runtime material source"
+      ],
+      "direct_runtime_suitable": false,
+      "promotion_status": "Reference only; component roles are extraction/redraw candidates, not approval of the composite",
+      "godot_role": "Existing Neon Mansion material palette; procedural surfaces avoid baked lighting/labels",
+      "photoshop_cleanup": "Isolate a component; remove labels, borders and background/checkerboard; verify real alpha, correct perspective, remove baked glow/reflections, redraw corrupted text; create seamless maps only for suitable planar surface components. Separate normal and Nightmare."
+    },
+    {
+      "source_filename": "neon-mansion-architecture-pack-1__Retro_Nightmare_Frequency___Scene_1_Production_Board-10.png",
+      "source_pack": 1,
+      "observed_content": "Eight perspective palette/lighting studies, including normal and corrupted states",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "lighting reference",
+        "Nightmare overlay"
+      ],
+      "direct_runtime_suitable": false,
+      "promotion_status": "Reference only; component roles are extraction/redraw candidates, not approval of the composite",
+      "godot_role": "light_fixture.tscn practical geometry and normal light palette",
+      "photoshop_cleanup": "Isolate a component; remove labels, borders and background/checkerboard; verify real alpha, correct perspective, remove baked glow/reflections, redraw corrupted text; create seamless maps only for suitable planar surface components. Separate normal and Nightmare."
+    },
+    {
+      "source_filename": "neon-mansion-architecture-pack-1__Retro_Nightmare_Frequency___Scene_1_Production_Board-11.png",
+      "source_pack": 1,
+      "observed_content": "Material naming guide and labelled swatches",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "runtime material source"
+      ],
+      "direct_runtime_suitable": false,
+      "promotion_status": "Reference only; component roles are extraction/redraw candidates, not approval of the composite",
+      "godot_role": "Existing Neon Mansion material palette; procedural surfaces avoid baked lighting/labels",
+      "photoshop_cleanup": "Isolate a component; remove labels, borders and background/checkerboard; verify real alpha, correct perspective, remove baked glow/reflections, redraw corrupted text; create seamless maps only for suitable planar surface components. Separate normal and Nightmare."
+    },
+    {
+      "source_filename": "neon-mansion-architecture-pack-1__Retro_Nightmare_Frequency___Scene_1_Production_Board-2.png",
+      "source_pack": 1,
+      "observed_content": "Labelled glass, pool/bath tile, carpet/concrete/exterior paving, stone and corruption swatches",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "runtime material source"
+      ],
+      "direct_runtime_suitable": false,
+      "promotion_status": "Reference only; component roles are extraction/redraw candidates, not approval of the composite",
+      "godot_role": "Existing Neon Mansion material palette; procedural surfaces avoid baked lighting/labels",
+      "photoshop_cleanup": "Isolate a component; remove labels, borders and background/checkerboard; verify real alpha, correct perspective, remove baked glow/reflections, redraw corrupted text; create seamless maps only for suitable planar surface components. Separate normal and Nightmare."
+    },
+    {
+      "source_filename": "neon-mansion-architecture-pack-1__Retro_Nightmare_Frequency___Scene_1_Production_Board-3.png",
+      "source_pack": 1,
+      "observed_content": "Fabric, chrome, leather, stone/plaster/rubber, paint, metal mesh and emissive crack swatches",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "runtime material source"
+      ],
+      "direct_runtime_suitable": false,
+      "promotion_status": "Reference only; component roles are extraction/redraw candidates, not approval of the composite",
+      "godot_role": "Existing Neon Mansion material palette; procedural surfaces avoid baked lighting/labels",
+      "photoshop_cleanup": "Isolate a component; remove labels, borders and background/checkerboard; verify real alpha, correct perspective, remove baked glow/reflections, redraw corrupted text; create seamless maps only for suitable planar surface components. Separate normal and Nightmare."
+    },
+    {
+      "source_filename": "neon-mansion-architecture-pack-1__Retro_Nightmare_Frequency___Scene_1_Production_Board-4.png",
+      "source_pack": 1,
+      "observed_content": "Normal and glitched neon strips, number plaque, indicator, hazard bands and screen studies",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "lighting reference",
+        "screen/sign asset",
+        "decal",
+        "Nightmare overlay"
+      ],
+      "direct_runtime_suitable": false,
+      "promotion_status": "Reference only; component roles are extraction/redraw candidates, not approval of the composite",
+      "godot_role": "light_fixture.tscn practical geometry and normal light palette",
+      "photoshop_cleanup": "Isolate a component; remove labels, borders and background/checkerboard; verify real alpha, correct perspective, remove baked glow/reflections, redraw corrupted text; create seamless maps only for suitable planar surface components. Separate normal and Nightmare."
+    },
+    {
+      "source_filename": "neon-mansion-architecture-pack-1__Retro_Nightmare_Frequency___Scene_1_Production_Board-5.png",
+      "source_pack": 1,
+      "observed_content": "Composite decal/icon/damage sheet with visible checkerboard backgrounds and labels",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "screen/sign asset",
+        "decal",
+        "Nightmare overlay"
+      ],
+      "direct_runtime_suitable": false,
+      "promotion_status": "Reference only; component roles are extraction/redraw candidates, not approval of the composite",
+      "godot_role": "Literal Godot labels and existing provisional artwork sampling; no new bitmap promoted",
+      "photoshop_cleanup": "Isolate a component; remove labels, borders and background/checkerboard; verify real alpha, correct perspective, remove baked glow/reflections, redraw corrupted text; create seamless maps only for suitable planar surface components. Separate normal and Nightmare."
+    },
+    {
+      "source_filename": "neon-mansion-architecture-pack-1__Retro_Nightmare_Frequency___Scene_1_Production_Board-6.png",
+      "source_pack": 1,
+      "observed_content": "Screen/interface and framed-art composite; includes CCTV, arcade, theatre, portraits and separate Nightmare panels",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "screen/sign asset",
+        "decal",
+        "Nightmare overlay"
+      ],
+      "direct_runtime_suitable": false,
+      "promotion_status": "Reference only; component roles are extraction/redraw candidates, not approval of the composite",
+      "godot_role": "Literal Godot labels and existing provisional artwork sampling; no new bitmap promoted",
+      "photoshop_cleanup": "Isolate a component; remove labels, borders and background/checkerboard; verify real alpha, correct perspective, remove baked glow/reflections, redraw corrupted text; create seamless maps only for suitable planar surface components. Separate normal and Nightmare."
+    },
+    {
+      "source_filename": "neon-mansion-architecture-pack-1__Retro_Nightmare_Frequency___Scene_1_Production_Board-7.png",
+      "source_pack": 1,
+      "observed_content": "Composite exterior/city/night-sky background plates with captions",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "backdrop"
+      ],
+      "direct_runtime_suitable": false,
+      "promotion_status": "Reference only; component roles are extraction/redraw candidates, not approval of the composite",
+      "godot_role": "Future exterior backdrop only, not installed",
+      "photoshop_cleanup": "Isolate a component; remove labels, borders and background/checkerboard; verify real alpha, correct perspective, remove baked glow/reflections, redraw corrupted text; create seamless maps only for suitable planar surface components. Separate normal and Nightmare."
+    },
+    {
+      "source_filename": "neon-mansion-architecture-pack-1__Retro_Nightmare_Frequency___Scene_1_Production_Board-8.png",
+      "source_pack": 1,
+      "observed_content": "Composite Nightmare VFX: code, glyphs, scanlines, tears, cracks, bursts, Jester and composite overlays",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "Nightmare overlay"
+      ],
+      "direct_runtime_suitable": false,
+      "promotion_status": "Reference only; component roles are extraction/redraw candidates, not approval of the composite",
+      "godot_role": "Future isolated optional decal/mask/Nightmare resource",
+      "photoshop_cleanup": "Isolate a component; remove labels, borders and background/checkerboard; verify real alpha, correct perspective, remove baked glow/reflections, redraw corrupted text; create seamless maps only for suitable planar surface components. Separate normal and Nightmare."
+    },
+    {
+      "source_filename": "neon-mansion-architecture-pack-1__Retro_Nightmare_Frequency___Scene_1_Production_Board-9.png",
+      "source_pack": 1,
+      "observed_content": "Labelled binary masks for doors/windows/screens/trim/floors/corruption zones",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "Nightmare overlay"
+      ],
+      "direct_runtime_suitable": false,
+      "promotion_status": "Reference only; component roles are extraction/redraw candidates, not approval of the composite",
+      "godot_role": "Future isolated optional decal/mask/Nightmare resource",
+      "photoshop_cleanup": "Isolate a component; remove labels, borders and background/checkerboard; verify real alpha, correct perspective, remove baked glow/reflections, redraw corrupted text; create seamless maps only for suitable planar surface components. Separate normal and Nightmare."
+    },
+    {
+      "source_filename": "neon-mansion-architecture-pack-2__Retro_Nightmare_Frequency___Scene_1_Production_Board-1.png",
+      "source_pack": 2,
+      "observed_content": "Perspective moulding, wall-bay, wainscot, picture-frame, arch, dado, cornice and neon-strip modelling studies",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "architectural reference",
+        "modelling reference"
+      ],
+      "direct_runtime_suitable": false,
+      "promotion_status": "Reference only; component roles are extraction/redraw candidates, not approval of the composite",
+      "godot_role": "interior_kit.gd mouldings/coffers/windows or mansion_skeleton.gd structural dressing",
+      "photoshop_cleanup": "Isolate a component; remove labels, borders and background/checkerboard; verify real alpha, correct perspective, remove baked glow/reflections, redraw corrupted text; create seamless maps only for suitable planar surface components. Separate normal and Nightmare."
+    },
+    {
+      "source_filename": "neon-mansion-architecture-pack-2__Retro_Nightmare_Frequency___Scene_1_Production_Board-10.png",
+      "source_pack": 2,
+      "observed_content": "Perspective exterior paving/stone/steps/terrace/garage/workshop/gate/rail/glass/wet material studies",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "architectural reference",
+        "modelling reference"
+      ],
+      "direct_runtime_suitable": false,
+      "promotion_status": "Reference only; component roles are extraction/redraw candidates, not approval of the composite",
+      "godot_role": "interior_kit.gd mouldings/coffers/windows or mansion_skeleton.gd structural dressing",
+      "photoshop_cleanup": "Isolate a component; remove labels, borders and background/checkerboard; verify real alpha, correct perspective, remove baked glow/reflections, redraw corrupted text; create seamless maps only for suitable planar surface components. Separate normal and Nightmare."
+    },
+    {
+      "source_filename": "neon-mansion-architecture-pack-2__Retro_Nightmare_Frequency___Scene_1_Production_Board-11.png",
+      "source_pack": 2,
+      "observed_content": "Wide detailed trim/moulding profile modelling composite",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "architectural reference",
+        "modelling reference"
+      ],
+      "direct_runtime_suitable": false,
+      "promotion_status": "Reference only; component roles are extraction/redraw candidates, not approval of the composite",
+      "godot_role": "interior_kit.gd mouldings/coffers/windows or mansion_skeleton.gd structural dressing",
+      "photoshop_cleanup": "Isolate a component; remove labels, borders and background/checkerboard; verify real alpha, correct perspective, remove baked glow/reflections, redraw corrupted text; create seamless maps only for suitable planar surface components. Separate normal and Nightmare."
+    },
+    {
+      "source_filename": "neon-mansion-architecture-pack-2__Retro_Nightmare_Frequency___Scene_1_Production_Board-12.png",
+      "source_pack": 2,
+      "observed_content": "Wide coffer/rib/cornice/round/vault/conduit/perforated ceiling modelling composite",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "architectural reference",
+        "modelling reference"
+      ],
+      "direct_runtime_suitable": false,
+      "promotion_status": "Reference only; component roles are extraction/redraw candidates, not approval of the composite",
+      "godot_role": "interior_kit.gd mouldings/coffers/windows or mansion_skeleton.gd structural dressing",
+      "photoshop_cleanup": "Isolate a component; remove labels, borders and background/checkerboard; verify real alpha, correct perspective, remove baked glow/reflections, redraw corrupted text; create seamless maps only for suitable planar surface components. Separate normal and Nightmare."
+    },
+    {
+      "source_filename": "neon-mansion-architecture-pack-2__Retro_Nightmare_Frequency___Scene_1_Production_Board-13.png",
+      "source_pack": 2,
+      "observed_content": "Wide practical lighting fixture modelling composite",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "modelling reference",
+        "prop reference",
+        "lighting reference"
+      ],
+      "direct_runtime_suitable": false,
+      "promotion_status": "Reference only; component roles are extraction/redraw candidates, not approval of the composite",
+      "godot_role": "light_fixture.tscn practical geometry and normal light palette",
+      "photoshop_cleanup": "Isolate a component; remove labels, borders and background/checkerboard; verify real alpha, correct perspective, remove baked glow/reflections, redraw corrupted text; create seamless maps only for suitable planar surface components. Separate normal and Nightmare."
+    },
+    {
+      "source_filename": "neon-mansion-architecture-pack-2__Retro_Nightmare_Frequency___Scene_1_Production_Board-14.png",
+      "source_pack": 2,
+      "observed_content": "Labelled black tile/teal stone/marble/parquet/carpet/runner/pool/exterior floor swatches",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "runtime material source"
+      ],
+      "direct_runtime_suitable": false,
+      "promotion_status": "Reference only; component roles are extraction/redraw candidates, not approval of the composite",
+      "godot_role": "Existing Neon Mansion material palette; procedural surfaces avoid baked lighting/labels",
+      "photoshop_cleanup": "Isolate a component; remove labels, borders and background/checkerboard; verify real alpha, correct perspective, remove baked glow/reflections, redraw corrupted text; create seamless maps only for suitable planar surface components. Separate normal and Nightmare."
+    },
+    {
+      "source_filename": "neon-mansion-architecture-pack-2__Retro_Nightmare_Frequency___Scene_1_Production_Board-2.png",
+      "source_pack": 2,
+      "observed_content": "Labelled tile, marble, parquet, carpet/runner, bathroom/service/garage and exterior floor swatches",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "runtime material source"
+      ],
+      "direct_runtime_suitable": false,
+      "promotion_status": "Reference only; component roles are extraction/redraw candidates, not approval of the composite",
+      "godot_role": "Existing Neon Mansion material palette; procedural surfaces avoid baked lighting/labels",
+      "photoshop_cleanup": "Isolate a component; remove labels, borders and background/checkerboard; verify real alpha, correct perspective, remove baked glow/reflections, redraw corrupted text; create seamless maps only for suitable planar surface components. Separate normal and Nightmare."
+    },
+    {
+      "source_filename": "neon-mansion-architecture-pack-2__Retro_Nightmare_Frequency___Scene_1_Production_Board-3.png",
+      "source_pack": 2,
+      "observed_content": "Coffered, gothic rib, ornate drawing ceiling, stair vault and room-specific ceiling studies",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "architectural reference",
+        "modelling reference"
+      ],
+      "direct_runtime_suitable": false,
+      "promotion_status": "Reference only; component roles are extraction/redraw candidates, not approval of the composite",
+      "godot_role": "interior_kit.gd mouldings/coffers/windows or mansion_skeleton.gd structural dressing",
+      "photoshop_cleanup": "Isolate a component; remove labels, borders and background/checkerboard; verify real alpha, correct perspective, remove baked glow/reflections, redraw corrupted text; create seamless maps only for suitable planar surface components. Separate normal and Nightmare."
+    },
+    {
+      "source_filename": "neon-mansion-architecture-pack-2__Retro_Nightmare_Frequency___Scene_1_Production_Board-4.png",
+      "source_pack": 2,
+      "observed_content": "Glass and window composite: smoked/frosted/stained panes, sash/garden frames, cracked/corrupted variants",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "architectural reference",
+        "modelling reference",
+        "Nightmare overlay"
+      ],
+      "direct_runtime_suitable": false,
+      "promotion_status": "Reference only; component roles are extraction/redraw candidates, not approval of the composite",
+      "godot_role": "interior_kit.gd mouldings/coffers/windows or mansion_skeleton.gd structural dressing",
+      "photoshop_cleanup": "Isolate a component; remove labels, borders and background/checkerboard; verify real alpha, correct perspective, remove baked glow/reflections, redraw corrupted text; create seamless maps only for suitable planar surface components. Separate normal and Nightmare."
+    },
+    {
+      "source_filename": "neon-mansion-architecture-pack-2__Retro_Nightmare_Frequency___Scene_1_Production_Board-5.png",
+      "source_pack": 2,
+      "observed_content": "Perspective paired practical fixtures: sconces, chandelier, strip, indicators, stair lights, theatre/pool/security lamps",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "modelling reference",
+        "prop reference",
+        "lighting reference"
+      ],
+      "direct_runtime_suitable": false,
+      "promotion_status": "Reference only; component roles are extraction/redraw candidates, not approval of the composite",
+      "godot_role": "light_fixture.tscn practical geometry and normal light palette",
+      "photoshop_cleanup": "Isolate a component; remove labels, borders and background/checkerboard; verify real alpha, correct perspective, remove baked glow/reflections, redraw corrupted text; create seamless maps only for suitable planar surface components. Separate normal and Nightmare."
+    },
+    {
+      "source_filename": "neon-mansion-architecture-pack-2__Retro_Nightmare_Frequency___Scene_1_Production_Board-6.png",
+      "source_pack": 2,
+      "observed_content": "Labelled upholstery/leather/velvet, walnut/lacquer/brass/chrome/metal and plastics swatches",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "runtime material source"
+      ],
+      "direct_runtime_suitable": false,
+      "promotion_status": "Reference only; component roles are extraction/redraw candidates, not approval of the composite",
+      "godot_role": "Existing Neon Mansion material palette; procedural surfaces avoid baked lighting/labels",
+      "photoshop_cleanup": "Isolate a component; remove labels, borders and background/checkerboard; verify real alpha, correct perspective, remove baked glow/reflections, redraw corrupted text; create seamless maps only for suitable planar surface components. Separate normal and Nightmare."
+    },
+    {
+      "source_filename": "neon-mansion-architecture-pack-2__Retro_Nightmare_Frequency___Scene_1_Production_Board-7.png",
+      "source_pack": 2,
+      "observed_content": "Room plaques, numbers, panels, warning/CCTV/exit/arrows and separate corrupted panel study",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "screen/sign asset",
+        "decal",
+        "Nightmare overlay"
+      ],
+      "direct_runtime_suitable": false,
+      "promotion_status": "Reference only; component roles are extraction/redraw candidates, not approval of the composite",
+      "godot_role": "Literal Godot labels and existing provisional artwork sampling; no new bitmap promoted",
+      "photoshop_cleanup": "Isolate a component; remove labels, borders and background/checkerboard; verify real alpha, correct perspective, remove baked glow/reflections, redraw corrupted text; create seamless maps only for suitable planar surface components. Separate normal and Nightmare."
+    },
+    {
+      "source_filename": "neon-mansion-architecture-pack-2__Retro_Nightmare_Frequency___Scene_1_Production_Board-8.png",
+      "source_pack": 2,
+      "observed_content": "Labelled ageing/damage patches: scratches, chips, stains, grime, scuffs, brass, ceiling and wall damage",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "decal"
+      ],
+      "direct_runtime_suitable": false,
+      "promotion_status": "Reference only; component roles are extraction/redraw candidates, not approval of the composite",
+      "godot_role": "Future isolated optional decal/mask/Nightmare resource",
+      "photoshop_cleanup": "Isolate a component; remove labels, borders and background/checkerboard; verify real alpha, correct perspective, remove baked glow/reflections, redraw corrupted text; create seamless maps only for suitable planar surface components. Separate normal and Nightmare."
+    },
+    {
+      "source_filename": "neon-mansion-architecture-pack-2__Retro_Nightmare_Frequency___Scene_1_Production_Board-9.png",
+      "source_pack": 2,
+      "observed_content": "Labelled Nightmare overlay studies: cracks/code/Jester/signal/tears/masks/corrupted glass/panel",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "Nightmare overlay"
+      ],
+      "direct_runtime_suitable": false,
+      "promotion_status": "Reference only; component roles are extraction/redraw candidates, not approval of the composite",
+      "godot_role": "Future isolated optional decal/mask/Nightmare resource",
+      "photoshop_cleanup": "Isolate a component; remove labels, borders and background/checkerboard; verify real alpha, correct perspective, remove baked glow/reflections, redraw corrupted text; create seamless maps only for suitable planar surface components. Separate normal and Nightmare."
+    }
+  ],
+  "promoted_bitmap_assets": [],
+  "useful_current_references": [
+    "pack 2:1/11 moulding and bay grammar",
+    "pack 2:3/12 coffered ceiling grammar",
+    "pack 2:5/13 sconces and chandelier silhouettes",
+    "pack 2:4 sash/privacy windows",
+    "pack 2:6 upholstery/material palette",
+    "pack 2:7 literal access/signage vocabulary",
+    "pack 1:10 warm/cool controlled lighting",
+    "pack 1/2 floor/material boards for existing procedural materials"
+  ],
+  "existing_artwork_note": "Existing provisional, label-free samples of the already imported material board 6 are reused on paintings; not final approved surface assets."
+}

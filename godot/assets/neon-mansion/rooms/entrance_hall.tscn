@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3]
+[ext_resource type="Script" path="res://assets/neon-mansion/scripts/room.gd" id="1"]
+[ext_resource type="Material" path="res://assets/neon-mansion/materials/dark_marble.tres" id="2"]
+[ext_resource type="Material" path="res://assets/neon-mansion/materials/charcoal.tres" id="3"]
+[node name="EntranceHall" type="Node3D"]
+script = ExtResource("1")
+room_id = &"entrance_hall"
+display_name = "Entrance Hall"
+footprint = Vector2(8, 8)
+ceiling_height = 4
+portals = {"north": {"offset": 0.0, "elevation": 0.0}}
+
+floor_material = ExtResource("2")
+lower_wall_material = ExtResource("3")

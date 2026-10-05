@@ -1,6 +1,7 @@
 extends Node3D
 ## Authored permanent skeleton; variation is restricted to declared sockets.
 signal room_discovered(room_id: StringName)
+const HERO = preload("res://assets/neon-mansion/scripts/hero_visuals.gd")
 const A = preload("res://assets/neon-mansion/scripts/architecture.gd")
 const ROOM = preload("res://assets/neon-mansion/scripts/map_room.gd")
 const KIT = preload("res://assets/neon-mansion/scripts/interior_kit.gd")
@@ -44,7 +45,7 @@ func _ready() -> void:
 		room.definition = definition
 		room.name = String(definition.id).to_pascal_case()
 		room.position = vector(definition.position)
-		room.floor_material = MARBLE if definition.role in ["anchor", "benchmark"] else TILE
+		room.floor_material = MARBLE if definition.role in ["anchor", "benchmark"] and definition.id != "long_gallery" else TILE
 		room.wall_material = CHARCOAL if definition.position[1] < 0 or definition.id == "drawing_room" else TEAL
 		room.lower_wall_material = WOOD if definition.id in ["drawing_room", "foyer_reception", "lounge"] else CHARCOAL
 		rooms_by_id[StringName(definition.id)] = room
@@ -101,6 +102,7 @@ func _ready() -> void:
 			populate_socket(socket, run_store.select(socket, templates, run_seed))
 	dress_arrival()
 	dress_drawing()
+	HERO.build(self)
 	for marker in layout.reserved_wing_connections:
 		var node := Marker3D.new()
 		node.name = marker.id
@@ -258,12 +260,12 @@ func dress_arrival() -> void:
 
 func dress_drawing() -> void:
 	var room = rooms_by_id[&"drawing_room"]
-	KIT.prop(room,"couch_pillows",Vector3(4.6,0,2),-PI/2,CHARCOAL,true,1.3)
-	KIT.prop(room,"couch",Vector3(-4.6,0,2),PI/2,TEAL,true,1.3)
-	KIT.prop(room,"armchair_pillows",Vector3(2.5,0,5),PI,CHARCOAL,true,1.2)
-	KIT.prop(room,"armchair",Vector3(-2.5,0,5),PI,TEAL,true,1.2)
+	KIT.prop(room,"couch_pillows",Vector3(4.6,0,2),-PI/2,preload("res://assets/neon-mansion/materials/upholstery_black.tres"),true,1.3)
+	KIT.prop(room,"couch",Vector3(-4.6,0,2),PI/2,preload("res://assets/neon-mansion/materials/upholstery_teal.tres"),true,1.3)
+	KIT.prop(room,"armchair_pillows",Vector3(2.5,0,5),PI,preload("res://assets/neon-mansion/materials/upholstery_black.tres"),true,1.2)
+	KIT.prop(room,"armchair",Vector3(-2.5,0,5),PI,preload("res://assets/neon-mansion/materials/upholstery_teal.tres"),true,1.2)
 	KIT.prop(room,"table_low",Vector3(0,0,2),0,WOOD,true,1.5)
-	KIT.prop(room,"rug_rectangle_B",Vector3(0,0.01,2),0,CHARCOAL,false,2)
+	KIT.prop(room,"rug_rectangle_B",Vector3(0,0.01,2),0,preload("res://assets/neon-mansion/materials/burgundy_carpet.tres"),false,2)
 	KIT.prop(room,"lamp_standing",Vector3(5.8,0,5.5),0,BRASS,false,1.2)
 	for side in [-1,1]:
 		for z in [-3.0,3.0]:

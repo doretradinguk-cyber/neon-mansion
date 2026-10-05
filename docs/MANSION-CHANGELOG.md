@@ -15,3 +15,10 @@ Checkpoint housekeeping: raw Firefly boards and local captures/cache/run saves a
 Permanent records: MANSION-MAP.md, design/mansion-map.json and the runtime layout. Update all three together with this changelog for future structural alterations. Record date, reason, affected room/door/socket IDs, connection/transform changes, compatibility or save migration implications, and validation outcome. New sockets require explicit approval and complete metadata before generation uses them.
 
 This checkpoint is local only. Publishing requires separate authorization.
+
+## Visual quality pass — 5 October 2026 (local, uncommitted)
+
+Baseline v1 structure remains unchanged. No room/door/socket IDs, transforms, connections, stairs, aperture dimensions or procedural assignment rules changed. No save migration is required.
+
+Rebuilt door display geometry around the existing collider/hinge system; added layered frames, hardware, distinct family details and control plaques. Upgraded the five hero spaces with mouldings, coffers, railing detail, floor/rug zones, glass accents, fixtures and shared stylised finishes. Details and source classifications: VISUAL-UPGRADE.md and layout/visual_upgrade_manifest.json. Nightmare Frequency remains disabled. No push or new commit was requested for this pass.
+Validation: Godot 4.7.2 foundation and rendered-input checks passed; map snapshot unchanged; all 4,722 protected vendor/reference hashes matched. Final captures were reviewed and privacy/service detail overlaps corrected. No parser/resource/shader errors in final validation logs.

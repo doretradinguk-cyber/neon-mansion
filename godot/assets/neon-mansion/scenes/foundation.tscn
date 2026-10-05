@@ -1,26 +1,32 @@
-[gd_scene load_steps=5 format=3]
-[ext_resource type="Script" path="res://assets/neon-mansion/scripts/mansion_skeleton.gd" id="1"]
+[gd_scene format=3 uid="uid://e7owuuuyr5o8"]
+
+[ext_resource type="Script" uid="uid://cafoty61sviv6" path="res://assets/neon-mansion/scripts/mansion_skeleton.gd" id="1"]
 [ext_resource type="PackedScene" path="res://assets/neon-mansion/player/test_player.tscn" id="2"]
 [ext_resource type="PackedScene" path="res://assets/neon-mansion/nightmare-fx/nightmare_layer.tscn" id="3"]
+
 [sub_resource type="Environment" id="Environment"]
 background_mode = 1
 background_color = Color(0.012, 0.025, 0.039, 1)
 ambient_light_source = 3
 ambient_light_color = Color(0.42, 0.61, 0.69, 1)
-ambient_light_energy = 0.9
+ambient_light_energy = 0.76
 tonemap_mode = 2
-glow_enabled = true
-glow_intensity = 0.35
 ssr_enabled = true
 ssr_max_steps = 32
+glow_enabled = true
+glow_intensity = 0.48
 fog_enabled = true
-fog_light_color = Color(0.03, 0.08, 0.10, 1)
+fog_light_color = Color(0.03, 0.08, 0.1, 1)
 fog_density = 0.002
-[node name="NeonMansionFoundation" type="Node3D"]
+
+[node name="NeonMansionFoundation" type="Node3D" unique_id=621662076]
 script = ExtResource("1")
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=799207832]
 environment = SubResource("Environment")
-[node name="Player" parent="." instance=ExtResource("2")]
-position = Vector3(0, 0.05, 32)
-[node name="NightmareLayer" parent="." instance=ExtResource("3")]
+
+[node name="Player" parent="." unique_id=371899952 instance=ExtResource("2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 32)
+
+[node name="NightmareLayer" parent="." unique_id=265066236 instance=ExtResource("3")]
 metadata/prepared_hooks = PackedStringArray("emissive_cracks", "code_contamination", "corrupted_signage", "jester_interference", "glitch_overlays", "altered_lights")

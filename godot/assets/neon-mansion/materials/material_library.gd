@@ -1,6 +1,13 @@
 extends Resource
 ## Shared immutable resources. Future variants must duplicate before changing parameters.
 const NORMAL = {
+	"frame_teal": preload("res://assets/neon-mansion/materials/frame_teal.tres"),
+	"dark_wood_panel": preload("res://assets/neon-mansion/materials/dark_wood_panel.tres"),
+	"frosted_glass": preload("res://assets/neon-mansion/materials/frosted_glass.tres"),
+	"upholstery_teal": preload("res://assets/neon-mansion/materials/upholstery_teal.tres"),
+	"upholstery_black": preload("res://assets/neon-mansion/materials/upholstery_black.tres"),
+	"burgundy_carpet": preload("res://assets/neon-mansion/materials/burgundy_carpet.tres"),
+	"lamp_warm": preload("res://assets/neon-mansion/materials/lamp_warm.tres"),
 	"wall_teal": preload("res://assets/neon-mansion/materials/dark_teal.tres"),
 	"wall_charcoal": preload("res://assets/neon-mansion/materials/charcoal.tres"),
 	"black_door": preload("res://assets/neon-mansion/materials/near_black.tres"),

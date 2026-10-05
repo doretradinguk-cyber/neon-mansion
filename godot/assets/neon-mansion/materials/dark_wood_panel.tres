@@ -2,8 +2,8 @@
 [ext_resource type="Shader" path="res://assets/neon-mansion/materials/shaders/stylised_surface.gdshader" id="1"]
 [resource]
 shader = ExtResource("1")
-shader_parameter/base_color = Color(0.08, 0.105, 0.13, 1)
-shader_parameter/pattern = 1
-shader_parameter/roughness_value = 0.36
-shader_parameter/metallic_value = 0.12
-shader_parameter/pattern_scale = 1.25
+shader_parameter/base_color = Color(0.07, 0.033, 0.028, 1)
+shader_parameter/pattern = 3
+shader_parameter/roughness_value = 0.64
+shader_parameter/metallic_value = 0
+shader_parameter/pattern_scale = 1.0

@@ -1,0 +1,616 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-10-05",
+  "baseline_commit": "0fd277c1c31b4506e7ae1901504faeb152ce843b",
+  "review_method": "All 45 local material, door and architecture images compared in labelled contact sheets; six matching Godot before/after views and nine door families in closed/open states.",
+  "structure_changed": false,
+  "raw_images_promoted": [],
+  "useful_reference_mapping": {
+    "architecture_pack_2_boards_5_13": "Cylinder sconces, ring flush fixtures, suspended chandelier; light_fixture.gd",
+    "door_boards_1_to_9": "Layered jamb/casing profiles, applied gothic panels, hinges, lever/pull/lock hardware, service porthole/push plate, cyan spine, green access/number modules; scripts/door_visual.gd",
+    "architecture_pack_2_boards_1_11": "Inset wainscot, stepped profiles, crown/dado/skirting; interior_kit.gd and hero_visuals.gd",
+    "architecture_pack_2_boards_3_12": "Coffered ceilings and nested trim; interior_kit.gd",
+    "material_boards_1_2_3_10_11": "Normal surface palette, dark glass/cloth and controlled practical light balance",
+    "nightmare_and_damage_boards": "Classified and retained for future work; no normal-state corruption activated",
+    "architecture_pack_2_board_7": "Literal rebuilt plaques/access panels; no generated lettering",
+    "architecture_pack_2_boards_4": "Smoked/frosted and applied stained-glass vocabulary; hero_visuals.gd and door_visual.gd",
+    "architecture_pack_2_boards_2_6_14": "Dark floor finishes, brass inlay, burgundy runners, walnut and upholstery palette; shared materials"
+  },
+  "limitations": [
+    "Approved rectangular apertures and leaf dimensions preserved. Gothic arches are applied moulding and shallow crowns, not new arched openings.",
+    "Opaque stylised smoked/frosted glass is used on backed decorative panels; no new architectural openings.",
+    "Framed artwork remains owned procedural placeholder art; no production portrait images were extracted.",
+    "Source decal/screen/VFX sheets require Photoshop cleanup before direct use."
+  ],
+  "sources": [
+    {
+      "source": "godot/assets/neon-mansion/materials/firefly-source/nightmare-fx/Retro_Nightmare_Frequency___Scene_1_Production_Board-1.png",
+      "family": "materials",
+      "observed_content": "Teal, charcoal, black door, tile, marble, walnut, panelling, brass and dark metal references",
+      "classification": "Labelled 3x3 surface swatch board",
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "godot/assets/neon-mansion/materials/firefly-source/nightmare-fx/Retro_Nightmare_Frequency___Scene_1_Production_Board-2.png",
+      "family": "materials",
+      "observed_content": "Smoked and frosted glass, pool/bath tiles, carpet, concrete, paving, stone, neon cracks",
+      "classification": "Labelled 3x3 glass/tile/carpet/masonry/corruption board",
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "godot/assets/neon-mansion/materials/firefly-source/nightmare-fx/Retro_Nightmare_Frequency___Scene_1_Production_Board-3.png",
+      "family": "materials",
+      "observed_content": "Fabric, dark chrome, luminous crack network, stone, plaster, leather, rubber, black paint, metal mesh",
+      "classification": "Labelled 3x3 fabric/metal/crack/stone/leather board",
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "godot/assets/neon-mansion/materials/firefly-source/nightmare-fx/Retro_Nightmare_Frequency___Scene_1_Production_Board-4.png",
+      "family": "materials",
+      "observed_content": "Clean and glitched light bars, access buttons, signs, hazard bands and terminals on black",
+      "classification": "Labelled emissive component comparison sheet",
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "godot/assets/neon-mansion/materials/firefly-source/nightmare-fx/Retro_Nightmare_Frequency___Scene_1_Production_Board-5.png",
+      "family": "materials",
+      "observed_content": "Room numbers, caution/security/CCTV/access, damage marks and corruption symbols",
+      "classification": "Labelled decal/icon contact sheet with visible checker pattern",
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "godot/assets/neon-mansion/materials/firefly-source/nightmare-fx/Retro_Nightmare_Frequency___Scene_1_Production_Board-6.png",
+      "family": "materials",
+      "observed_content": "CCTV/security/arcade/UI/signage/corrupt terminals, gothic painting, abstract retrowave artwork and poster",
+      "classification": "Labelled screens/artwork contact sheet",
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "godot/assets/neon-mansion/materials/firefly-source/nightmare-fx/Retro_Nightmare_Frequency___Scene_1_Production_Board-7.png",
+      "family": "materials",
+      "observed_content": "City, driveway, front garden, rear garden/pool, storm sky and corrupted sky",
+      "classification": "Labelled cinematic background plate board",
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "godot/assets/neon-mansion/materials/firefly-source/nightmare-fx/Retro_Nightmare_Frequency___Scene_1_Production_Board-8.png",
+      "family": "materials",
+      "observed_content": "Code rain, glyph sets, scanlines, tears, bursts, clouds, cracks, ring, static noise, cells, Jester and sigil",
+      "classification": "Labelled VFX contact sheet with checker background",
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "godot/assets/neon-mansion/materials/firefly-source/nightmare-fx/Retro_Nightmare_Frequency___Scene_1_Production_Board-9.png",
+      "family": "materials",
+      "observed_content": "Door/window/screen/trim/sign/floor/wall/ceiling/activation/Jester zones and combined multi-mask",
+      "classification": "Labelled black/white mask sheet",
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "godot/assets/neon-mansion/materials/firefly-source/nightmare-fx/Retro_Nightmare_Frequency___Scene_1_Production_Board-10.png",
+      "family": "materials",
+      "observed_content": "Cool cyan, saturated magenta, moonlight, green corruption and warm brass variations",
+      "classification": "Lighting and colour-grading comparison board",
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "godot/assets/neon-mansion/materials/firefly-source/nightmare-fx/Retro_Nightmare_Frequency___Scene_1_Production_Board-11.png",
+      "family": "materials",
+      "observed_content": "Names/descriptions with small palette/material chips",
+      "classification": "Material naming and swatch guide",
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "firefly/door-references/raw/Retro_Nightmare_Frequency___Scene_1_Production_Board-1.png",
+      "family": "doors",
+      "observed_content": "Standard rectangular single-door state study",
+      "classification": [
+        "modelling reference",
+        "frame/profile reference",
+        "handle/hardware reference",
+        "emissive-trim reference",
+        "access-panel / room-number reference",
+        "reference-only / unsuitable for direct runtime use"
+      ],
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "firefly/door-references/raw/Retro_Nightmare_Frequency___Scene_1_Production_Board-2.png",
+      "family": "doors",
+      "observed_content": "Wide luxury pointed-arch single-door state study",
+      "classification": [
+        "modelling reference",
+        "frame/profile reference",
+        "handle/hardware reference",
+        "emissive-trim reference",
+        "access-panel / room-number reference",
+        "reference-only / unsuitable for direct runtime use"
+      ],
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "firefly/door-references/raw/Retro_Nightmare_Frequency___Scene_1_Production_Board-3.png",
+      "family": "doors",
+      "observed_content": "Grand pointed-arch double-door state study",
+      "classification": [
+        "modelling reference",
+        "frame/profile reference",
+        "handle/hardware reference",
+        "emissive-trim reference",
+        "access-panel / room-number reference",
+        "reference-only / unsuitable for direct runtime use"
+      ],
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "firefly/door-references/raw/Retro_Nightmare_Frequency___Scene_1_Production_Board-4.png",
+      "family": "doors",
+      "observed_content": "Bedroom single-door state study",
+      "classification": [
+        "modelling reference",
+        "frame/profile reference",
+        "handle/hardware reference",
+        "emissive-trim reference",
+        "access-panel / room-number reference",
+        "reference-only / unsuitable for direct runtime use"
+      ],
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "firefly/door-references/raw/Retro_Nightmare_Frequency___Scene_1_Production_Board-5.png",
+      "family": "doors",
+      "observed_content": "Bathroom/en-suite glazed single-door state study",
+      "classification": [
+        "modelling reference",
+        "frame/profile reference",
+        "handle/hardware reference",
+        "emissive-trim reference",
+        "access-panel / room-number reference",
+        "reference-only / unsuitable for direct runtime use"
+      ],
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "firefly/door-references/raw/Retro_Nightmare_Frequency___Scene_1_Production_Board-6.png",
+      "family": "doors",
+      "observed_content": "Kitchen/service single-door state study",
+      "classification": [
+        "modelling reference",
+        "frame/profile reference",
+        "handle/hardware reference",
+        "emissive-trim reference",
+        "access-panel / room-number reference",
+        "reference-only / unsuitable for direct runtime use"
+      ],
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "firefly/door-references/raw/Retro_Nightmare_Frequency___Scene_1_Production_Board-7.png",
+      "family": "doors",
+      "observed_content": "Library/study gothic single-door state study",
+      "classification": [
+        "modelling reference",
+        "frame/profile reference",
+        "handle/hardware reference",
+        "emissive-trim reference",
+        "access-panel / room-number reference",
+        "reference-only / unsuitable for direct runtime use"
+      ],
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "firefly/door-references/raw/Retro_Nightmare_Frequency___Scene_1_Production_Board-8.png",
+      "family": "doors",
+      "observed_content": "Games/arcade rectangular single-door state study",
+      "classification": [
+        "modelling reference",
+        "frame/profile reference",
+        "handle/hardware reference",
+        "emissive-trim reference",
+        "access-panel / room-number reference",
+        "reference-only / unsuitable for direct runtime use"
+      ],
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "firefly/door-references/raw/Retro_Nightmare_Frequency___Scene_1_Production_Board-9.png",
+      "family": "doors",
+      "observed_content": "Security/CCTV single-door state study",
+      "classification": [
+        "modelling reference",
+        "frame/profile reference",
+        "handle/hardware reference",
+        "emissive-trim reference",
+        "access-panel / room-number reference",
+        "reference-only / unsuitable for direct runtime use"
+      ],
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "firefly/architecture-references/raw/neon-mansion-architecture-pack-1__Retro_Nightmare_Frequency___Scene_1_Production_Board-1.png",
+      "family": "architecture",
+      "observed_content": "Nine labelled swatches: teal plaster, charcoal plaster, black panel, dark tile/marble, walnut, dark wood panels, brass and black metal",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "runtime material source"
+      ],
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "firefly/architecture-references/raw/neon-mansion-architecture-pack-1__Retro_Nightmare_Frequency___Scene_1_Production_Board-10.png",
+      "family": "architecture",
+      "observed_content": "Eight perspective palette/lighting studies, including normal and corrupted states",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "lighting reference",
+        "Nightmare overlay"
+      ],
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "firefly/architecture-references/raw/neon-mansion-architecture-pack-1__Retro_Nightmare_Frequency___Scene_1_Production_Board-11.png",
+      "family": "architecture",
+      "observed_content": "Material naming guide and labelled swatches",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "runtime material source"
+      ],
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "firefly/architecture-references/raw/neon-mansion-architecture-pack-1__Retro_Nightmare_Frequency___Scene_1_Production_Board-2.png",
+      "family": "architecture",
+      "observed_content": "Labelled glass, pool/bath tile, carpet/concrete/exterior paving, stone and corruption swatches",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "runtime material source"
+      ],
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "firefly/architecture-references/raw/neon-mansion-architecture-pack-1__Retro_Nightmare_Frequency___Scene_1_Production_Board-3.png",
+      "family": "architecture",
+      "observed_content": "Fabric, chrome, leather, stone/plaster/rubber, paint, metal mesh and emissive crack swatches",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "runtime material source"
+      ],
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "firefly/architecture-references/raw/neon-mansion-architecture-pack-1__Retro_Nightmare_Frequency___Scene_1_Production_Board-4.png",
+      "family": "architecture",
+      "observed_content": "Normal and glitched neon strips, number plaque, indicator, hazard bands and screen studies",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "lighting reference",
+        "screen/sign asset",
+        "decal",
+        "Nightmare overlay"
+      ],
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "firefly/architecture-references/raw/neon-mansion-architecture-pack-1__Retro_Nightmare_Frequency___Scene_1_Production_Board-5.png",
+      "family": "architecture",
+      "observed_content": "Composite decal/icon/damage sheet with visible checkerboard backgrounds and labels",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "screen/sign asset",
+        "decal",
+        "Nightmare overlay"
+      ],
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "firefly/architecture-references/raw/neon-mansion-architecture-pack-1__Retro_Nightmare_Frequency___Scene_1_Production_Board-6.png",
+      "family": "architecture",
+      "observed_content": "Screen/interface and framed-art composite; includes CCTV, arcade, theatre, portraits and separate Nightmare panels",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "screen/sign asset",
+        "decal",
+        "Nightmare overlay"
+      ],
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "firefly/architecture-references/raw/neon-mansion-architecture-pack-1__Retro_Nightmare_Frequency___Scene_1_Production_Board-7.png",
+      "family": "architecture",
+      "observed_content": "Composite exterior/city/night-sky background plates with captions",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "backdrop"
+      ],
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "firefly/architecture-references/raw/neon-mansion-architecture-pack-1__Retro_Nightmare_Frequency___Scene_1_Production_Board-8.png",
+      "family": "architecture",
+      "observed_content": "Composite Nightmare VFX: code, glyphs, scanlines, tears, cracks, bursts, Jester and composite overlays",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "Nightmare overlay"
+      ],
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "firefly/architecture-references/raw/neon-mansion-architecture-pack-1__Retro_Nightmare_Frequency___Scene_1_Production_Board-9.png",
+      "family": "architecture",
+      "observed_content": "Labelled binary masks for doors/windows/screens/trim/floors/corruption zones",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "Nightmare overlay"
+      ],
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "firefly/architecture-references/raw/neon-mansion-architecture-pack-2__Retro_Nightmare_Frequency___Scene_1_Production_Board-1.png",
+      "family": "architecture",
+      "observed_content": "Perspective moulding, wall-bay, wainscot, picture-frame, arch, dado, cornice and neon-strip modelling studies",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "architectural reference",
+        "modelling reference"
+      ],
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "firefly/architecture-references/raw/neon-mansion-architecture-pack-2__Retro_Nightmare_Frequency___Scene_1_Production_Board-10.png",
+      "family": "architecture",
+      "observed_content": "Perspective exterior paving/stone/steps/terrace/garage/workshop/gate/rail/glass/wet material studies",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "architectural reference",
+        "modelling reference"
+      ],
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "firefly/architecture-references/raw/neon-mansion-architecture-pack-2__Retro_Nightmare_Frequency___Scene_1_Production_Board-11.png",
+      "family": "architecture",
+      "observed_content": "Wide detailed trim/moulding profile modelling composite",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "architectural reference",
+        "modelling reference"
+      ],
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "firefly/architecture-references/raw/neon-mansion-architecture-pack-2__Retro_Nightmare_Frequency___Scene_1_Production_Board-12.png",
+      "family": "architecture",
+      "observed_content": "Wide coffer/rib/cornice/round/vault/conduit/perforated ceiling modelling composite",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "architectural reference",
+        "modelling reference"
+      ],
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "firefly/architecture-references/raw/neon-mansion-architecture-pack-2__Retro_Nightmare_Frequency___Scene_1_Production_Board-13.png",
+      "family": "architecture",
+      "observed_content": "Wide practical lighting fixture modelling composite",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "modelling reference",
+        "prop reference",
+        "lighting reference"
+      ],
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "firefly/architecture-references/raw/neon-mansion-architecture-pack-2__Retro_Nightmare_Frequency___Scene_1_Production_Board-14.png",
+      "family": "architecture",
+      "observed_content": "Labelled black tile/teal stone/marble/parquet/carpet/runner/pool/exterior floor swatches",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "runtime material source"
+      ],
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "firefly/architecture-references/raw/neon-mansion-architecture-pack-2__Retro_Nightmare_Frequency___Scene_1_Production_Board-2.png",
+      "family": "architecture",
+      "observed_content": "Labelled tile, marble, parquet, carpet/runner, bathroom/service/garage and exterior floor swatches",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "runtime material source"
+      ],
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "firefly/architecture-references/raw/neon-mansion-architecture-pack-2__Retro_Nightmare_Frequency___Scene_1_Production_Board-3.png",
+      "family": "architecture",
+      "observed_content": "Coffered, gothic rib, ornate drawing ceiling, stair vault and room-specific ceiling studies",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "architectural reference",
+        "modelling reference"
+      ],
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "firefly/architecture-references/raw/neon-mansion-architecture-pack-2__Retro_Nightmare_Frequency___Scene_1_Production_Board-4.png",
+      "family": "architecture",
+      "observed_content": "Glass and window composite: smoked/frosted/stained panes, sash/garden frames, cracked/corrupted variants",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "architectural reference",
+        "modelling reference",
+        "Nightmare overlay"
+      ],
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "firefly/architecture-references/raw/neon-mansion-architecture-pack-2__Retro_Nightmare_Frequency___Scene_1_Production_Board-5.png",
+      "family": "architecture",
+      "observed_content": "Perspective paired practical fixtures: sconces, chandelier, strip, indicators, stair lights, theatre/pool/security lamps",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "modelling reference",
+        "prop reference",
+        "lighting reference"
+      ],
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "firefly/architecture-references/raw/neon-mansion-architecture-pack-2__Retro_Nightmare_Frequency___Scene_1_Production_Board-6.png",
+      "family": "architecture",
+      "observed_content": "Labelled upholstery/leather/velvet, walnut/lacquer/brass/chrome/metal and plastics swatches",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "runtime material source"
+      ],
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "firefly/architecture-references/raw/neon-mansion-architecture-pack-2__Retro_Nightmare_Frequency___Scene_1_Production_Board-7.png",
+      "family": "architecture",
+      "observed_content": "Room plaques, numbers, panels, warning/CCTV/exit/arrows and separate corrupted panel study",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "screen/sign asset",
+        "decal",
+        "Nightmare overlay"
+      ],
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "firefly/architecture-references/raw/neon-mansion-architecture-pack-2__Retro_Nightmare_Frequency___Scene_1_Production_Board-8.png",
+      "family": "architecture",
+      "observed_content": "Labelled ageing/damage patches: scratches, chips, stains, grime, scuffs, brass, ceiling and wall damage",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "decal"
+      ],
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    },
+    {
+      "source": "firefly/architecture-references/raw/neon-mansion-architecture-pack-2__Retro_Nightmare_Frequency___Scene_1_Production_Board-9.png",
+      "family": "architecture",
+      "observed_content": "Labelled Nightmare overlay studies: cracks/code/Jester/signal/tears/masks/corrupted glass/panel",
+      "classification": [
+        "reference-only / unsuitable",
+        "Photoshop cleanup required",
+        "Nightmare overlay"
+      ],
+      "direct_runtime_bitmap_use": false,
+      "runtime_role": "Reference translated into owned geometry/materials where relevant; no composite sheet applied as a texture.",
+      "cleanup_before_extraction": "Isolate components; remove labels/backgrounds/baked lighting; correct perspective; rebuild legible text; verify alpha; author seamless swatches and separate material channels."
+    }
+  ]
+}

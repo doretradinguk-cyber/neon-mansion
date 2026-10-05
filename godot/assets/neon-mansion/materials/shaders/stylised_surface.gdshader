@@ -1,7 +1,7 @@
 shader_type spatial;
 render_mode diffuse_toon, specular_schlick_ggx;
 uniform vec4 base_color : source_color = vec4(0.1, 0.2, 0.22, 1.0);
-uniform int pattern : hint_range(0, 4) = 0;
+uniform int pattern : hint_range(0, 5) = 0;
 uniform float roughness_value : hint_range(0, 1) = 0.8;
 uniform float metallic_value : hint_range(0, 1) = 0.0;
 uniform float pattern_scale = 1.0;
@@ -27,8 +27,8 @@ void fragment() {
 		color = mix(color, vec3(0.005, 0.008, 0.012), grout * 0.85);
 		roughness_local = mix(roughness_value, 0.9, grout);
 	} else if (pattern == 2) {
-		float vein = pow(abs(sin(p.x * 3.0 + p.y * 1.8 + noise(p * 0.8) * 7.0)), 28.0);
-		color = mix(color, base_color.rgb * 1.7, vein * 0.22);
+		float vein = pow(abs(sin(p.x * 2.0 + p.y * 0.7 + noise(p * 0.45) * 5.0)), 18.0);
+		color = mix(color, base_color.rgb * 1.45, vein * 0.22);
 		color *= 0.94 + noise(p * 0.5) * 0.12;
 	} else if (pattern == 3) {
 		// World-coordinate wood: restrained grain, no board labels or baked lighting.
@@ -37,6 +37,7 @@ void fragment() {
 	} else if (pattern == 4) {
 		color *= 0.92 + noise(vec2(world_position.x * 2.0, world_position.y * 70.0)) * 0.12;
 	}
+	if (pattern == 5) { color *= 0.91 + noise(world_position.xz * 70.0 + world_position.yy * 12.0) * 0.15; }
 	ALBEDO = color;
 	ROUGHNESS = roughness_local;
 	METALLIC = metallic_value;

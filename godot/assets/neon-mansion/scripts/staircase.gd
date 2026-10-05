@@ -1,4 +1,5 @@
 extends Node3D
+const G = preload("res://assets/neon-mansion/scripts/visual_geometry.gd")
 const Module = preload("res://assets/neon-mansion/architecture/module.tscn")
 const Architecture = preload("res://assets/neon-mansion/scripts/architecture.gd")
 const FLOOR = preload("res://assets/neon-mansion/materials/dark_marble.tres")
@@ -46,3 +47,22 @@ func _ready() -> void:
 		var rail := Architecture.box(self, Vector3(0.12, 0.09, sqrt(run_length * run_length + rise * rise)), Vector3(x, rise / 2 + 1.1, 0), BRASS, true)
 		rail.rotation.x = atan(rise / run_length)
 		get_child(get_child_count() - 1).rotation.x = rail.rotation.x
+	# Surface dress only; wedge, original posts and handrail collision stay identical.
+	var carpet = preload("res://assets/neon-mansion/materials/burgundy_carpet.tres")
+	for i in range(step_count):
+		var y := (i+1)*rise/step_count
+		var z := half_run-(i+0.5)*run_length/step_count
+		Architecture.box(self,Vector3(stair_width*0.44,0.012,run_length/step_count),Vector3(0,y+0.008,z),carpet)
+		Architecture.box(self,Vector3(stair_width*0.44,rise/step_count,0.012),Vector3(0,y-rise/step_count/2,z+run_length/step_count/2+0.007),carpet)
+		for x in [-stair_width*0.23,stair_width*0.23]:
+			Architecture.box(self,Vector3(0.025,0.015,run_length/step_count),Vector3(x,y+0.012,z),BRASS)
+	for x in [-half_width-0.15,half_width+0.15]:
+		for t in [0.0,1.0]:
+			var at := Vector3(x,t*rise,half_run-t*run_length)
+			Architecture.box(self,Vector3(0.20,1.15,0.20),at+Vector3(0,0.575,0),METAL)
+			G.cylinder(self,at+Vector3(0,1.18,0),0.16,0.08,BRASS)
+		for i in range(1,24):
+			var t := i/24.0
+			Architecture.box(self,Vector3(0.035,1.0,0.035),Vector3(x,t*rise+0.50,half_run-t*run_length),METAL)
+			Architecture.box(self,Vector3(0.07,0.07,0.07),Vector3(x,t*rise+0.55,half_run-t*run_length),BRASS)
+	G.batch(self)

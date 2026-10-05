@@ -2,6 +2,14 @@
 
 Updated 5 October 2026. Work performed only inside C:\GitHub\neon-mansion. Nothing reset, cleaned, deleted, checked out over, merged or published. The user has authorized the Baseline v1 local checkpoint commit; pushing is not authorized. Existing uncommitted work was inspected first. The previous handover and the previous foundation entry scene/stair script are preserved in work/map-foundation alongside the before-state hash inventory. Existing owned room scenes, original foundation helpers, door behavior, materials, reference images and vendor sources are retained.
 
+## Current visual upgrade
+
+The 5 October visual pass is local and uncommitted on top of Baseline v1. See `docs/VISUAL-UPGRADE.md` for the comparison, file inventory, door/frame/material changes, Firefly mappings and remaining visual gaps. The approved mansion structure and socket logic remain intact. Runtime door surfaces now use owned display geometry while retaining the original wrapper collider and interaction ownership. All eight families plus the grand-anchor size preset remain available.
+
+The latest Entrance Hall follow-up adds a mirrored pair of collision-free side-bay benches; that small addition remains pending a Godot visual check. Validation for this visual pass: installed Godot 4.7.2 foundation checks and rendered input checks passed. All 41 doors, grand/service stairs, upper landing/guards, basement progression, Drawing Room lanes and both socket templates passed. Final render logs contain no parser/resource/shader errors. The map snapshot still matches all 43 spaces, 41 doors, 22 sockets and two stairs. Hash checks confirmed 4,722 vendor/reference source files unchanged. Six matched before/after views and all nine door presets in closed/open states were visually reviewed under `work/visual-upgrade/`.
+
+All 45 local source boards were reviewed before editing. No raw image was promoted or modified. Composite textures, signs/screens, artwork and VFX still require component extraction and Photoshop cleanup before production use. Normal materials remain independent of the disabled Nightmare layer.
+
 ## Approved structural baseline — v1
 
 The current mansion foundation has been manually tested by the user and the layout is approved as the structural baseline. Codex validation passed in Godot 4.7.2. Grand Stair Hall, upper landing/balconies, doors, basement traversal and the persistent random socket prototype are working.
@@ -128,7 +136,7 @@ The existing player fall-respawn behavior is unchanged. Normal basement floor at
 
 ## Checkpoint and next work
 
-Baseline v1 is approved for a local commit. Do not push without separate authorization. Review the local commit SHA and changed-file summary before any publishing step.
+Baseline v1 is recorded in local commit 0fd277c1c31b4506e7ae1901504faeb152ce843b. The subsequent visual upgrade remains uncommitted. Do not push without separate authorization.
 
 Further furnishing may build on this approved skeleton. Preserve the anchor proportions, stair/landing connections, door IDs and socket rules; record any proposed structural alteration in the permanent map/changelog before implementation.
 

@@ -45,6 +45,11 @@ func _ready() -> void:
 		panel.position = Vector3(direction * style.leaf_width / 2, style.leaf_height / 2, 0)
 		panel.set_meta("door_id", door_id)
 		hinge.add_child(panel)
+		# Retain the approved collider and ownership; replace only the displayed mesh.
+		var inherited_meshes: Array[MeshInstance3D] = []
+		Visual.A._collect(panel, inherited_meshes)
+		for mesh in inherited_meshes:
+			mesh.visible = false
 		visual.leaf(hinge, style, direction, room_number)
 		var effect := Node3D.new()
 		effect.set_script(Nightmare)
@@ -60,11 +65,11 @@ func _ready() -> void:
 		var label := Label3D.new()
 		label.text = caption
 		label.double_sided = false
-		label.font_size = 32
-		label.pixel_size = 0.008
+		label.font_size = 28
+		label.pixel_size = 0.007
 		label.modulate = Color(0.2, 1.0, 0.85)
 		label.outline_modulate = Color(0.01, 0.02, 0.025)
-		label.position = Vector3(0, style.leaf_height + (0.64 if style.pointed_profile else 0.49), side * 0.43)
+		label.position = Vector3(0, style.leaf_height + (0.64 if style.pointed_profile else 0.49), side * 0.60)
 		if side == -1:
 			label.rotation.y = PI
 		add_child(label)

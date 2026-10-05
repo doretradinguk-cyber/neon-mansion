@@ -3,75 +3,152 @@
 Updated: 5 October 2026.
 
 ## Purpose
+Neon Mansion is the reusable 3D mansion / virtual-layer project for **Neo-Gothic Glitch**. The Book of Hosts Virtual Manor remains reference/rollback material only; Neon Mansion is now a clean Godot 4.7 project with its own modular architecture, materials, room rules and Firefly-assisted art pipeline.
 
-Neon Mansion is a clean, reusable mansion project derived from the verified Book of Hosts Virtual Manor foundation. It is not a copy of the Book of Hosts app. The goal is to isolate the mansion-specific room data, rendering ideas and useful assets so the environment can be reworked into the **Neo-Gothic Glitch** visual language.
+## Current local development state
+The active working copy is expected at:
 
-## Source of truth for extraction
+`C:\GitHub\neon-mansion`
 
-Primary source repository:
-- `dorejamesdt4-lang/book-of-hosts-app`
+Important: the current playable Godot foundation and recent Codex polish/layout work have been developed as **local uncommitted work** while testing. Do not reset, clean, checkout over, delete or blindly replace the local working tree before reviewing it.
 
-Verified Virtual Manor boundary:
-- `public/modules/virtual-manor/`
+The remote `main` branch contains the asset/import/documentation pipeline, but the latest tested Godot scene changes may still only exist locally until the user approves the checkpoint.
 
-Verified design data already copied into this repository:
-- `design/original-room-bounds.json`
+## Current playable foundation
+A working first-person four-room slice has been created and tested in Godot 4.7.2:
 
-## Verified source facts
+Entrance / Reception Hall -> Grand Stair Hall -> Long Gallery -> Drawing Room
 
-The Book of Hosts Virtual Manor currently contains seven fixed rooms:
-- Entrance Hall
-- Long Gallery
-- Drawing Room
-- Library
-- Dining Room
-- Conservatory
-- Garden
+Verified during local testing:
+- first-person movement works
+- mouse look works
+- door interaction exists
+- collision is present
+- stair traversal works
+- room/door IDs are visible and retained
+- teal/charcoal base palette is present
+- magenta emissive accents are present
+- cyan/acid-green indicators are present
+- no obvious missing-material pink/error surfaces were seen in the tested screenshots
 
-The source handover also records:
-- self-hosted Three.js 0.180.0/MIT in the old runtime
-- authored batched architecture
-- source-derived plaster/tile maps
-- first-person exploration
-- material and texture work
-- 27 draw calls / 104,858 triangles in one measured pass
-- current old-runtime movement code includes superseded/malformed sections and must not be copied wholesale
+## Current layout issue / required correction
+The first tested layout placed the Grand Stair Hall too directly behind the first doorway. This makes the mansion feel cramped and abrupt.
 
-## Neon Mansion direction
+Required flow:
 
-This new project will deliberately move away from the Storybook / Arcane Oracle palette of Book of Hosts and toward:
-- dark neo-gothic architecture
-- cel-shaded / graphic-novel rendering
-- retrowave neon cyan / magenta / violet / acid-green emission
-- Nightmare Frequency overlays
-- Firefly-generated backgrounds, glows, decals and texture concepts where useful
-- Photoshop cleanup / masking / texture preparation
-- reusable room and material data
+Entrance Hall -> short reception/foyer transition -> Grand Stair Hall -> Long Gallery -> Drawing Room
 
-## First extraction pass
+Grand Stair Hall should become a true anchor room:
+- wider and deeper
+- staircase set back from the entrance
+- meaningful lower-floor arrival space before the first step
+- larger visible landing/balcony
+- clear railing silhouette
+- room for future left/right wing connections
+- stronger mansion proportions and visual hierarchy
 
-Do not import everything at once. First inspect and isolate:
-1. room bounds / room graph
-2. world-building geometry source
-3. material registry
-4. runtime texture catalogue
-5. room and door definitions
-6. camera / spawn positions
-7. reusable furniture / props
-8. visual regression assets that help compare the old and new mansion
+Do not expand to the full mansion until this anchor flow feels correct.
 
-## Do not bring across blindly
+## Visual benchmark
+The current geometry is structurally useful but still needs environmental dressing and lighting polish to match the Firefly benchmark.
 
-- dashboard code
-- narrator / theatre features
-- unrelated Book of Hosts routes
-- old service workers
-- admin tools
-- superseded movement / camera code
-- time-machine or twisting-corridor systems from other projects
+Target language:
+- dark teal / charcoal architecture
+- near-black doors
+- hot-magenta emissive trims
+- restrained cyan and acid-green diagnostics
+- dark tiled/polished flooring
+- cel-shaded / graphic low-poly presentation
+- controlled neon spill rather than neon on every surface
+- readable architecture despite a dark horror mood
+- 80s/90s retrowave + neo-gothic atmosphere
 
-## Immediate next task
+The Drawing Room should become the first quality-benchmark room before duplicating the style across the remaining mansion.
 
-Inspect `public/modules/virtual-manor/` in Book of Hosts and copy the minimum mansion-specific text/code files needed to reconstruct and test the environment in isolation. Record the original source path for every copied file.
+## Nightmare Frequency rule
+Nightmare Frequency remains a **separate disabled visual state** during normal mansion testing. It may later add code rain, corrupted signage, Jester imagery, signal fractures, emissive cracks, glitch distortion and fog, but normal materials must remain intact and reusable.
 
-After the extraction is stable, begin a first visual pass on Entrance Hall + Long Gallery using new Neon Mansion materials and lighting.
+## Firefly room pipeline
+The 30 Firefly room concepts are visual targets, not literal 3D rooms.
+
+Use them to define:
+- room identity
+- major prop priorities
+- palette
+- lighting
+- door relationships
+- backdrop/screen/decal opportunities
+
+Source master stays in `the-drop-zone`. Local references are ignored by Git. See `docs/FIREFLY-ROOM-PIPELINE.md`.
+
+## Firefly texture/material pipeline
+Firefly texture/support packs are imported as working references first. Do not assume every composite board is a direct UV-ready texture.
+
+Current runtime-facing material families include/target:
+- teal wall
+- charcoal wall
+- near-black door
+- dark tile
+- dark marble
+- walnut/dark wood
+- brass/dark metal
+- smoked glass
+- magenta emissive trim
+- cyan emissive trim
+- acid-green indicator
+- Nightmare corruption base/emissive variants
+
+Raw source references remain uncommitted unless deliberately curated into final runtime assets.
+
+## Firefly door pipeline — added
+A dedicated door import workflow now exists:
+
+`tools/import-firefly-doors.ps1`
+
+Documentation:
+
+`docs/FIREFLY-DOOR-PIPELINE.md`
+
+The door pack remains mastered in Drop Zone and is copied into ignored local reference storage for inspection. It must be classified before runtime use.
+
+Target reusable door families:
+- standard single
+- luxury single
+- grand double
+- bedroom/bathroom/en-suite
+- kitchen/service
+- library/study
+- games/arcade/theatre
+- security/CCTV
+- cyber mainframe high-security
+- exterior/garden/terrace
+
+Preserve door IDs, interaction behavior, collision and room connections. Nightmare-corrupted doors are optional visual variants, not replacements for the normal door scene.
+
+## Source / vendor policy
+KayKit and other third-party/vendor source assets remain under their vendor folders and must not be edited directly. Neon Mansion-owned wrappers, materials, scenes and variants belong under the Neon Mansion asset tree.
+
+Current source packs include:
+- KayKit Dungeon Remastered
+- KayKit Furniture Bits
+- KayKit Restaurant Bits
+- KayKit Prototype Bits
+
+## Immediate test-before-merge plan
+1. Pull the latest remote pipeline/documentation updates **without discarding local Codex work**.
+2. Import the Firefly door pack with `tools/import-firefly-doors.ps1`.
+3. Let Codex inspect/classify the door pack and build/improve reusable door scenes incrementally.
+4. Preserve the recently revised four-room layout and visual-polish work.
+5. Reload changed files from disk in Godot if prompted.
+6. Test Entrance Hall, foyer transition, Grand Stair Hall, Long Gallery and Drawing Room in Godot 4.7.2.
+7. Test door scale, clearance, open/close interaction, collision and lighting.
+8. Run `git status` and review the complete local working tree.
+9. Only after visual/playable approval create the first proper checkpoint commit/merge.
+
+## Safety / rollback rules
+- Do not run `git clean`.
+- Do not run destructive reset/checkout commands against the local working tree.
+- Do not modify KayKit vendor source files.
+- Do not commit `.godot` import cache.
+- Do not commit raw Firefly reference folders wholesale.
+- Do not build the remaining 26 rooms until the first slice establishes the approved architecture, door system, material system and lighting quality.

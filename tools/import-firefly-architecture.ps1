@@ -13,32 +13,23 @@ $localRefs = Join-Path $NeonMansion "firefly\architecture-references\raw"
 
 New-Item -ItemType Directory -Force -Path $archiveDir,$extractDir,$manifestDir,$localRefs | Out-Null
 
-$zip = Get-ChildItem -Path $DropZone -Filter "*.zip" -File |
+$zips = Get-ChildItem -Path $DropZone -Filter "*.zip" -File |
     Where-Object {
         $_.Name -match "architecture|architectural|detail|trim|ceiling|lighting|floor|material" -and
         $_.Name -notmatch "door|doors|room|scene"
     } |
-    Sort-Object LastWriteTime -Descending |
-    Select-Object -First 1
+    Sort-Object LastWriteTime
 
-if (-not $zip) {
-    throw "No Firefly architectural-detail ZIP found in $DropZone. Put the latest architecture/detail pack ZIP in the Drop Zone root and run again."
-}
-
-Write-Host "Using Firefly architectural pack: $($zip.Name)" -ForegroundColor Cyan
-
-$archiveCopy = Join-Path $archiveDir $zip.Name
-if (-not (Test-Path $archiveCopy)) {
-    Copy-Item $zip.FullName $archiveCopy
+if (-not $zips) {
+    throw "No Firefly architectural-detail ZIPs found in $DropZone. Put the architecture/detail pack ZIPs in the Drop Zone root and run again."
 }
 
 $stamp = Get-Date -Format "yyyyMMdd-HHmmss"
-$sessionDir = Join-Path $extractDir $stamp
-New-Item -ItemType Directory -Force -Path $sessionDir | Out-Null
-Expand-Archive -Path $zip.FullName -DestinationPath $sessionDir -Force
+$sessionRoot = Join-Path $extractDir $stamp
+New-Item -ItemType Directory -Force -Path $sessionRoot | Out-Null
 
 $assetExts = @('.png','.jpg','.jpeg','.webp','.svg','.pdf')
-$files = Get-ChildItem -Path $sessionDir -Recurse -File | Where-Object { $assetExts -contains $_.Extension.ToLower() }
+$allFiles = @()
 
 function Classify-ArchitectureAsset([string]$name) {
     $n = $name.ToLower()
@@ -55,13 +46,42 @@ function Classify-ArchitectureAsset([string]$name) {
     return 'reference-unclassified'
 }
 
-$manifest = foreach ($f in $files) {
+foreach ($zip in $zips) {
+    Write-Host "Using Firefly architectural pack: $($zip.Name)" -ForegroundColor Cyan
+
+    $archiveCopy = Join-Path $archiveDir $zip.Name
+    if (-not (Test-Path $archiveCopy)) {
+        Copy-Item $zip.FullName $archiveCopy
+    }
+
+    $packName = [System.IO.Path]::GetFileNameWithoutExtension($zip.Name)
+    $safePackName = ($packName -replace '[^A-Za-z0-9._-]','_')
+    $sessionDir = Join-Path $sessionRoot $safePackName
+    New-Item -ItemType Directory -Force -Path $sessionDir | Out-Null
+    Expand-Archive -Path $zip.FullName -DestinationPath $sessionDir -Force
+
+    $files = Get-ChildItem -Path $sessionDir -Recurse -File | Where-Object { $assetExts -contains $_.Extension.ToLower() }
+
+    foreach ($f in $files) {
+        $allFiles += [pscustomobject]@{
+            source_pack = $zip.Name
+            pack_key = $safePackName
+            file = $f
+            category = Classify-ArchitectureAsset $f.Name
+        }
+    }
+}
+
+$manifest = foreach ($item in $allFiles) {
+    $f = $item.file
+    $packRoot = Join-Path $sessionRoot $item.pack_key
     [pscustomobject]@{
+        source_pack = $item.source_pack
         file_name = $f.Name
-        relative_path = $f.FullName.Substring($sessionDir.Length + 1)
+        relative_path = $f.FullName.Substring($packRoot.Length + 1)
         extension = $f.Extension.ToLower()
         size_bytes = $f.Length
-        category = Classify-ArchitectureAsset $f.Name
+        category = $item.category
         runtime_status = 'review-required'
         godot_role = ''
         photoshop_cleanup = ''
@@ -71,16 +91,19 @@ $manifest = foreach ($f in $files) {
 $manifestPath = Join-Path $manifestDir "firefly-architecture-assets-$stamp.csv"
 $manifest | Export-Csv -NoTypeInformation -Encoding UTF8 -Path $manifestPath
 
-foreach ($f in $files | Where-Object { @('.png','.jpg','.jpeg','.webp') -contains $_.Extension.ToLower() }) {
+foreach ($item in $allFiles | Where-Object { @('.png','.jpg','.jpeg','.webp') -contains $_.file.Extension.ToLower() }) {
+    $f = $item.file
     $safeName = ($f.Name -replace '[^A-Za-z0-9._-]','_')
-    $dest = Join-Path $localRefs $safeName
+    $destName = "$($item.pack_key)__${safeName}"
+    $dest = Join-Path $localRefs $destName
     if (-not (Test-Path $dest)) {
         Copy-Item $f.FullName $dest
     }
 }
 
-Write-Host "Architectural pack archived to: $archiveCopy" -ForegroundColor Green
-Write-Host "Extracted working copy: $sessionDir" -ForegroundColor Green
-Write-Host "Manifest: $manifestPath" -ForegroundColor Green
+Write-Host "Imported $($zips.Count) architectural pack(s)." -ForegroundColor Green
+Write-Host "Archived masters: $archiveDir" -ForegroundColor Green
+Write-Host "Extracted working copies: $sessionRoot" -ForegroundColor Green
+Write-Host "Combined manifest: $manifestPath" -ForegroundColor Green
 Write-Host "Local Codex/Godot references: $localRefs" -ForegroundColor Green
-Write-Host "Next: review/classify the pack, then promote only approved assets into Godot runtime folders." -ForegroundColor Yellow
+Write-Host "Next: review/classify both packs together, then promote only approved assets into Godot runtime folders." -ForegroundColor Yellow

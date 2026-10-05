@@ -7,7 +7,6 @@ const FLOOR = preload("res://assets/neon-mansion/materials/flat_floor.tres")
 const INK = preload("res://assets/neon-mansion/materials/flat_ink.tres")
 const LIGHT = preload("res://assets/neon-mansion/materials/flat_trim_light.tres")
 const MID = preload("res://assets/neon-mansion/materials/flat_trim_mid.tres")
-const DEEP = preload("res://assets/neon-mansion/materials/flat_trim_deep.tres")
 const PANEL = preload("res://assets/neon-mansion/materials/flat_accent_panel.tres")
 const SIGNAL = preload("res://assets/neon-mansion/materials/flat_accent_signal.tres")
 # Metres, measured from the benchmark. Depths run from the camera towards the far wall.
@@ -18,13 +17,15 @@ const HEIGHT := 3.9
 # Cove profile as [projection, height]; each crease reads as one cornice line.
 const COVE := [[0.0, 3.41], [0.07, 3.47], [0.07, 3.60], [0.13, 3.63], [0.18, 3.90]]
 const DOOR_DEPTHS := [6.73, 12.7, 19.9, 29.1]
-# Blank number plates as [depth, width, height]; far plates are drawn larger, as in the benchmark.
-const PLATES := [[5.48, 0.40, 0.22], [11.06, 0.50, 0.23], [17.7, 0.60, 0.24], [26.3, 0.62, 0.25]]
+# Blank square number plates as [depth, side]; the fourth door has none.
+const PLATES := [[5.48, 0.32], [11.06, 0.40], [17.7, 0.50]]
 const SEAM_X := [-1.12, 0.0, 1.12]
 const SEAM_DEPTHS := [6.1, 8.4, 12.2, 15.3, 19.6, 23.6, 25.5, 29.1, 33.2]
 const LEAF := Vector2(1.25, 2.16)
 # Casing steps outward from the leaf as [width, projection].
 const CASING := [[0.12, 0.04], [0.17, 0.07]]
+# The benchmark draws the jamb further from the camera wider than the near one.
+const FAR_JAMB := 2.0
 
 func _ready() -> void:
 	var run := BACK + LENGTH
@@ -43,17 +44,17 @@ func _ready() -> void:
 		face(Vector2(HALF_WIDTH * 2, rise.length()), Vector3(0, height, -LENGTH + out), Vector3.RIGHT, Vector3(0, rise.y, rise.x).normalized(), CEILING)
 		for side in [-1.0, 1.0]:
 			face(Vector2(run, rise.length()), Vector3(side * (HALF_WIDTH - out), height, middle), Vector3(0, 0, side), Vector3(-side * rise.x, rise.y, 0).normalized(), WALL)
-	var half_frame: float = LEAF.x / 2 + CASING[0][0] + CASING[1][0]
+	var casing: float = CASING[0][0] + CASING[1][0]
 	for side in [-1.0, 1.0]:
 		face(Vector2(run, HEIGHT), Vector3(side * HALF_WIDTH, HEIGHT / 2, middle), Vector3(0, 0, side), Vector3.UP, WALL)
 		var start := BACK
 		for depth: float in DOOR_DEPTHS:
 			door(side, -depth)
-			skirting(side, start, -depth + half_frame)
-			start = -depth - half_frame
+			skirting(side, start, -depth + LEAF.x / 2 + casing)
+			start = -depth - LEAF.x / 2 - casing * FAR_JAMB
 		skirting(side, start, -LENGTH)
 		for plate in PLATES:
-			A.box(self, Vector3(0.03, plate[2], plate[1]), Vector3(side * (HALF_WIDTH - 0.015), 1.27, -plate[0]), SIGNAL)
+			face(Vector2(plate[1], plate[1]), Vector3(side * (HALF_WIDTH - 0.003), 1.27, -plate[0]), Vector3(0, 0, side), Vector3.UP, SIGNAL)
 	var seams := PackedFloat32Array()
 	for depth: float in SEAM_DEPTHS:
 		seams.append(-depth)
@@ -84,22 +85,21 @@ func door(side: float, z: float) -> void:
 	var wall := side * HALF_WIDTH
 	face(LEAF, Vector3(wall - side * 0.003, LEAF.y / 2, z), along, Vector3.UP, LIGHT)
 	face(Vector2(LEAF.x - 0.10, 1.86), Vector3(wall - side * 0.006, 1.15, z), along, Vector3.UP, INK)
-	var edge := LEAF.x / 2
+	var near := LEAF.x / 2
+	var far := LEAF.x / 2
 	var top := LEAF.y
 	for step in CASING:
 		var width: float = step[0]
+		var wide: float = width * FAR_JAMB
 		var out: float = step[1]
 		var body := wall - side * out / 2
 		var front := wall - side * (out + 0.002)
-		# Shaded bodies with lit corridor-facing fronts: the shadow step is baked per face.
-		for end in [-1.0, 1.0]:
-			var jamb: float = z + end * (edge + width / 2)
-			A.box(self, Vector3(out, top + width, width), Vector3(body, (top + width) / 2, jamb), MID)
-			face(Vector2(width, top + width), Vector3(front, (top + width) / 2, jamb), along, Vector3.UP, LIGHT)
-		A.box(self, Vector3(out, width, edge * 2), Vector3(body, top + width / 2, z), MID)
-		face(Vector2(edge * 2, width), Vector3(front, top + width / 2, z), along, Vector3.UP, LIGHT)
-		edge += width
+		# Shadow-pink bodies with main-pink corridor-facing fronts: the shadow step is baked per face.
+		for jamb in [[z + near + width / 2, width], [z - far - wide / 2, wide]]:
+			A.box(self, Vector3(out, top + width, jamb[1]), Vector3(body, (top + width) / 2, jamb[0]), MID)
+			face(Vector2(jamb[1], top + width), Vector3(front, (top + width) / 2, jamb[0]), along, Vector3.UP, LIGHT)
+		A.box(self, Vector3(out, width, near + far), Vector3(body, top + width / 2, z + (near - far) / 2), MID)
+		face(Vector2(near + far, width), Vector3(front, top + width / 2, z + (near - far) / 2), along, Vector3.UP, LIGHT)
+		near += width
+		far += wide
 		top += width
-	var reveal: float = CASING[0][1]
-	face(Vector2(reveal, LEAF.y), Vector3(wall - side * reveal / 2, LEAF.y / 2, z - LEAF.x / 2 + 0.002), Vector3.RIGHT, Vector3.UP, DEEP)
-	face(Vector2(LEAF.x, reveal), Vector3(wall - side * reveal / 2, LEAF.y - 0.002, z), Vector3.BACK, Vector3.LEFT, DEEP)

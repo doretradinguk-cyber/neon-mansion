@@ -18,7 +18,7 @@ const NIGHTMARE = {
 	"corruption_base": preload("res://assets/neon-mansion/nightmare-fx/materials/corruption_base.tres"),
 	"corruption_emissive": preload("res://assets/neon-mansion/nightmare-fx/materials/corruption_emissive.tres")
 }
-## Unshaded nine-colour comic palette for the flat Long Gallery. Never add a tenth.
+## Unshaded eight-colour comic palette for the flat Long Gallery. Never add a ninth.
 const FLAT = {
 	"wall": preload("res://assets/neon-mansion/materials/flat_wall.tres"),
 	"ceiling": preload("res://assets/neon-mansion/materials/flat_ceiling.tres"),
@@ -26,7 +26,6 @@ const FLAT = {
 	"ink": preload("res://assets/neon-mansion/materials/flat_ink.tres"),
 	"trim_light": preload("res://assets/neon-mansion/materials/flat_trim_light.tres"),
 	"trim_mid": preload("res://assets/neon-mansion/materials/flat_trim_mid.tres"),
-	"trim_deep": preload("res://assets/neon-mansion/materials/flat_trim_deep.tres"),
 	"accent_panel": preload("res://assets/neon-mansion/materials/flat_accent_panel.tres"),
 	"accent_signal": preload("res://assets/neon-mansion/materials/flat_accent_signal.tres")
 }

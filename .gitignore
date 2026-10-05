@@ -1,0 +1,13 @@
+# Godot generated/import cache
+.godot/
+
+# Local Firefly working references copied from Drop Zone.
+# Keep master/generated art in the Drop Zone; commit only curated final assets.
+firefly/room-references/raw/
+
+# Local temporary review exports
+firefly/review-temp/
+
+# OS/editor noise
+Thumbs.db
+.DS_Store

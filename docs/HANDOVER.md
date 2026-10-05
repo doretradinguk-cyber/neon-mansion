@@ -127,8 +127,10 @@ Preserve door IDs, interaction behavior, collision and room connections. Nightma
 
 Codex has completed the current door-system pass locally. Before committing, test the revised door scenes in Godot for scale, interaction, swing/clearance and collisions.
 
-## Firefly architectural-detail pipeline — added
-A new importer is ready for the upcoming Firefly architectural detail pack:
+## Firefly architectural-detail pipeline — ready with two packs
+The Drop Zone now contains two approved architectural-detail packs from Firefly. The importer has been updated to import **all matching architecture/detail ZIPs together** in one session rather than only the newest pack.
+
+Importer:
 
 `tools/import-firefly-architecture.ps1`
 
@@ -136,7 +138,14 @@ Documentation:
 
 `docs/FIREFLY-ARCHITECTURE-PIPELINE.md`
 
-This pack covers:
+This workflow now:
+- archives both master ZIPs
+- extracts each pack into its own subfolder
+- creates one combined manifest with `source_pack`
+- prefixes local reference filenames with the source pack key to avoid collisions
+- keeps raw working references out of Git
+
+The packs cover:
 - wall treatments / mouldings / trim
 - floors
 - ceilings
@@ -151,7 +160,7 @@ This pack covers:
 The usual rule applies: Drop Zone is the master archive; local working references are ignored; only reviewed assets are promoted into runtime Godot folders.
 
 ## Stable mansion map architecture — next major system
-After the current first-slice visual/door test, create the permanent mansion map before building the remaining rooms.
+After the current first-slice visual/door/architecture test, create the permanent mansion map before building the remaining rooms.
 
 The governing rule is:
 
@@ -196,10 +205,10 @@ Current source packs include:
 - KayKit Prototype Bits
 
 ## Immediate test-before-merge plan
-1. Wait for the new Firefly architectural detail pack.
-2. Pull the latest remote pipeline/documentation updates **without discarding local Codex work**.
-3. Import it with `tools/import-firefly-architecture.ps1` using the usual Drop Zone archive/extract/manifest workflow.
-4. Reload changed project files from disk in Godot if prompted.
+1. Pull the latest remote importer/handover updates **without discarding local Codex work**.
+2. Run `tools/import-firefly-architecture.ps1`; it should import both architectural-detail ZIPs visible in the Drop Zone.
+3. Reload changed project files from disk in Godot if prompted.
+4. Let Codex inspect/classify the combined architecture packs, but do not expand the mansion yet.
 5. Test the latest local Codex door/layout/visual work in Godot 4.7.2.
 6. Verify Entrance Hall -> foyer -> Grand Stair Hall -> Long Gallery -> Drawing Room flow.
 7. Verify door scale, clearance, interaction, double-door movement and collision.

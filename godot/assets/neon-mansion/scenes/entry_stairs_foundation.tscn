@@ -1,0 +1,16 @@
+[gd_scene format=3]
+[ext_resource type="PackedScene" path="res://assets/neon-mansion/scenes/foundation.tscn" id="1"]
+[ext_resource type="Script" path="res://assets/neon-mansion/garden/garden_style.gd" id="2"]
+[ext_resource type="Script" path="res://assets/neon-mansion/reception/reception_style.gd" id="3"]
+[ext_resource type="Script" path="res://assets/neon-mansion/stair_hall/stair_style.gd" id="4"]
+[node name="NeonMansionEntryAndStairs" type="Node3D"]
+[node name="Foundation" parent="." instance=ExtResource("1")]
+[node name="GardenStyle" type="Node3D" parent="."]
+script = ExtResource("2")
+[node name="ReceptionStyle" type="Node3D" parent="."]
+process_priority = 1
+script = ExtResource("3")
+
+[node name="StairStyle" type="Node3D" parent="."]
+process_priority = 2
+script = ExtResource("4")

@@ -1,6 +1,6 @@
 # Flat style handoff
 
-For Codex, who built `foundation.tscn` and will do the integration. Branch: `long-gallery-flat` (local only, not pushed). Godot 4.7.2, Forward+.
+For Codex, who built `foundation.tscn` and will do the integration. Branch: `long-gallery-flat`, tracking `origin/long-gallery-flat`. At this handoff check, local HEAD is one commit ahead of origin; three additional scene/import metadata files are modified in the working tree. Godot 4.7.2, Forward+.
 
 ## 1. Style rules
 
